@@ -1,0 +1,17 @@
+# Raw datasets exceeding GitHub's 100MB limit (not needed to run the website)
+data/*.csv
+data/*.db
+*.csv
+*.db
+
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+
+# Local environment & IDE files
+.vscode/
+.idea/
+venv/
+env/

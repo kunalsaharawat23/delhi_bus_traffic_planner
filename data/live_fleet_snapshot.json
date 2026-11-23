@@ -1,0 +1,3505 @@
+{
+  "vehicles": [
+    {
+      "vehicle_id": "DL51GD5737",
+      "lat": 28.7718658447266,
+      "lng": 77.1794586181641,
+      "speed_kmh": 6.7,
+      "route_id": 1408.0,
+      "heading": 278,
+      "status": "congested",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD7487",
+      "lat": 28.6364231109619,
+      "lng": 77.0946884155273,
+      "speed_kmh": 10.5,
+      "route_id": 2356.0,
+      "heading": 201,
+      "status": "congested",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL51GD9221",
+      "lat": 28.5641479492187,
+      "lng": 77.1211013793945,
+      "speed_kmh": 6.0,
+      "route_id": 2229.0,
+      "heading": 19,
+      "status": "congested",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD8743",
+      "lat": 28.5415840148926,
+      "lng": 77.076789855957,
+      "speed_kmh": 1.4,
+      "route_id": 2986.0,
+      "heading": 334,
+      "status": "congested",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL51GD3170",
+      "lat": 28.6763896942139,
+      "lng": 77.1181106567383,
+      "speed_kmh": 3.2,
+      "route_id": 2544.0,
+      "heading": 47,
+      "status": "congested",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL51GD0256",
+      "lat": 28.664966583252,
+      "lng": 77.2536087036133,
+      "speed_kmh": 4.7,
+      "route_id": 2742.0,
+      "heading": 77,
+      "status": "congested",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL51GD9218",
+      "lat": 28.7838592529297,
+      "lng": 77.0423049926758,
+      "speed_kmh": 1.8,
+      "route_id": 1515.0,
+      "heading": 99,
+      "status": "congested",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD9413",
+      "lat": 28.6988735198975,
+      "lng": 77.3225479125977,
+      "speed_kmh": 27.9,
+      "route_id": 3202.0,
+      "heading": 70,
+      "status": "fast",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD9425",
+      "lat": 28.6819610595703,
+      "lng": 77.3129119873047,
+      "speed_kmh": 5.9,
+      "route_id": 2892.0,
+      "heading": 60,
+      "status": "congested",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL51GD2197",
+      "lat": 28.7272338867187,
+      "lng": 77.050178527832,
+      "speed_kmh": 3.2,
+      "route_id": 2498.0,
+      "heading": 323,
+      "status": "congested",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD7843",
+      "lat": 28.6459426879883,
+      "lng": 77.3175811767578,
+      "speed_kmh": 7.2,
+      "route_id": 375.0,
+      "heading": 188,
+      "status": "congested",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD8247",
+      "lat": 28.6353187561035,
+      "lng": 77.0707015991211,
+      "speed_kmh": 3.5,
+      "route_id": 1003.0,
+      "heading": 185,
+      "status": "congested",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD8370",
+      "lat": 28.6536693572998,
+      "lng": 77.1549987792969,
+      "speed_kmh": 13.2,
+      "route_id": 1697.0,
+      "heading": 177,
+      "status": "moving",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD8192",
+      "lat": 28.5118427276611,
+      "lng": 77.2497100830078,
+      "speed_kmh": 4.7,
+      "route_id": 1849.0,
+      "heading": 126,
+      "status": "congested",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD9548",
+      "lat": 28.6965465545654,
+      "lng": 77.1433181762695,
+      "speed_kmh": 19.3,
+      "route_id": 3716.0,
+      "heading": 212,
+      "status": "moving",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD5496",
+      "lat": 28.5546569824219,
+      "lng": 77.0540084838867,
+      "speed_kmh": 0.0,
+      "route_id": 840.0,
+      "heading": 142,
+      "status": "stopped",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD8660",
+      "lat": 28.8134307861328,
+      "lng": 77.1352691650391,
+      "speed_kmh": 10.6,
+      "route_id": 3204.0,
+      "heading": 226,
+      "status": "congested",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL51EV3133",
+      "lat": 28.6936893463135,
+      "lng": 77.1559295654297,
+      "speed_kmh": 0.0,
+      "route_id": 2251.0,
+      "heading": 136,
+      "status": "stopped",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD7280",
+      "lat": 28.5794658660889,
+      "lng": 77.2298583984375,
+      "speed_kmh": 0.0,
+      "route_id": 514.0,
+      "heading": 294,
+      "status": "stopped",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL51EV3200",
+      "lat": 28.6939582824707,
+      "lng": 77.1563568115234,
+      "speed_kmh": 0.0,
+      "route_id": 2227.0,
+      "heading": 336,
+      "status": "stopped",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD4312",
+      "lat": 28.5540218353271,
+      "lng": 77.0549392700195,
+      "speed_kmh": 0.0,
+      "route_id": 840.0,
+      "heading": 226,
+      "status": "stopped",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL51EV3101",
+      "lat": 28.6347961425781,
+      "lng": 77.3086242675781,
+      "speed_kmh": 0.0,
+      "route_id": 2205.0,
+      "heading": 240,
+      "status": "stopped",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD6204",
+      "lat": 28.8083667755127,
+      "lng": 77.0761260986328,
+      "speed_kmh": 0.0,
+      "route_id": 309.0,
+      "heading": 312,
+      "status": "stopped",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD7769",
+      "lat": 28.5791530609131,
+      "lng": 77.2305450439453,
+      "speed_kmh": 0.0,
+      "route_id": 1333.0,
+      "heading": 42,
+      "status": "stopped",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD9533",
+      "lat": 28.6963577270508,
+      "lng": 77.1422119140625,
+      "speed_kmh": 0.0,
+      "route_id": 1760.0,
+      "heading": 262,
+      "status": "stopped",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD7635",
+      "lat": 28.6212978363037,
+      "lng": 77.300422668457,
+      "speed_kmh": 0.0,
+      "route_id": 1842.0,
+      "heading": 49,
+      "status": "stopped",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD4706",
+      "lat": 28.6233825683594,
+      "lng": 77.0966110229492,
+      "speed_kmh": 0.0,
+      "route_id": 793.0,
+      "heading": 344,
+      "status": "stopped",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD6293",
+      "lat": 28.8143501281738,
+      "lng": 77.0655136108398,
+      "speed_kmh": 4.2,
+      "route_id": 1090.0,
+      "heading": 218,
+      "status": "congested",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD4419",
+      "lat": 28.6923503875732,
+      "lng": 77.0277404785156,
+      "speed_kmh": 1.9,
+      "route_id": 970.0,
+      "heading": 149,
+      "status": "congested",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD6234",
+      "lat": 28.6085205078125,
+      "lng": 76.9448394775391,
+      "speed_kmh": 5.3,
+      "route_id": 868.0,
+      "heading": 71,
+      "status": "congested",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD7048",
+      "lat": 28.6988296508789,
+      "lng": 77.3063125610352,
+      "speed_kmh": 0.0,
+      "route_id": 1709.0,
+      "heading": 214,
+      "status": "stopped",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD5298",
+      "lat": 28.6222801208496,
+      "lng": 77.1028518676758,
+      "speed_kmh": 0.0,
+      "route_id": 1054.0,
+      "heading": 325,
+      "status": "stopped",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD5026",
+      "lat": 28.7951755523682,
+      "lng": 77.0404052734375,
+      "speed_kmh": 0.0,
+      "route_id": 117.0,
+      "heading": 255,
+      "status": "stopped",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD5611",
+      "lat": 28.8080959320068,
+      "lng": 77.0756607055664,
+      "speed_kmh": 0.0,
+      "route_id": 309.0,
+      "heading": 295,
+      "status": "stopped",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL1PD9027",
+      "lat": 28.7309074401855,
+      "lng": 77.1564025878906,
+      "speed_kmh": 0.0,
+      "route_id": 1527.0,
+      "heading": 298,
+      "status": "stopped",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL51EV4112",
+      "lat": 28.7328948974609,
+      "lng": 77.1924209594727,
+      "speed_kmh": 0.0,
+      "route_id": 2716.0,
+      "heading": 157,
+      "status": "stopped",
+      "last_updated": "00:00:01"
+    },
+    {
+      "vehicle_id": "DL51GD2623",
+      "lat": 28.6616592407227,
+      "lng": 77.2349624633789,
+      "speed_kmh": 1.6,
+      "route_id": 1839.0,
+      "heading": 297,
+      "status": "congested",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD7614",
+      "lat": 28.6275596618652,
+      "lng": 77.2790069580078,
+      "speed_kmh": 2.3,
+      "route_id": 1873.0,
+      "heading": 17,
+      "status": "congested",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL51EV8810",
+      "lat": 28.5028915405273,
+      "lng": 77.2995452880859,
+      "speed_kmh": 18.1,
+      "route_id": 1899.0,
+      "heading": 162,
+      "status": "moving",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD8627",
+      "lat": 28.5223655700684,
+      "lng": 77.214714050293,
+      "speed_kmh": 3.6,
+      "route_id": 3063.0,
+      "heading": 263,
+      "status": "congested",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD6695",
+      "lat": 28.6552219390869,
+      "lng": 77.1514663696289,
+      "speed_kmh": 15.7,
+      "route_id": 2246.0,
+      "heading": 115,
+      "status": "moving",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD7730",
+      "lat": 28.6217193603516,
+      "lng": 77.2846069335937,
+      "speed_kmh": 3.3,
+      "route_id": 1873.0,
+      "heading": 350,
+      "status": "congested",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD7410",
+      "lat": 28.5126476287842,
+      "lng": 77.2405853271484,
+      "speed_kmh": 6.6,
+      "route_id": 1967.0,
+      "heading": 80,
+      "status": "congested",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD4462",
+      "lat": 28.7242469787598,
+      "lng": 77.0044021606445,
+      "speed_kmh": 3.5,
+      "route_id": 1516.0,
+      "heading": 251,
+      "status": "congested",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD7018",
+      "lat": 28.6708793640137,
+      "lng": 77.2655181884766,
+      "speed_kmh": 11.8,
+      "route_id": 314.0,
+      "heading": 171,
+      "status": "congested",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL51GD2641",
+      "lat": 28.5239486694336,
+      "lng": 77.0832366943359,
+      "speed_kmh": 25.6,
+      "route_id": 1482.0,
+      "heading": 132,
+      "status": "fast",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL51GD0113",
+      "lat": 28.6680469512939,
+      "lng": 77.2502059936523,
+      "speed_kmh": 14.9,
+      "route_id": 3213.0,
+      "heading": 263,
+      "status": "moving",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD4395",
+      "lat": 28.7579174041748,
+      "lng": 76.9677810668945,
+      "speed_kmh": 4.0,
+      "route_id": 70.0,
+      "heading": 82,
+      "status": "congested",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL51EV1800",
+      "lat": 28.5701789855957,
+      "lng": 77.1850814819336,
+      "speed_kmh": 4.2,
+      "route_id": 2065.0,
+      "heading": 272,
+      "status": "congested",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL51EV1278",
+      "lat": 28.6224632263184,
+      "lng": 77.2027587890625,
+      "speed_kmh": 2.0,
+      "route_id": 1496.0,
+      "heading": 248,
+      "status": "congested",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD5416",
+      "lat": 28.6976947784424,
+      "lng": 77.0315628051758,
+      "speed_kmh": 4.6,
+      "route_id": 70.0,
+      "heading": 67,
+      "status": "congested",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD7872",
+      "lat": 28.5792369842529,
+      "lng": 77.2306518554688,
+      "speed_kmh": 0.0,
+      "route_id": 1348.0,
+      "heading": 282,
+      "status": "stopped",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD4650",
+      "lat": 28.5542755126953,
+      "lng": 77.0550155639648,
+      "speed_kmh": 0.0,
+      "route_id": 838.0,
+      "heading": 178,
+      "status": "stopped",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL51GD8756",
+      "lat": 28.6349811553955,
+      "lng": 77.1306533813477,
+      "speed_kmh": 0.0,
+      "route_id": 2205.0,
+      "heading": 206,
+      "status": "stopped",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD4251",
+      "lat": 28.55517578125,
+      "lng": 77.0546264648437,
+      "speed_kmh": 0.0,
+      "route_id": 834.0,
+      "heading": 317,
+      "status": "stopped",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD6078",
+      "lat": 28.5371341705322,
+      "lng": 76.9135513305664,
+      "speed_kmh": 0.0,
+      "route_id": 1387.0,
+      "heading": 223,
+      "status": "stopped",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD7169",
+      "lat": 28.5793304443359,
+      "lng": 77.2303924560547,
+      "speed_kmh": 0.0,
+      "route_id": 2796.0,
+      "heading": 244,
+      "status": "stopped",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL51EV3878",
+      "lat": 28.6925735473633,
+      "lng": 77.1548080444336,
+      "speed_kmh": 0.0,
+      "route_id": 1616.0,
+      "heading": 84,
+      "status": "stopped",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD5230",
+      "lat": 28.5539989471436,
+      "lng": 77.0541229248047,
+      "speed_kmh": 0.0,
+      "route_id": 1366.0,
+      "heading": 127,
+      "status": "stopped",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD4630",
+      "lat": 28.5542736053467,
+      "lng": 77.0541458129883,
+      "speed_kmh": 0.0,
+      "route_id": 1366.0,
+      "heading": 307,
+      "status": "stopped",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL51GD8979",
+      "lat": 28.6345500946045,
+      "lng": 77.1306991577148,
+      "speed_kmh": 0.0,
+      "route_id": 2205.0,
+      "heading": 265,
+      "status": "stopped",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL51EV3728",
+      "lat": 28.6927146911621,
+      "lng": 77.1545333862305,
+      "speed_kmh": 0.0,
+      "route_id": 1615.0,
+      "heading": 75,
+      "status": "stopped",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL51EV4400",
+      "lat": 28.7322750091553,
+      "lng": 77.1924743652344,
+      "speed_kmh": 0.0,
+      "route_id": 1162.0,
+      "heading": 93,
+      "status": "stopped",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL51EV1527",
+      "lat": 28.6455593109131,
+      "lng": 77.3173065185547,
+      "speed_kmh": 9.2,
+      "route_id": 1977.0,
+      "heading": 23,
+      "status": "congested",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL51EV4305",
+      "lat": 28.733081817627,
+      "lng": 77.1925964355469,
+      "speed_kmh": 0.0,
+      "route_id": 1162.0,
+      "heading": 53,
+      "status": "stopped",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD5484",
+      "lat": 28.8073596954346,
+      "lng": 77.0746307373047,
+      "speed_kmh": 0.0,
+      "route_id": 1150.0,
+      "heading": 337,
+      "status": "stopped",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD4327",
+      "lat": 28.6242580413818,
+      "lng": 77.0994338989258,
+      "speed_kmh": 0.0,
+      "route_id": 1024.0,
+      "heading": 90,
+      "status": "stopped",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD8063",
+      "lat": 28.8411693572998,
+      "lng": 77.1100463867187,
+      "speed_kmh": 0.0,
+      "route_id": 113.0,
+      "heading": 322,
+      "status": "stopped",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD5009",
+      "lat": 28.5549488067627,
+      "lng": 77.0543365478516,
+      "speed_kmh": 0.0,
+      "route_id": 840.0,
+      "heading": 38,
+      "status": "stopped",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD4484",
+      "lat": 28.6227130889893,
+      "lng": 77.1014709472656,
+      "speed_kmh": 0.0,
+      "route_id": 617.0,
+      "heading": 347,
+      "status": "stopped",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD9499",
+      "lat": 28.5113372802734,
+      "lng": 77.2812118530273,
+      "speed_kmh": 0.0,
+      "route_id": 3147.0,
+      "heading": 216,
+      "status": "stopped",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL51EV4165",
+      "lat": 28.7336311340332,
+      "lng": 77.1923294067383,
+      "speed_kmh": 0.0,
+      "route_id": 264.0,
+      "heading": 126,
+      "status": "stopped",
+      "last_updated": "00:00:11"
+    },
+    {
+      "vehicle_id": "DL1PD7439",
+      "lat": 28.5196781158447,
+      "lng": 77.2067718505859,
+      "speed_kmh": 3.6,
+      "route_id": 1937.0,
+      "heading": 349,
+      "status": "congested",
+      "last_updated": "00:00:21"
+    },
+    {
+      "vehicle_id": "DL51EV0438",
+      "lat": 28.7054004669189,
+      "lng": 77.1869201660156,
+      "speed_kmh": 2.2,
+      "route_id": 1488.0,
+      "heading": 346,
+      "status": "congested",
+      "last_updated": "00:00:21"
+    },
+    {
+      "vehicle_id": "DL1PD5842",
+      "lat": 28.6090087890625,
+      "lng": 76.9852447509766,
+      "speed_kmh": 8.9,
+      "route_id": 2433.0,
+      "heading": 263,
+      "status": "congested",
+      "last_updated": "00:00:21"
+    },
+    {
+      "vehicle_id": "DL1PD4544",
+      "lat": 28.7559356689453,
+      "lng": 76.9681167602539,
+      "speed_kmh": 7.9,
+      "route_id": 72.0,
+      "heading": 151,
+      "status": "congested",
+      "last_updated": "00:00:21"
+    },
+    {
+      "vehicle_id": "DL1PD9258",
+      "lat": 28.6532039642334,
+      "lng": 77.1558151245117,
+      "speed_kmh": 13.7,
+      "route_id": 3048.0,
+      "heading": 313,
+      "status": "moving",
+      "last_updated": "00:00:21"
+    },
+    {
+      "vehicle_id": "DL51GD3349",
+      "lat": 28.6405696868896,
+      "lng": 77.2253189086914,
+      "speed_kmh": 2.0,
+      "route_id": 2864.0,
+      "heading": 298,
+      "status": "congested",
+      "last_updated": "00:00:21"
+    },
+    {
+      "vehicle_id": "DL1PD8404",
+      "lat": 28.5950355529785,
+      "lng": 77.0606384277344,
+      "speed_kmh": 3.1,
+      "route_id": 2980.0,
+      "heading": 291,
+      "status": "congested",
+      "last_updated": "00:00:21"
+    },
+    {
+      "vehicle_id": "DL1PD7600",
+      "lat": 28.6201171875,
+      "lng": 77.302116394043,
+      "speed_kmh": 12.2,
+      "route_id": 1846.0,
+      "heading": 81,
+      "status": "moving",
+      "last_updated": "00:00:21"
+    },
+    {
+      "vehicle_id": "DL1PD7232",
+      "lat": 28.6760768890381,
+      "lng": 77.3125228881836,
+      "speed_kmh": 14.6,
+      "route_id": 1698.0,
+      "heading": 329,
+      "status": "moving",
+      "last_updated": "00:00:21"
+    },
+    {
+      "vehicle_id": "DL51EV3521",
+      "lat": 28.672664642334,
+      "lng": 77.2788848876953,
+      "speed_kmh": 20.5,
+      "route_id": 1497.0,
+      "heading": 236,
+      "status": "moving",
+      "last_updated": "00:00:21"
+    },
+    {
+      "vehicle_id": "DL51GD8974",
+      "lat": 28.6186981201172,
+      "lng": 77.1364669799805,
+      "speed_kmh": 8.7,
+      "route_id": 3338.0,
+      "heading": 178,
+      "status": "congested",
+      "last_updated": "00:00:31"
+    },
+    {
+      "vehicle_id": "DL51EV0891",
+      "lat": 28.5541820526123,
+      "lng": 77.0863723754883,
+      "speed_kmh": 9.5,
+      "route_id": 1496.0,
+      "heading": 157,
+      "status": "congested",
+      "last_updated": "00:00:31"
+    },
+    {
+      "vehicle_id": "DL1PD8190",
+      "lat": 28.6483135223389,
+      "lng": 77.0848541259766,
+      "speed_kmh": 4.3,
+      "route_id": 3076.0,
+      "heading": 305,
+      "status": "congested",
+      "last_updated": "00:00:31"
+    },
+    {
+      "vehicle_id": "DL51GD8599",
+      "lat": 28.6256542205811,
+      "lng": 77.0652618408203,
+      "speed_kmh": 12.7,
+      "route_id": 1484.0,
+      "heading": 154,
+      "status": "moving",
+      "last_updated": "00:00:31"
+    },
+    {
+      "vehicle_id": "DL1PD8039",
+      "lat": 28.6536731719971,
+      "lng": 77.1551666259766,
+      "speed_kmh": 13.9,
+      "route_id": 3015.0,
+      "heading": 152,
+      "status": "moving",
+      "last_updated": "00:00:31"
+    },
+    {
+      "vehicle_id": "DL51EV1855",
+      "lat": 28.6210193634033,
+      "lng": 77.2156753540039,
+      "speed_kmh": 2.5,
+      "route_id": 1631.0,
+      "heading": 359,
+      "status": "congested",
+      "last_updated": "00:00:31"
+    },
+    {
+      "vehicle_id": "DL51GD2860",
+      "lat": 28.6652927398682,
+      "lng": 76.9434509277344,
+      "speed_kmh": 18.7,
+      "route_id": 2054.0,
+      "heading": 189,
+      "status": "moving",
+      "last_updated": "00:00:31"
+    },
+    {
+      "vehicle_id": "DL1PD8746",
+      "lat": 28.5162353515625,
+      "lng": 77.2270202636719,
+      "speed_kmh": 19.8,
+      "route_id": 1914.0,
+      "heading": 106,
+      "status": "moving",
+      "last_updated": "00:00:31"
+    },
+    {
+      "vehicle_id": "DL1PD7973",
+      "lat": 28.8507518768311,
+      "lng": 77.0764007568359,
+      "speed_kmh": 1.7,
+      "route_id": 116.0,
+      "heading": 49,
+      "status": "congested",
+      "last_updated": "00:00:31"
+    },
+    {
+      "vehicle_id": "DL1PD8412",
+      "lat": 28.5153770446777,
+      "lng": 77.2817993164062,
+      "speed_kmh": 1.8,
+      "route_id": 3341.0,
+      "heading": 234,
+      "status": "congested",
+      "last_updated": "00:00:31"
+    },
+    {
+      "vehicle_id": "DL51GD9075",
+      "lat": 28.7121028900146,
+      "lng": 77.1080627441406,
+      "speed_kmh": 1.5,
+      "route_id": 2342.0,
+      "heading": 237,
+      "status": "congested",
+      "last_updated": "00:00:31"
+    },
+    {
+      "vehicle_id": "DL51GD3390",
+      "lat": 28.6238460540771,
+      "lng": 77.1353149414062,
+      "speed_kmh": 3.4,
+      "route_id": 2734.0,
+      "heading": 213,
+      "status": "congested",
+      "last_updated": "00:00:41"
+    },
+    {
+      "vehicle_id": "DL51EV9668",
+      "lat": 28.4456577301025,
+      "lng": 77.0340118408203,
+      "speed_kmh": 3.6,
+      "route_id": 1881.0,
+      "heading": 15,
+      "status": "congested",
+      "last_updated": "00:00:41"
+    },
+    {
+      "vehicle_id": "DL51EV9794",
+      "lat": 28.6135177612305,
+      "lng": 77.2120590209961,
+      "speed_kmh": 4.3,
+      "route_id": 2105.0,
+      "heading": 6,
+      "status": "congested",
+      "last_updated": "00:00:41"
+    },
+    {
+      "vehicle_id": "DL51EV9644",
+      "lat": 28.6256160736084,
+      "lng": 77.0654602050781,
+      "speed_kmh": 13.8,
+      "route_id": 1485.0,
+      "heading": 212,
+      "status": "moving",
+      "last_updated": "00:00:41"
+    },
+    {
+      "vehicle_id": "DL1PD7874",
+      "lat": 28.6159839630127,
+      "lng": 77.3414154052734,
+      "speed_kmh": 3.7,
+      "route_id": 2875.0,
+      "heading": 222,
+      "status": "congested",
+      "last_updated": "00:00:41"
+    },
+    {
+      "vehicle_id": "DL51GD8535",
+      "lat": 28.6339168548584,
+      "lng": 77.1898345947266,
+      "speed_kmh": 3.5,
+      "route_id": 2205.0,
+      "heading": 232,
+      "status": "congested",
+      "last_updated": "00:00:41"
+    },
+    {
+      "vehicle_id": "DL1PD7954",
+      "lat": 28.6006546020508,
+      "lng": 77.0596923828125,
+      "speed_kmh": 9.8,
+      "route_id": 2265.0,
+      "heading": 243,
+      "status": "congested",
+      "last_updated": "00:00:41"
+    },
+    {
+      "vehicle_id": "DL1PD5665",
+      "lat": 28.8492393493652,
+      "lng": 77.0983581542969,
+      "speed_kmh": 23.3,
+      "route_id": 1090.0,
+      "heading": 105,
+      "status": "moving",
+      "last_updated": "00:00:41"
+    },
+    {
+      "vehicle_id": "DL1PD7914",
+      "lat": 28.5938282012939,
+      "lng": 77.0631103515625,
+      "speed_kmh": 17.4,
+      "route_id": 2986.0,
+      "heading": 25,
+      "status": "moving",
+      "last_updated": "00:00:41"
+    },
+    {
+      "vehicle_id": "DL1PD5277",
+      "lat": 28.6863613128662,
+      "lng": 77.2056884765625,
+      "speed_kmh": 5.8,
+      "route_id": 1522.0,
+      "heading": 330,
+      "status": "congested",
+      "last_updated": "00:00:41"
+    },
+    {
+      "vehicle_id": "DL1PD6974",
+      "lat": 28.7492752075195,
+      "lng": 77.2657775878906,
+      "speed_kmh": 14.4,
+      "route_id": 1728.0,
+      "heading": 308,
+      "status": "moving",
+      "last_updated": "00:00:41"
+    },
+    {
+      "vehicle_id": "DL1PD5645",
+      "lat": 28.8156337738037,
+      "lng": 77.0584869384766,
+      "speed_kmh": 1.3,
+      "route_id": 312.0,
+      "heading": 234,
+      "status": "congested",
+      "last_updated": "00:00:51"
+    },
+    {
+      "vehicle_id": "DL51EV3766",
+      "lat": 28.7091484069824,
+      "lng": 77.1766357421875,
+      "speed_kmh": 24.0,
+      "route_id": 2251.0,
+      "heading": 318,
+      "status": "moving",
+      "last_updated": "00:00:51"
+    },
+    {
+      "vehicle_id": "DL51EV1773",
+      "lat": 28.6684799194336,
+      "lng": 77.2262954711914,
+      "speed_kmh": 1.8,
+      "route_id": 2694.0,
+      "heading": 256,
+      "status": "congested",
+      "last_updated": "00:00:51"
+    },
+    {
+      "vehicle_id": "DL51GD9141",
+      "lat": 28.7038993835449,
+      "lng": 77.170051574707,
+      "speed_kmh": 7.3,
+      "route_id": 1570.0,
+      "heading": 320,
+      "status": "congested",
+      "last_updated": "00:00:51"
+    },
+    {
+      "vehicle_id": "DL1PD8324",
+      "lat": 28.6472778320312,
+      "lng": 77.0542678833008,
+      "speed_kmh": 1.5,
+      "route_id": 1051.0,
+      "heading": 48,
+      "status": "congested",
+      "last_updated": "00:00:51"
+    },
+    {
+      "vehicle_id": "DL51EV9635",
+      "lat": 28.564998626709,
+      "lng": 77.2502212524414,
+      "speed_kmh": 18.5,
+      "route_id": 1928.0,
+      "heading": 315,
+      "status": "moving",
+      "last_updated": "00:00:51"
+    },
+    {
+      "vehicle_id": "DL1PD7957",
+      "lat": 28.6705532073975,
+      "lng": 77.1661529541016,
+      "speed_kmh": 12.8,
+      "route_id": 3506.0,
+      "heading": 195,
+      "status": "moving",
+      "last_updated": "00:00:51"
+    },
+    {
+      "vehicle_id": "DL51GD8691",
+      "lat": 28.5732154846191,
+      "lng": 76.9817962646484,
+      "speed_kmh": 0.9,
+      "route_id": 2309.0,
+      "heading": 265,
+      "status": "stopped",
+      "last_updated": "00:00:51"
+    },
+    {
+      "vehicle_id": "DL51EV9076",
+      "lat": 28.5959968566895,
+      "lng": 77.2233963012695,
+      "speed_kmh": 1.5,
+      "route_id": 1938.0,
+      "heading": 148,
+      "status": "congested",
+      "last_updated": "00:00:51"
+    },
+    {
+      "vehicle_id": "DL51EV2022",
+      "lat": 28.7078170776367,
+      "lng": 77.1787796020508,
+      "speed_kmh": 32.3,
+      "route_id": 2250.0,
+      "heading": 197,
+      "status": "fast",
+      "last_updated": "00:01:01"
+    },
+    {
+      "vehicle_id": "DL1PD7834",
+      "lat": 28.6532115936279,
+      "lng": 77.1558532714844,
+      "speed_kmh": 17.2,
+      "route_id": 2340.0,
+      "heading": 338,
+      "status": "moving",
+      "last_updated": "00:01:01"
+    },
+    {
+      "vehicle_id": "DL1PD7240",
+      "lat": 28.6987781524658,
+      "lng": 77.3065567016602,
+      "speed_kmh": 12.3,
+      "route_id": 1712.0,
+      "heading": 225,
+      "status": "moving",
+      "last_updated": "00:01:01"
+    },
+    {
+      "vehicle_id": "DL51EV9750",
+      "lat": 28.6424789428711,
+      "lng": 77.2268447875977,
+      "speed_kmh": 7.1,
+      "route_id": 1486.0,
+      "heading": 324,
+      "status": "congested",
+      "last_updated": "00:01:01"
+    },
+    {
+      "vehicle_id": "DL51EV3740",
+      "lat": 28.495174407959,
+      "lng": 77.302734375,
+      "speed_kmh": 21.7,
+      "route_id": 2074.0,
+      "heading": 291,
+      "status": "moving",
+      "last_updated": "00:01:01"
+    },
+    {
+      "vehicle_id": "DL51EV8514",
+      "lat": 28.5995426177979,
+      "lng": 77.2391204833984,
+      "speed_kmh": 2.6,
+      "route_id": 1899.0,
+      "heading": 255,
+      "status": "congested",
+      "last_updated": "00:01:01"
+    },
+    {
+      "vehicle_id": "DL1PD8445",
+      "lat": 28.636791229248,
+      "lng": 77.095703125,
+      "speed_kmh": 16.6,
+      "route_id": 2316.0,
+      "heading": 61,
+      "status": "moving",
+      "last_updated": "00:01:01"
+    },
+    {
+      "vehicle_id": "DL51EV9992",
+      "lat": 28.6381320953369,
+      "lng": 77.1426544189453,
+      "speed_kmh": 0.9,
+      "route_id": 1881.0,
+      "heading": 169,
+      "status": "stopped",
+      "last_updated": "00:01:01"
+    },
+    {
+      "vehicle_id": "DL51EV9726",
+      "lat": 28.6564311981201,
+      "lng": 77.1500244140625,
+      "speed_kmh": 1.9,
+      "route_id": 2023.0,
+      "heading": 140,
+      "status": "congested",
+      "last_updated": "00:01:01"
+    },
+    {
+      "vehicle_id": "DL1PD9103",
+      "lat": 28.6241264343262,
+      "lng": 77.3085098266602,
+      "speed_kmh": 4.2,
+      "route_id": 1830.0,
+      "heading": 173,
+      "status": "congested",
+      "last_updated": "00:01:01"
+    },
+    {
+      "vehicle_id": "DL1PD8691",
+      "lat": 28.6275615692139,
+      "lng": 77.2415161132812,
+      "speed_kmh": 2.1,
+      "route_id": 1913.0,
+      "heading": 258,
+      "status": "congested",
+      "last_updated": "00:01:01"
+    },
+    {
+      "vehicle_id": "DL51GD2230",
+      "lat": 28.6093368530273,
+      "lng": 76.9843673706055,
+      "speed_kmh": 2.8,
+      "route_id": 2054.0,
+      "heading": 298,
+      "status": "congested",
+      "last_updated": "00:01:01"
+    },
+    {
+      "vehicle_id": "DL51GD2653",
+      "lat": 28.6396923065186,
+      "lng": 77.246452331543,
+      "speed_kmh": 2.2,
+      "route_id": 2734.0,
+      "heading": 204,
+      "status": "congested",
+      "last_updated": "00:01:11"
+    },
+    {
+      "vehicle_id": "DL1PD7079",
+      "lat": 28.5839385986328,
+      "lng": 77.2622985839844,
+      "speed_kmh": 14.5,
+      "route_id": 2977.0,
+      "heading": 308,
+      "status": "moving",
+      "last_updated": "00:01:11"
+    },
+    {
+      "vehicle_id": "DL1PD8017",
+      "lat": 28.6716270446777,
+      "lng": 77.0585479736328,
+      "speed_kmh": 2.4,
+      "route_id": 2543.0,
+      "heading": 209,
+      "status": "congested",
+      "last_updated": "00:01:11"
+    },
+    {
+      "vehicle_id": "DL1PD9596",
+      "lat": 28.8434944152832,
+      "lng": 77.1809158325195,
+      "speed_kmh": 7.6,
+      "route_id": 1566.0,
+      "heading": 49,
+      "status": "congested",
+      "last_updated": "00:01:11"
+    },
+    {
+      "vehicle_id": "DL1PD9719",
+      "lat": 28.6821269989014,
+      "lng": 77.0586471557617,
+      "speed_kmh": 7.0,
+      "route_id": 2417.0,
+      "heading": 168,
+      "status": "congested",
+      "last_updated": "00:01:11"
+    },
+    {
+      "vehicle_id": "DL51EV9753",
+      "lat": 28.5381984710693,
+      "lng": 77.2673950195312,
+      "speed_kmh": 15.1,
+      "route_id": 1928.0,
+      "heading": 144,
+      "status": "moving",
+      "last_updated": "00:01:11"
+    },
+    {
+      "vehicle_id": "DL1PD5147",
+      "lat": 28.6113662719727,
+      "lng": 76.9760665893555,
+      "speed_kmh": 10.4,
+      "route_id": 2098.0,
+      "heading": 230,
+      "status": "congested",
+      "last_updated": "00:01:11"
+    },
+    {
+      "vehicle_id": "DL1PD9427",
+      "lat": 28.662654876709,
+      "lng": 77.2864990234375,
+      "speed_kmh": 7.5,
+      "route_id": 1812.0,
+      "heading": 100,
+      "status": "congested",
+      "last_updated": "00:01:11"
+    },
+    {
+      "vehicle_id": "DL1PD9025",
+      "lat": 28.7482624053955,
+      "lng": 77.0959854125977,
+      "speed_kmh": 11.8,
+      "route_id": 2365.0,
+      "heading": 155,
+      "status": "congested",
+      "last_updated": "00:01:11"
+    },
+    {
+      "vehicle_id": "DL1PD8713",
+      "lat": 28.5984745025635,
+      "lng": 77.0638961791992,
+      "speed_kmh": 18.7,
+      "route_id": 673.0,
+      "heading": 243,
+      "status": "moving",
+      "last_updated": "00:01:11"
+    },
+    {
+      "vehicle_id": "DL1PD7897",
+      "lat": 28.6732349395752,
+      "lng": 77.2817764282227,
+      "speed_kmh": 2.1,
+      "route_id": 1726.0,
+      "heading": 154,
+      "status": "congested",
+      "last_updated": "00:01:21"
+    },
+    {
+      "vehicle_id": "DL51GD8945",
+      "lat": 28.6358375549316,
+      "lng": 77.3080520629883,
+      "speed_kmh": 13.3,
+      "route_id": 1484.0,
+      "heading": 41,
+      "status": "moving",
+      "last_updated": "00:01:21"
+    },
+    {
+      "vehicle_id": "DL51GD2218",
+      "lat": 28.6537494659424,
+      "lng": 77.1547775268555,
+      "speed_kmh": 17.0,
+      "route_id": 3488.0,
+      "heading": 19,
+      "status": "moving",
+      "last_updated": "00:01:21"
+    },
+    {
+      "vehicle_id": "DL51EV3199",
+      "lat": 28.6821212768555,
+      "lng": 77.0693130493164,
+      "speed_kmh": 1.3,
+      "route_id": 2432.0,
+      "heading": 38,
+      "status": "congested",
+      "last_updated": "00:01:21"
+    },
+    {
+      "vehicle_id": "DL1PD9442",
+      "lat": 28.6493167877197,
+      "lng": 77.1997604370117,
+      "speed_kmh": 16.7,
+      "route_id": 1708.0,
+      "heading": 22,
+      "status": "moving",
+      "last_updated": "00:01:21"
+    },
+    {
+      "vehicle_id": "DL1PD9502",
+      "lat": 28.6283569335937,
+      "lng": 77.3744049072266,
+      "speed_kmh": 0.9,
+      "route_id": 1880.0,
+      "heading": 134,
+      "status": "stopped",
+      "last_updated": "00:01:21"
+    },
+    {
+      "vehicle_id": "DL1PD4875",
+      "lat": 28.6863899230957,
+      "lng": 77.0260696411133,
+      "speed_kmh": 4.0,
+      "route_id": 970.0,
+      "heading": 54,
+      "status": "congested",
+      "last_updated": "00:01:21"
+    },
+    {
+      "vehicle_id": "DL51GD9022",
+      "lat": 28.5645313262939,
+      "lng": 77.1220550537109,
+      "speed_kmh": 25.9,
+      "route_id": 2583.0,
+      "heading": 350,
+      "status": "fast",
+      "last_updated": "00:01:21"
+    },
+    {
+      "vehicle_id": "DL51EV1758",
+      "lat": 28.6812973022461,
+      "lng": 77.1555404663086,
+      "speed_kmh": 19.8,
+      "route_id": 1887.0,
+      "heading": 7,
+      "status": "moving",
+      "last_updated": "00:01:21"
+    },
+    {
+      "vehicle_id": "DL51EV9950",
+      "lat": 28.6105175018311,
+      "lng": 77.2002563476562,
+      "speed_kmh": 1.5,
+      "route_id": 2106.0,
+      "heading": 218,
+      "status": "congested",
+      "last_updated": "00:01:21"
+    },
+    {
+      "vehicle_id": "DL51EV2514",
+      "lat": 28.7327766418457,
+      "lng": 77.1720199584961,
+      "speed_kmh": 4.7,
+      "route_id": 1655.0,
+      "heading": 311,
+      "status": "congested",
+      "last_updated": "00:01:21"
+    },
+    {
+      "vehicle_id": "DL51EV0482",
+      "lat": 28.7182521820068,
+      "lng": 77.1689529418945,
+      "speed_kmh": 3.6,
+      "route_id": 2550.0,
+      "heading": 77,
+      "status": "congested",
+      "last_updated": "00:01:21"
+    },
+    {
+      "vehicle_id": "DL51EV0814",
+      "lat": 28.6978225708008,
+      "lng": 77.20751953125,
+      "speed_kmh": 7.3,
+      "route_id": 1665.0,
+      "heading": 185,
+      "status": "congested",
+      "last_updated": "00:01:31"
+    },
+    {
+      "vehicle_id": "DL1PD8427",
+      "lat": 28.597448348999,
+      "lng": 77.0627059936523,
+      "speed_kmh": 6.4,
+      "route_id": 2980.0,
+      "heading": 188,
+      "status": "congested",
+      "last_updated": "00:01:31"
+    },
+    {
+      "vehicle_id": "DL51EV0415",
+      "lat": 28.7300357818604,
+      "lng": 77.1216125488281,
+      "speed_kmh": 11.1,
+      "route_id": 1505.0,
+      "heading": 108,
+      "status": "congested",
+      "last_updated": "00:01:31"
+    },
+    {
+      "vehicle_id": "DL1PD9132",
+      "lat": 28.6369094848633,
+      "lng": 77.3144226074219,
+      "speed_kmh": 1.4,
+      "route_id": 1829.0,
+      "heading": 39,
+      "status": "congested",
+      "last_updated": "00:01:31"
+    },
+    {
+      "vehicle_id": "DL1PD7153",
+      "lat": 28.6481781005859,
+      "lng": 77.3182678222656,
+      "speed_kmh": 2.0,
+      "route_id": 2122.0,
+      "heading": 21,
+      "status": "congested",
+      "last_updated": "00:01:31"
+    },
+    {
+      "vehicle_id": "DL1PD8916",
+      "lat": 28.7037334442139,
+      "lng": 77.100700378418,
+      "speed_kmh": 21.0,
+      "route_id": 2551.0,
+      "heading": 226,
+      "status": "moving",
+      "last_updated": "00:01:31"
+    },
+    {
+      "vehicle_id": "DL1PD7587",
+      "lat": 28.6282424926758,
+      "lng": 77.2669143676758,
+      "speed_kmh": 3.5,
+      "route_id": 448.0,
+      "heading": 40,
+      "status": "congested",
+      "last_updated": "00:01:31"
+    },
+    {
+      "vehicle_id": "DL1PD7895",
+      "lat": 28.6403388977051,
+      "lng": 77.0106887817383,
+      "speed_kmh": 5.5,
+      "route_id": 2854.0,
+      "heading": 40,
+      "status": "congested",
+      "last_updated": "00:01:31"
+    },
+    {
+      "vehicle_id": "DL1PD7222",
+      "lat": 28.6998672485352,
+      "lng": 77.2998962402344,
+      "speed_kmh": 2.4,
+      "route_id": 1709.0,
+      "heading": 50,
+      "status": "congested",
+      "last_updated": "00:01:31"
+    },
+    {
+      "vehicle_id": "DL1PD5194",
+      "lat": 28.6123924255371,
+      "lng": 76.9855728149414,
+      "speed_kmh": 6.8,
+      "route_id": 3193.0,
+      "heading": 44,
+      "status": "congested",
+      "last_updated": "00:01:31"
+    },
+    {
+      "vehicle_id": "DL1PD7927",
+      "lat": 28.6285591125488,
+      "lng": 77.2271423339844,
+      "speed_kmh": 8.9,
+      "route_id": 2205.0,
+      "heading": 276,
+      "status": "congested",
+      "last_updated": "00:01:41"
+    },
+    {
+      "vehicle_id": "DL51EV1777",
+      "lat": 28.6735820770264,
+      "lng": 77.2410736083984,
+      "speed_kmh": 1.7,
+      "route_id": 2694.0,
+      "heading": 266,
+      "status": "congested",
+      "last_updated": "00:01:41"
+    },
+    {
+      "vehicle_id": "DL51EV1718",
+      "lat": 28.6514282226562,
+      "lng": 77.3197250366211,
+      "speed_kmh": 11.8,
+      "route_id": 1973.0,
+      "heading": 160,
+      "status": "congested",
+      "last_updated": "00:01:41"
+    },
+    {
+      "vehicle_id": "DL1PD8681",
+      "lat": 28.6043224334717,
+      "lng": 77.0828857421875,
+      "speed_kmh": 3.7,
+      "route_id": 673.0,
+      "heading": 241,
+      "status": "congested",
+      "last_updated": "00:01:41"
+    },
+    {
+      "vehicle_id": "DL51GD2917",
+      "lat": 28.6649951934814,
+      "lng": 76.9436721801758,
+      "speed_kmh": 17.0,
+      "route_id": 2053.0,
+      "heading": 85,
+      "status": "moving",
+      "last_updated": "00:01:41"
+    },
+    {
+      "vehicle_id": "DL1PD6994",
+      "lat": 28.5757293701172,
+      "lng": 77.2383041381836,
+      "speed_kmh": 7.9,
+      "route_id": 1332.0,
+      "heading": 282,
+      "status": "congested",
+      "last_updated": "00:01:41"
+    },
+    {
+      "vehicle_id": "DL1PD7699",
+      "lat": 28.6177024841309,
+      "lng": 77.02392578125,
+      "speed_kmh": 11.1,
+      "route_id": 3350.0,
+      "heading": 305,
+      "status": "congested",
+      "last_updated": "00:01:41"
+    },
+    {
+      "vehicle_id": "DL51EV3508",
+      "lat": 28.6941299438477,
+      "lng": 77.2171783447266,
+      "speed_kmh": 6.1,
+      "route_id": 2526.0,
+      "heading": 91,
+      "status": "congested",
+      "last_updated": "00:01:41"
+    },
+    {
+      "vehicle_id": "DL51EV0271",
+      "lat": 28.732084274292,
+      "lng": 77.1186599731445,
+      "speed_kmh": 6.5,
+      "route_id": 1513.0,
+      "heading": 39,
+      "status": "congested",
+      "last_updated": "00:01:51"
+    },
+    {
+      "vehicle_id": "DL1PD6401",
+      "lat": 28.626091003418,
+      "lng": 76.9934921264648,
+      "speed_kmh": 1.3,
+      "route_id": 598.0,
+      "heading": 47,
+      "status": "congested",
+      "last_updated": "00:01:51"
+    },
+    {
+      "vehicle_id": "DL51EV3250",
+      "lat": 28.7417049407959,
+      "lng": 77.0742797851562,
+      "speed_kmh": 2.0,
+      "route_id": 1266.0,
+      "heading": 301,
+      "status": "congested",
+      "last_updated": "00:01:51"
+    },
+    {
+      "vehicle_id": "DL51EV0863",
+      "lat": 28.7308921813965,
+      "lng": 77.1332092285156,
+      "speed_kmh": 6.4,
+      "route_id": 2363.0,
+      "heading": 31,
+      "status": "congested",
+      "last_updated": "00:01:51"
+    },
+    {
+      "vehicle_id": "DL51EV3092",
+      "lat": 28.6790714263916,
+      "lng": 77.1867446899414,
+      "speed_kmh": 2.7,
+      "route_id": 1631.0,
+      "heading": 189,
+      "status": "congested",
+      "last_updated": "00:01:51"
+    },
+    {
+      "vehicle_id": "DL51EV9971",
+      "lat": 28.5156993865967,
+      "lng": 77.2258682250977,
+      "speed_kmh": 2.0,
+      "route_id": 2031.0,
+      "heading": 202,
+      "status": "congested",
+      "last_updated": "00:01:51"
+    },
+    {
+      "vehicle_id": "DL51GD9248",
+      "lat": 28.5631866455078,
+      "lng": 77.1267242431641,
+      "speed_kmh": 1.9,
+      "route_id": 2583.0,
+      "heading": 295,
+      "status": "congested",
+      "last_updated": "00:01:51"
+    },
+    {
+      "vehicle_id": "DL1PD5999",
+      "lat": 28.6027679443359,
+      "lng": 76.9704360961914,
+      "speed_kmh": 10.8,
+      "route_id": 3721.0,
+      "heading": 192,
+      "status": "congested",
+      "last_updated": "00:01:51"
+    },
+    {
+      "vehicle_id": "DL51EV4134",
+      "lat": 28.6996726989746,
+      "lng": 77.2025756835938,
+      "speed_kmh": 1.3,
+      "route_id": 2345.0,
+      "heading": 306,
+      "status": "congested",
+      "last_updated": "00:02:01"
+    },
+    {
+      "vehicle_id": "DL51EV0631",
+      "lat": 28.7330131530762,
+      "lng": 77.1261672973633,
+      "speed_kmh": 2.9,
+      "route_id": 2363.0,
+      "heading": 164,
+      "status": "congested",
+      "last_updated": "00:02:01"
+    },
+    {
+      "vehicle_id": "DL1PD7326",
+      "lat": 28.6802577972412,
+      "lng": 77.3258972167969,
+      "speed_kmh": 1.4,
+      "route_id": 1715.0,
+      "heading": 165,
+      "status": "congested",
+      "last_updated": "00:02:01"
+    },
+    {
+      "vehicle_id": "DL1PD8443",
+      "lat": 28.6620483398437,
+      "lng": 77.0816192626953,
+      "speed_kmh": 20.4,
+      "route_id": 1739.0,
+      "heading": 326,
+      "status": "moving",
+      "last_updated": "00:02:01"
+    },
+    {
+      "vehicle_id": "DL1PD9350",
+      "lat": 28.6745376586914,
+      "lng": 77.2869338989258,
+      "speed_kmh": 13.4,
+      "route_id": 411.0,
+      "heading": 88,
+      "status": "moving",
+      "last_updated": "00:02:01"
+    },
+    {
+      "vehicle_id": "DL1PD6724",
+      "lat": 28.6261596679687,
+      "lng": 77.1339874267578,
+      "speed_kmh": 4.4,
+      "route_id": 1501.0,
+      "heading": 316,
+      "status": "congested",
+      "last_updated": "00:02:01"
+    },
+    {
+      "vehicle_id": "DL51GD8551",
+      "lat": 28.7298164367676,
+      "lng": 77.1220550537109,
+      "speed_kmh": 23.7,
+      "route_id": 1515.0,
+      "heading": 131,
+      "status": "moving",
+      "last_updated": "00:02:01"
+    },
+    {
+      "vehicle_id": "DL1PD8865",
+      "lat": 28.5317134857178,
+      "lng": 77.1945953369141,
+      "speed_kmh": 2.2,
+      "route_id": 1995.0,
+      "heading": 48,
+      "status": "congested",
+      "last_updated": "00:02:01"
+    },
+    {
+      "vehicle_id": "DL1PD7884",
+      "lat": 28.5978031158447,
+      "lng": 77.0630035400391,
+      "speed_kmh": 15.4,
+      "route_id": 3498.0,
+      "heading": 71,
+      "status": "moving",
+      "last_updated": "00:02:01"
+    },
+    {
+      "vehicle_id": "DL1PD9403",
+      "lat": 28.8615741729736,
+      "lng": 77.0957183837891,
+      "speed_kmh": 1.5,
+      "route_id": 116.0,
+      "heading": 258,
+      "status": "congested",
+      "last_updated": "00:02:11"
+    },
+    {
+      "vehicle_id": "DL51EV9702",
+      "lat": 28.6529769897461,
+      "lng": 77.1923446655273,
+      "speed_kmh": 2.1,
+      "route_id": 2592.0,
+      "heading": 251,
+      "status": "congested",
+      "last_updated": "00:02:11"
+    },
+    {
+      "vehicle_id": "DL51EV3114",
+      "lat": 28.6685180664062,
+      "lng": 77.2280120849609,
+      "speed_kmh": 24.7,
+      "route_id": 1497.0,
+      "heading": 180,
+      "status": "moving",
+      "last_updated": "00:02:11"
+    },
+    {
+      "vehicle_id": "DL51GD2378",
+      "lat": 28.6678371429443,
+      "lng": 77.2505416870117,
+      "speed_kmh": 13.4,
+      "route_id": 1393.0,
+      "heading": 315,
+      "status": "moving",
+      "last_updated": "00:02:11"
+    },
+    {
+      "vehicle_id": "DL51EV4375",
+      "lat": 28.6213607788086,
+      "lng": 77.2402954101562,
+      "speed_kmh": 3.8,
+      "route_id": 1919.0,
+      "heading": 4,
+      "status": "congested",
+      "last_updated": "00:02:11"
+    },
+    {
+      "vehicle_id": "DL1PD5839",
+      "lat": 28.6252250671387,
+      "lng": 77.0673217773437,
+      "speed_kmh": 27.4,
+      "route_id": 2213.0,
+      "heading": 343,
+      "status": "fast",
+      "last_updated": "00:02:11"
+    },
+    {
+      "vehicle_id": "DL1PD5512",
+      "lat": 28.7594509124756,
+      "lng": 77.061897277832,
+      "speed_kmh": 3.3,
+      "route_id": 1149.0,
+      "heading": 183,
+      "status": "congested",
+      "last_updated": "00:02:11"
+    },
+    {
+      "vehicle_id": "DL51EV1645",
+      "lat": 28.6537742614746,
+      "lng": 77.3089065551758,
+      "speed_kmh": 4.2,
+      "route_id": 1977.0,
+      "heading": 139,
+      "status": "congested",
+      "last_updated": "00:02:11"
+    },
+    {
+      "vehicle_id": "DL1PD7248",
+      "lat": 28.7019577026367,
+      "lng": 77.28466796875,
+      "speed_kmh": 4.0,
+      "route_id": 3407.0,
+      "heading": 79,
+      "status": "congested",
+      "last_updated": "00:02:11"
+    },
+    {
+      "vehicle_id": "DL1PD4729",
+      "lat": 28.681957244873,
+      "lng": 77.0527572631836,
+      "speed_kmh": 11.7,
+      "route_id": 970.0,
+      "heading": 123,
+      "status": "congested",
+      "last_updated": "00:02:21"
+    },
+    {
+      "vehicle_id": "DL51EV1517",
+      "lat": 28.6723518371582,
+      "lng": 77.2570953369141,
+      "speed_kmh": 9.5,
+      "route_id": 2694.0,
+      "heading": 100,
+      "status": "congested",
+      "last_updated": "00:02:21"
+    },
+    {
+      "vehicle_id": "DL51GD2757",
+      "lat": 28.6108322143555,
+      "lng": 76.973876953125,
+      "speed_kmh": 3.6,
+      "route_id": 2098.0,
+      "heading": 308,
+      "status": "congested",
+      "last_updated": "00:02:21"
+    },
+    {
+      "vehicle_id": "DL51GD8719",
+      "lat": 28.6352100372314,
+      "lng": 77.1293106079102,
+      "speed_kmh": 14.2,
+      "route_id": 2182.0,
+      "heading": 205,
+      "status": "moving",
+      "last_updated": "00:02:21"
+    },
+    {
+      "vehicle_id": "DL51EV4243",
+      "lat": 28.6001892089844,
+      "lng": 77.2386932373047,
+      "speed_kmh": 3.2,
+      "route_id": 1899.0,
+      "heading": 284,
+      "status": "congested",
+      "last_updated": "00:02:21"
+    },
+    {
+      "vehicle_id": "DL51GD9048",
+      "lat": 28.5597763061523,
+      "lng": 77.1705856323242,
+      "speed_kmh": 6.4,
+      "route_id": 2229.0,
+      "heading": 144,
+      "status": "congested",
+      "last_updated": "00:02:21"
+    },
+    {
+      "vehicle_id": "DL51GD3347",
+      "lat": 28.6694850921631,
+      "lng": 77.2300186157227,
+      "speed_kmh": 2.0,
+      "route_id": 2735.0,
+      "heading": 105,
+      "status": "congested",
+      "last_updated": "00:02:21"
+    },
+    {
+      "vehicle_id": "DL51GD8739",
+      "lat": 28.6366062164307,
+      "lng": 77.3142929077148,
+      "speed_kmh": 6.6,
+      "route_id": 2205.0,
+      "heading": 265,
+      "status": "congested",
+      "last_updated": "00:02:21"
+    },
+    {
+      "vehicle_id": "DL1PD8352",
+      "lat": 28.5952224731445,
+      "lng": 77.0704116821289,
+      "speed_kmh": 18.7,
+      "route_id": 2408.0,
+      "heading": 324,
+      "status": "moving",
+      "last_updated": "00:02:21"
+    },
+    {
+      "vehicle_id": "DL1PD9486",
+      "lat": 28.6748924255371,
+      "lng": 77.129524230957,
+      "speed_kmh": 4.6,
+      "route_id": 2417.0,
+      "heading": 20,
+      "status": "congested",
+      "last_updated": "00:02:31"
+    },
+    {
+      "vehicle_id": "DL1PD5934",
+      "lat": 28.6300525665283,
+      "lng": 76.9988174438477,
+      "speed_kmh": 2.0,
+      "route_id": 2427.0,
+      "heading": 46,
+      "status": "congested",
+      "last_updated": "00:02:31"
+    },
+    {
+      "vehicle_id": "DL51EV0824",
+      "lat": 28.6281032562256,
+      "lng": 77.2412338256836,
+      "speed_kmh": 2.5,
+      "route_id": 2134.0,
+      "heading": 214,
+      "status": "congested",
+      "last_updated": "00:02:31"
+    },
+    {
+      "vehicle_id": "DL1PD6709",
+      "lat": 28.6446418762207,
+      "lng": 77.192741394043,
+      "speed_kmh": 5.6,
+      "route_id": 1696.0,
+      "heading": 267,
+      "status": "congested",
+      "last_updated": "00:02:31"
+    },
+    {
+      "vehicle_id": "DL51EV1853",
+      "lat": 28.6846370697021,
+      "lng": 77.1482620239258,
+      "speed_kmh": 2.3,
+      "route_id": 1941.0,
+      "heading": 319,
+      "status": "congested",
+      "last_updated": "00:02:31"
+    },
+    {
+      "vehicle_id": "DL51EV1691",
+      "lat": 28.6462478637695,
+      "lng": 77.3150405883789,
+      "speed_kmh": 19.7,
+      "route_id": 3677.0,
+      "heading": 283,
+      "status": "moving",
+      "last_updated": "00:02:31"
+    },
+    {
+      "vehicle_id": "DL51EV1882",
+      "lat": 28.7204837799072,
+      "lng": 77.1594848632812,
+      "speed_kmh": 9.6,
+      "route_id": 1629.0,
+      "heading": 321,
+      "status": "congested",
+      "last_updated": "00:02:31"
+    },
+    {
+      "vehicle_id": "DL1PD8823",
+      "lat": 28.6073341369629,
+      "lng": 77.2402572631836,
+      "speed_kmh": 2.1,
+      "route_id": 1914.0,
+      "heading": 56,
+      "status": "congested",
+      "last_updated": "00:02:31"
+    },
+    {
+      "vehicle_id": "DL51EV1127",
+      "lat": 28.7034301757812,
+      "lng": 77.210578918457,
+      "speed_kmh": 20.5,
+      "route_id": 1995.0,
+      "heading": 318,
+      "status": "moving",
+      "last_updated": "00:02:31"
+    },
+    {
+      "vehicle_id": "DL1PD7880",
+      "lat": 28.6405429840088,
+      "lng": 77.2309722900391,
+      "speed_kmh": 2.7,
+      "route_id": 1793.0,
+      "heading": 41,
+      "status": "congested",
+      "last_updated": "00:02:41"
+    },
+    {
+      "vehicle_id": "DL51GD9219",
+      "lat": 28.5483551025391,
+      "lng": 77.2562255859375,
+      "speed_kmh": 9.0,
+      "route_id": 2229.0,
+      "heading": 263,
+      "status": "congested",
+      "last_updated": "00:02:41"
+    },
+    {
+      "vehicle_id": "DL1PD7007",
+      "lat": 28.6732177734375,
+      "lng": 77.2806625366211,
+      "speed_kmh": 1.3,
+      "route_id": 2140.0,
+      "heading": 329,
+      "status": "congested",
+      "last_updated": "00:02:41"
+    },
+    {
+      "vehicle_id": "DL1PD9307",
+      "lat": 28.642370223999,
+      "lng": 77.316162109375,
+      "speed_kmh": 8.2,
+      "route_id": 1830.0,
+      "heading": 342,
+      "status": "congested",
+      "last_updated": "00:02:41"
+    },
+    {
+      "vehicle_id": "DL51EV4972",
+      "lat": 28.5341682434082,
+      "lng": 77.2599792480469,
+      "speed_kmh": 4.2,
+      "route_id": 2074.0,
+      "heading": 287,
+      "status": "congested",
+      "last_updated": "00:02:41"
+    },
+    {
+      "vehicle_id": "DL1PD5556",
+      "lat": 28.7033176422119,
+      "lng": 77.0754241943359,
+      "speed_kmh": 20.7,
+      "route_id": 1146.0,
+      "heading": 56,
+      "status": "moving",
+      "last_updated": "00:02:41"
+    },
+    {
+      "vehicle_id": "DL1PD8701",
+      "lat": 28.5954456329346,
+      "lng": 77.0700073242187,
+      "speed_kmh": 15.5,
+      "route_id": 673.0,
+      "heading": 39,
+      "status": "moving",
+      "last_updated": "00:02:41"
+    },
+    {
+      "vehicle_id": "DL1PD9517",
+      "lat": 28.6458339691162,
+      "lng": 77.297492980957,
+      "speed_kmh": 1.6,
+      "route_id": 1809.0,
+      "heading": 192,
+      "status": "congested",
+      "last_updated": "00:02:41"
+    },
+    {
+      "vehicle_id": "DL51EV1496",
+      "lat": 28.6312198638916,
+      "lng": 77.3161087036133,
+      "speed_kmh": 2.5,
+      "route_id": 1704.0,
+      "heading": 327,
+      "status": "congested",
+      "last_updated": "00:02:41"
+    },
+    {
+      "vehicle_id": "DL1PD8340",
+      "lat": 28.5972957611084,
+      "lng": 77.0629043579102,
+      "speed_kmh": 15.1,
+      "route_id": 2980.0,
+      "heading": 294,
+      "status": "moving",
+      "last_updated": "00:02:41"
+    },
+    {
+      "vehicle_id": "DL1PD8650",
+      "lat": 28.8102569580078,
+      "lng": 77.1355361938477,
+      "speed_kmh": 2.9,
+      "route_id": 120.0,
+      "heading": 146,
+      "status": "congested",
+      "last_updated": "00:02:51"
+    },
+    {
+      "vehicle_id": "DL1PD9282",
+      "lat": 28.6169929504395,
+      "lng": 77.3414611816406,
+      "speed_kmh": 26.9,
+      "route_id": 1552.0,
+      "heading": 139,
+      "status": "fast",
+      "last_updated": "00:02:51"
+    },
+    {
+      "vehicle_id": "DL1PD8060",
+      "lat": 28.6823215484619,
+      "lng": 77.0640182495117,
+      "speed_kmh": 8.9,
+      "route_id": 1721.0,
+      "heading": 312,
+      "status": "congested",
+      "last_updated": "00:02:51"
+    },
+    {
+      "vehicle_id": "DL1PD4731",
+      "lat": 28.6854076385498,
+      "lng": 76.9947738647461,
+      "speed_kmh": 1.9,
+      "route_id": 1241.0,
+      "heading": 150,
+      "status": "congested",
+      "last_updated": "00:02:51"
+    },
+    {
+      "vehicle_id": "DL51GD9222",
+      "lat": 28.5534400939941,
+      "lng": 77.1017913818359,
+      "speed_kmh": 1.6,
+      "route_id": 2583.0,
+      "heading": 287,
+      "status": "congested",
+      "last_updated": "00:02:51"
+    },
+    {
+      "vehicle_id": "DL1PD7626",
+      "lat": 28.6200695037842,
+      "lng": 77.3052520751953,
+      "speed_kmh": 12.2,
+      "route_id": 1794.0,
+      "heading": 294,
+      "status": "moving",
+      "last_updated": "00:02:51"
+    },
+    {
+      "vehicle_id": "DL51EV1763",
+      "lat": 28.6992683410645,
+      "lng": 77.2917404174805,
+      "speed_kmh": 4.1,
+      "route_id": 1692.0,
+      "heading": 317,
+      "status": "congested",
+      "last_updated": "00:03:01"
+    },
+    {
+      "vehicle_id": "DL1PD6894",
+      "lat": 28.7048816680908,
+      "lng": 77.2547760009766,
+      "speed_kmh": 3.7,
+      "route_id": 292.0,
+      "heading": 57,
+      "status": "congested",
+      "last_updated": "00:03:01"
+    },
+    {
+      "vehicle_id": "DL51EV9674",
+      "lat": 28.5578460693359,
+      "lng": 77.1685562133789,
+      "speed_kmh": 5.3,
+      "route_id": 2106.0,
+      "heading": 158,
+      "status": "congested",
+      "last_updated": "00:03:01"
+    },
+    {
+      "vehicle_id": "DL51GD8537",
+      "lat": 28.6352100372314,
+      "lng": 77.1293106079102,
+      "speed_kmh": 19.4,
+      "route_id": 2205.0,
+      "heading": 111,
+      "status": "moving",
+      "last_updated": "00:03:01"
+    },
+    {
+      "vehicle_id": "DL1PD8504",
+      "lat": 28.5446949005127,
+      "lng": 77.0629959106445,
+      "speed_kmh": 1.7,
+      "route_id": 2176.0,
+      "heading": 253,
+      "status": "congested",
+      "last_updated": "00:03:01"
+    },
+    {
+      "vehicle_id": "DL1PD7636",
+      "lat": 28.6534385681152,
+      "lng": 77.1552658081055,
+      "speed_kmh": 8.6,
+      "route_id": 2340.0,
+      "heading": 264,
+      "status": "congested",
+      "last_updated": "00:03:11"
+    },
+    {
+      "vehicle_id": "DL1PD7263",
+      "lat": 28.6486186981201,
+      "lng": 77.3184509277344,
+      "speed_kmh": 14.4,
+      "route_id": 3349.0,
+      "heading": 37,
+      "status": "moving",
+      "last_updated": "00:03:11"
+    },
+    {
+      "vehicle_id": "DL1PD8194",
+      "lat": 28.6773376464844,
+      "lng": 77.063591003418,
+      "speed_kmh": 5.0,
+      "route_id": 2543.0,
+      "heading": 144,
+      "status": "congested",
+      "last_updated": "00:03:11"
+    },
+    {
+      "vehicle_id": "DL1PD5276",
+      "lat": 28.6081695556641,
+      "lng": 76.9473724365234,
+      "speed_kmh": 3.3,
+      "route_id": 869.0,
+      "heading": 204,
+      "status": "congested",
+      "last_updated": "00:03:11"
+    },
+    {
+      "vehicle_id": "DL1PD7696",
+      "lat": 28.6201705932617,
+      "lng": 77.3003311157227,
+      "speed_kmh": 16.9,
+      "route_id": 1841.0,
+      "heading": 346,
+      "status": "moving",
+      "last_updated": "00:03:11"
+    },
+    {
+      "vehicle_id": "DL1PD7658",
+      "lat": 28.618860244751,
+      "lng": 77.2864837646484,
+      "speed_kmh": 5.9,
+      "route_id": 1796.0,
+      "heading": 94,
+      "status": "congested",
+      "last_updated": "00:03:11"
+    },
+    {
+      "vehicle_id": "DL1PD6836",
+      "lat": 28.6627407073975,
+      "lng": 77.286247253418,
+      "speed_kmh": 3.3,
+      "route_id": 2140.0,
+      "heading": 350,
+      "status": "congested",
+      "last_updated": "00:03:11"
+    },
+    {
+      "vehicle_id": "DL51GD2289",
+      "lat": 28.6082668304443,
+      "lng": 76.9526443481445,
+      "speed_kmh": 2.7,
+      "route_id": 3511.0,
+      "heading": 243,
+      "status": "congested",
+      "last_updated": "00:03:21"
+    },
+    {
+      "vehicle_id": "DL51EV4915",
+      "lat": 28.5395469665527,
+      "lng": 77.2825012207031,
+      "speed_kmh": 19.7,
+      "route_id": 1989.0,
+      "heading": 320,
+      "status": "moving",
+      "last_updated": "00:03:21"
+    },
+    {
+      "vehicle_id": "DL51EV2662",
+      "lat": 28.6811046600342,
+      "lng": 77.1557159423828,
+      "speed_kmh": 17.3,
+      "route_id": 2114.0,
+      "heading": 213,
+      "status": "moving",
+      "last_updated": "00:03:21"
+    },
+    {
+      "vehicle_id": "DL1PD5015",
+      "lat": 28.6082096099854,
+      "lng": 76.9539031982422,
+      "speed_kmh": 12.9,
+      "route_id": 2098.0,
+      "heading": 270,
+      "status": "moving",
+      "last_updated": "00:03:21"
+    },
+    {
+      "vehicle_id": "DL51EV3736",
+      "lat": 28.684757232666,
+      "lng": 77.1673812866211,
+      "speed_kmh": 12.6,
+      "route_id": 1853.0,
+      "heading": 253,
+      "status": "moving",
+      "last_updated": "00:03:21"
+    },
+    {
+      "vehicle_id": "DL1PD7836",
+      "lat": 28.6603240966797,
+      "lng": 77.1438980102539,
+      "speed_kmh": 12.9,
+      "route_id": 2448.0,
+      "heading": 132,
+      "status": "moving",
+      "last_updated": "00:03:21"
+    },
+    {
+      "vehicle_id": "DL1PD7754",
+      "lat": 28.5859832763672,
+      "lng": 77.2296447753906,
+      "speed_kmh": 3.6,
+      "route_id": 1349.0,
+      "heading": 218,
+      "status": "congested",
+      "last_updated": "00:03:31"
+    },
+    {
+      "vehicle_id": "DL1PD4703",
+      "lat": 28.6953163146973,
+      "lng": 77.0277938842773,
+      "speed_kmh": 5.7,
+      "route_id": 70.0,
+      "heading": 184,
+      "status": "congested",
+      "last_updated": "00:03:31"
+    },
+    {
+      "vehicle_id": "DL51EV1412",
+      "lat": 28.7007122039795,
+      "lng": 77.2950744628906,
+      "speed_kmh": 3.9,
+      "route_id": 1693.0,
+      "heading": 309,
+      "status": "congested",
+      "last_updated": "00:03:31"
+    },
+    {
+      "vehicle_id": "DL51GD2385",
+      "lat": 28.5993022918701,
+      "lng": 76.9099884033203,
+      "speed_kmh": 1.2,
+      "route_id": 3511.0,
+      "heading": 46,
+      "status": "congested",
+      "last_updated": "00:03:31"
+    },
+    {
+      "vehicle_id": "DL1PD9321",
+      "lat": 28.5124187469482,
+      "lng": 77.2812347412109,
+      "speed_kmh": 2.1,
+      "route_id": 3148.0,
+      "heading": 349,
+      "status": "congested",
+      "last_updated": "00:03:41"
+    },
+    {
+      "vehicle_id": "DL51GD0232",
+      "lat": 28.62038230896,
+      "lng": 77.3063507080078,
+      "speed_kmh": 6.2,
+      "route_id": 3213.0,
+      "heading": 23,
+      "status": "congested",
+      "last_updated": "00:03:41"
+    },
+    {
+      "vehicle_id": "DL1PD9320",
+      "lat": 28.6528224945068,
+      "lng": 77.2924423217773,
+      "speed_kmh": 5.1,
+      "route_id": 414.0,
+      "heading": 266,
+      "status": "congested",
+      "last_updated": "00:03:41"
+    },
+    {
+      "vehicle_id": "DL51EV0859",
+      "lat": 28.6622085571289,
+      "lng": 77.0915908813477,
+      "speed_kmh": 15.7,
+      "route_id": 1499.0,
+      "heading": 28,
+      "status": "moving",
+      "last_updated": "00:03:41"
+    },
+    {
+      "vehicle_id": "DL51EV0861",
+      "lat": 28.564546585083,
+      "lng": 77.1208267211914,
+      "speed_kmh": 11.0,
+      "route_id": 1495.0,
+      "heading": 233,
+      "status": "congested",
+      "last_updated": "00:03:41"
+    },
+    {
+      "vehicle_id": "DL51GD2316",
+      "lat": 28.5986423492432,
+      "lng": 76.8417510986328,
+      "speed_kmh": 24.1,
+      "route_id": 2907.0,
+      "heading": 45,
+      "status": "moving",
+      "last_updated": "00:03:41"
+    },
+    {
+      "vehicle_id": "DL51GD9785",
+      "lat": 28.5612697601318,
+      "lng": 77.1208114624023,
+      "speed_kmh": 9.0,
+      "route_id": 2582.0,
+      "heading": 252,
+      "status": "congested",
+      "last_updated": "00:03:41"
+    },
+    {
+      "vehicle_id": "DL1PD8032",
+      "lat": 28.6819896697998,
+      "lng": 77.0673751831055,
+      "speed_kmh": 6.5,
+      "route_id": 3544.0,
+      "heading": 336,
+      "status": "congested",
+      "last_updated": "00:03:41"
+    },
+    {
+      "vehicle_id": "DL51EV3618",
+      "lat": 28.6991214752197,
+      "lng": 77.1956787109375,
+      "speed_kmh": 4.6,
+      "route_id": 1598.0,
+      "heading": 215,
+      "status": "congested",
+      "last_updated": "00:03:51"
+    },
+    {
+      "vehicle_id": "DL1PD7886",
+      "lat": 28.6534061431885,
+      "lng": 77.1556701660156,
+      "speed_kmh": 10.0,
+      "route_id": 3412.0,
+      "heading": 341,
+      "status": "congested",
+      "last_updated": "00:03:51"
+    },
+    {
+      "vehicle_id": "DL1PD7208",
+      "lat": 28.7035484313965,
+      "lng": 77.260498046875,
+      "speed_kmh": 5.3,
+      "route_id": 1708.0,
+      "heading": 115,
+      "status": "congested",
+      "last_updated": "00:03:51"
+    },
+    {
+      "vehicle_id": "DL1PD4770",
+      "lat": 28.6963939666748,
+      "lng": 76.9983139038086,
+      "speed_kmh": 3.2,
+      "route_id": 193.0,
+      "heading": 358,
+      "status": "congested",
+      "last_updated": "00:03:51"
+    },
+    {
+      "vehicle_id": "DL1PD8578",
+      "lat": 28.5385456085205,
+      "lng": 77.2923812866211,
+      "speed_kmh": 2.2,
+      "route_id": 3441.0,
+      "heading": 295,
+      "status": "congested",
+      "last_updated": "00:03:51"
+    },
+    {
+      "vehicle_id": "DL51EV4387",
+      "lat": 28.7282905578613,
+      "lng": 77.1982040405273,
+      "speed_kmh": 7.1,
+      "route_id": 265.0,
+      "heading": 314,
+      "status": "congested",
+      "last_updated": "00:03:51"
+    },
+    {
+      "vehicle_id": "DL1PD8569",
+      "lat": 28.5068531036377,
+      "lng": 77.2788238525391,
+      "speed_kmh": 3.0,
+      "route_id": 3148.0,
+      "heading": 83,
+      "status": "congested",
+      "last_updated": "00:04:01"
+    },
+    {
+      "vehicle_id": "DL1PD7497",
+      "lat": 28.634672164917,
+      "lng": 77.247200012207,
+      "speed_kmh": 8.9,
+      "route_id": 400.0,
+      "heading": 162,
+      "status": "congested",
+      "last_updated": "00:04:01"
+    },
+    {
+      "vehicle_id": "DL51EV9756",
+      "lat": 28.6459274291992,
+      "lng": 77.1680908203125,
+      "speed_kmh": 2.7,
+      "route_id": 2264.0,
+      "heading": 298,
+      "status": "congested",
+      "last_updated": "00:04:01"
+    },
+    {
+      "vehicle_id": "DL51EV8509",
+      "lat": 28.4964542388916,
+      "lng": 77.3022689819336,
+      "speed_kmh": 4.8,
+      "route_id": 2074.0,
+      "heading": 176,
+      "status": "congested",
+      "last_updated": "00:04:01"
+    },
+    {
+      "vehicle_id": "DL1PD5589",
+      "lat": 28.7954444885254,
+      "lng": 77.0360412597656,
+      "speed_kmh": 2.5,
+      "route_id": 1548.0,
+      "heading": 247,
+      "status": "congested",
+      "last_updated": "00:04:01"
+    },
+    {
+      "vehicle_id": "DL1PD8717",
+      "lat": 28.6602668762207,
+      "lng": 77.2322006225586,
+      "speed_kmh": 27.7,
+      "route_id": 1914.0,
+      "heading": 211,
+      "status": "fast",
+      "last_updated": "00:04:11"
+    },
+    {
+      "vehicle_id": "DL51EV1791",
+      "lat": 28.64479637146,
+      "lng": 77.3147735595703,
+      "speed_kmh": 4.9,
+      "route_id": 1693.0,
+      "heading": 225,
+      "status": "congested",
+      "last_updated": "00:04:11"
+    },
+    {
+      "vehicle_id": "DL51EV1827",
+      "lat": 28.695930480957,
+      "lng": 77.1556625366211,
+      "speed_kmh": 15.4,
+      "route_id": 2227.0,
+      "heading": 274,
+      "status": "moving",
+      "last_updated": "00:04:11"
+    },
+    {
+      "vehicle_id": "DL51GD9667",
+      "lat": 28.625301361084,
+      "lng": 77.0655059814453,
+      "speed_kmh": 13.7,
+      "route_id": 1499.0,
+      "heading": 152,
+      "status": "moving",
+      "last_updated": "00:04:21"
+    },
+    {
+      "vehicle_id": "DL1PD5561",
+      "lat": 28.7436370849609,
+      "lng": 77.1318588256836,
+      "speed_kmh": 1.0,
+      "route_id": 1548.0,
+      "heading": 302,
+      "status": "congested",
+      "last_updated": "00:04:21"
+    },
+    {
+      "vehicle_id": "DL51EV0203",
+      "lat": 28.6904735565186,
+      "lng": 77.2205047607422,
+      "speed_kmh": 3.0,
+      "route_id": 1487.0,
+      "heading": 311,
+      "status": "congested",
+      "last_updated": "00:04:21"
+    },
+    {
+      "vehicle_id": "DL51GD2971",
+      "lat": 28.5975036621094,
+      "lng": 76.8956069946289,
+      "speed_kmh": 5.0,
+      "route_id": 3511.0,
+      "heading": 62,
+      "status": "congested",
+      "last_updated": "00:04:21"
+    },
+    {
+      "vehicle_id": "DL1PD7536",
+      "lat": 28.6473827362061,
+      "lng": 77.0846252441406,
+      "speed_kmh": 0.0,
+      "route_id": 3078.0,
+      "heading": 348,
+      "status": "stopped",
+      "last_updated": "00:04:21"
+    },
+    {
+      "vehicle_id": "DL1PD8968",
+      "lat": 28.7328224182129,
+      "lng": 77.1919631958008,
+      "speed_kmh": 0.0,
+      "route_id": 264.0,
+      "heading": 188,
+      "status": "stopped",
+      "last_updated": "00:04:21"
+    },
+    {
+      "vehicle_id": "DL1PD5191",
+      "lat": 28.7951164245605,
+      "lng": 77.0403366088867,
+      "speed_kmh": 0.0,
+      "route_id": 51.0,
+      "heading": 329,
+      "status": "stopped",
+      "last_updated": "00:04:21"
+    },
+    {
+      "vehicle_id": "DL1PD4429",
+      "lat": 28.554744720459,
+      "lng": 77.0541152954102,
+      "speed_kmh": 0.0,
+      "route_id": 840.0,
+      "heading": 110,
+      "status": "stopped",
+      "last_updated": "00:04:21"
+    },
+    {
+      "vehicle_id": "DL1PD6254",
+      "lat": 28.8080406188965,
+      "lng": 77.0757293701172,
+      "speed_kmh": 0.0,
+      "route_id": 1089.0,
+      "heading": 305,
+      "status": "stopped",
+      "last_updated": "00:04:21"
+    },
+    {
+      "vehicle_id": "DL51EV9880",
+      "lat": 28.5389575958252,
+      "lng": 77.2676849365234,
+      "speed_kmh": 0.0,
+      "route_id": 2008.0,
+      "heading": 174,
+      "status": "stopped",
+      "last_updated": "00:04:21"
+    },
+    {
+      "vehicle_id": "DL51EV4398",
+      "lat": 28.731819152832,
+      "lng": 77.1920471191406,
+      "speed_kmh": 0.0,
+      "route_id": 1162.0,
+      "heading": 13,
+      "status": "stopped",
+      "last_updated": "00:04:21"
+    },
+    {
+      "vehicle_id": "DL1PD6326",
+      "lat": 28.8086795806885,
+      "lng": 77.0772247314453,
+      "speed_kmh": 0.0,
+      "route_id": 67.0,
+      "heading": 216,
+      "status": "stopped",
+      "last_updated": "00:04:21"
+    },
+    {
+      "vehicle_id": "DL51EV0124",
+      "lat": 28.7303237915039,
+      "lng": 77.1215896606445,
+      "speed_kmh": 0.0,
+      "route_id": 3377.0,
+      "heading": 188,
+      "status": "stopped",
+      "last_updated": "00:04:21"
+    },
+    {
+      "vehicle_id": "DL1PD7591",
+      "lat": 28.6534233093262,
+      "lng": 77.1555252075195,
+      "speed_kmh": 0.0,
+      "route_id": 1719.0,
+      "heading": 13,
+      "status": "stopped",
+      "last_updated": "00:04:21"
+    },
+    {
+      "vehicle_id": "DL1PD8572",
+      "lat": 28.5164260864258,
+      "lng": 77.2834701538086,
+      "speed_kmh": 0.0,
+      "route_id": 1931.0,
+      "heading": 125,
+      "status": "stopped",
+      "last_updated": "00:04:21"
+    },
+    {
+      "vehicle_id": "DL1PD4126",
+      "lat": 28.5539035797119,
+      "lng": 77.0549850463867,
+      "speed_kmh": 0.0,
+      "route_id": 789.0,
+      "heading": 5,
+      "status": "stopped",
+      "last_updated": "00:04:21"
+    },
+    {
+      "vehicle_id": "DL1PD4317",
+      "lat": 28.567850112915,
+      "lng": 77.0107879638672,
+      "speed_kmh": 10.6,
+      "route_id": 743.0,
+      "heading": 226,
+      "status": "congested",
+      "last_updated": "00:04:21"
+    },
+    {
+      "vehicle_id": "DL1PD4321",
+      "lat": 28.6230907440186,
+      "lng": 77.1020202636719,
+      "speed_kmh": 0.0,
+      "route_id": 2367.0,
+      "heading": 25,
+      "status": "stopped",
+      "last_updated": "00:04:21"
+    },
+    {
+      "vehicle_id": "DL1PD9528",
+      "lat": 28.6964149475098,
+      "lng": 77.1422348022461,
+      "speed_kmh": 0.0,
+      "route_id": 1759.0,
+      "heading": 219,
+      "status": "stopped",
+      "last_updated": "00:04:21"
+    },
+    {
+      "vehicle_id": "DL1PD4756",
+      "lat": 28.6240520477295,
+      "lng": 77.1016311645508,
+      "speed_kmh": 0.0,
+      "route_id": 1054.0,
+      "heading": 207,
+      "status": "stopped",
+      "last_updated": "00:04:21"
+    },
+    {
+      "vehicle_id": "DL1PD5197",
+      "lat": 28.6177139282227,
+      "lng": 76.931510925293,
+      "speed_kmh": 0.0,
+      "route_id": 868.0,
+      "heading": 19,
+      "status": "stopped",
+      "last_updated": "00:04:21"
+    },
+    {
+      "vehicle_id": "DL1PD6020",
+      "lat": 28.5322208404541,
+      "lng": 76.9189834594727,
+      "speed_kmh": 0.0,
+      "route_id": 597.0,
+      "heading": 222,
+      "status": "stopped",
+      "last_updated": "00:04:21"
+    },
+    {
+      "vehicle_id": "DL1PD5219",
+      "lat": 28.7179584503174,
+      "lng": 77.0708236694336,
+      "speed_kmh": 2.2,
+      "route_id": 1280.0,
+      "heading": 227,
+      "status": "congested",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL1PD7095",
+      "lat": 28.6283397674561,
+      "lng": 77.2783203125,
+      "speed_kmh": 2.2,
+      "route_id": 1484.0,
+      "heading": 108,
+      "status": "congested",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL51EV4051",
+      "lat": 28.791109085083,
+      "lng": 77.1400756835937,
+      "speed_kmh": 1.8,
+      "route_id": 1598.0,
+      "heading": 96,
+      "status": "congested",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL1PD9532",
+      "lat": 28.6697063446045,
+      "lng": 77.161979675293,
+      "speed_kmh": 22.4,
+      "route_id": 2416.0,
+      "heading": 171,
+      "status": "moving",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL1PD7792",
+      "lat": 28.648250579834,
+      "lng": 77.164192199707,
+      "speed_kmh": 5.8,
+      "route_id": 1720.0,
+      "heading": 156,
+      "status": "congested",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL51GD2642",
+      "lat": 28.6524448394775,
+      "lng": 77.2369918823242,
+      "speed_kmh": 1.7,
+      "route_id": 1920.0,
+      "heading": 271,
+      "status": "congested",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL1PD8239",
+      "lat": 28.6043491363525,
+      "lng": 77.1984939575195,
+      "speed_kmh": 4.7,
+      "route_id": 2106.0,
+      "heading": 209,
+      "status": "congested",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL1PD6119",
+      "lat": 28.8072147369385,
+      "lng": 77.0741119384766,
+      "speed_kmh": 0.0,
+      "route_id": 67.0,
+      "heading": 147,
+      "status": "stopped",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL1PD8448",
+      "lat": 28.6525363922119,
+      "lng": 77.0895233154297,
+      "speed_kmh": 0.0,
+      "route_id": 2227.0,
+      "heading": 138,
+      "status": "stopped",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL1PD6241",
+      "lat": 28.807466506958,
+      "lng": 77.0745849609375,
+      "speed_kmh": 0.0,
+      "route_id": 1089.0,
+      "heading": 251,
+      "status": "stopped",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL51EV3723",
+      "lat": 28.6928806304932,
+      "lng": 77.1545028686523,
+      "speed_kmh": 0.0,
+      "route_id": 2852.0,
+      "heading": 45,
+      "status": "stopped",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL51EV3874",
+      "lat": 28.7328472137451,
+      "lng": 77.1922073364258,
+      "speed_kmh": 0.0,
+      "route_id": 264.0,
+      "heading": 154,
+      "status": "stopped",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL1PD9394",
+      "lat": 28.7243461608887,
+      "lng": 77.1796340942383,
+      "speed_kmh": 0.0,
+      "route_id": 1409.0,
+      "heading": 209,
+      "status": "stopped",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL1PD9535",
+      "lat": 28.6966323852539,
+      "lng": 77.1421203613281,
+      "speed_kmh": 0.0,
+      "route_id": 148.0,
+      "heading": 45,
+      "status": "stopped",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL51EV3175",
+      "lat": 28.693904876709,
+      "lng": 77.1562423706055,
+      "speed_kmh": 0.0,
+      "route_id": 2227.0,
+      "heading": 320,
+      "status": "stopped",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL1PD8418",
+      "lat": 28.5974998474121,
+      "lng": 77.0627059936523,
+      "speed_kmh": 0.0,
+      "route_id": 2987.0,
+      "heading": 297,
+      "status": "stopped",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL51EV3730",
+      "lat": 28.6927356719971,
+      "lng": 77.1551513671875,
+      "speed_kmh": 0.0,
+      "route_id": 2117.0,
+      "heading": 234,
+      "status": "stopped",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL1PD5814",
+      "lat": 28.6100025177002,
+      "lng": 76.974609375,
+      "speed_kmh": 0.0,
+      "route_id": 3721.0,
+      "heading": 21,
+      "status": "stopped",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL1PD6965",
+      "lat": 28.7025299072266,
+      "lng": 77.2736587524414,
+      "speed_kmh": 11.4,
+      "route_id": 1829.0,
+      "heading": 315,
+      "status": "congested",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL1PD8797",
+      "lat": 28.5600471496582,
+      "lng": 77.2620391845703,
+      "speed_kmh": 0.0,
+      "route_id": 1924.0,
+      "heading": 271,
+      "status": "stopped",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL51EV2585",
+      "lat": 28.681640625,
+      "lng": 77.1846008300781,
+      "speed_kmh": 11.1,
+      "route_id": 1631.0,
+      "heading": 279,
+      "status": "congested",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL1PD4230",
+      "lat": 28.6886920928955,
+      "lng": 76.9942398071289,
+      "speed_kmh": 0.0,
+      "route_id": 70.0,
+      "heading": 102,
+      "status": "stopped",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL1PD5551",
+      "lat": 28.808536529541,
+      "lng": 77.0771713256836,
+      "speed_kmh": 0.0,
+      "route_id": 1281.0,
+      "heading": 295,
+      "status": "stopped",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL1PD8909",
+      "lat": 28.5605697631836,
+      "lng": 77.2611236572266,
+      "speed_kmh": 0.0,
+      "route_id": 3447.0,
+      "heading": 108,
+      "status": "stopped",
+      "last_updated": "00:04:31"
+    },
+    {
+      "vehicle_id": "DL51GD2214",
+      "lat": 28.5833301544189,
+      "lng": 76.9959411621094,
+      "speed_kmh": 4.2,
+      "route_id": 2098.0,
+      "heading": 180,
+      "status": "congested",
+      "last_updated": "00:04:41"
+    },
+    {
+      "vehicle_id": "DL1PD5731",
+      "lat": 28.6085872650146,
+      "lng": 76.9583969116211,
+      "speed_kmh": 6.6,
+      "route_id": 869.0,
+      "heading": 94,
+      "status": "congested",
+      "last_updated": "00:04:41"
+    },
+    {
+      "vehicle_id": "DL1PD7885",
+      "lat": 28.5952377319336,
+      "lng": 77.0703125,
+      "speed_kmh": 19.2,
+      "route_id": 2978.0,
+      "heading": 328,
+      "status": "moving",
+      "last_updated": "00:04:41"
+    },
+    {
+      "vehicle_id": "DL51EV4310",
+      "lat": 28.7343521118164,
+      "lng": 77.1926651000977,
+      "speed_kmh": 0.0,
+      "route_id": 1665.0,
+      "heading": 40,
+      "status": "stopped",
+      "last_updated": "00:04:41"
+    },
+    {
+      "vehicle_id": "DL1PD4992",
+      "lat": 28.5552558898926,
+      "lng": 77.0545425415039,
+      "speed_kmh": 0.0,
+      "route_id": 1366.0,
+      "heading": 200,
+      "status": "stopped",
+      "last_updated": "00:04:41"
+    },
+    {
+      "vehicle_id": "DL1PD4845",
+      "lat": 28.5546092987061,
+      "lng": 77.0539932250977,
+      "speed_kmh": 0.0,
+      "route_id": 3347.0,
+      "heading": 184,
+      "status": "stopped",
+      "last_updated": "00:04:41"
+    },
+    {
+      "vehicle_id": "DL1PD4834",
+      "lat": 28.6990451812744,
+      "lng": 77.0334625244141,
+      "speed_kmh": 0.0,
+      "route_id": 32.0,
+      "heading": 261,
+      "status": "stopped",
+      "last_updated": "00:04:41"
+    },
+    {
+      "vehicle_id": "DL1PD7595",
+      "lat": 28.636266708374,
+      "lng": 77.0955429077148,
+      "speed_kmh": 0.0,
+      "route_id": 2357.0,
+      "heading": 221,
+      "status": "stopped",
+      "last_updated": "00:04:41"
+    },
+    {
+      "vehicle_id": "DL1PD7817",
+      "lat": 28.5794143676758,
+      "lng": 77.2334442138672,
+      "speed_kmh": 0.0,
+      "route_id": 1348.0,
+      "heading": 274,
+      "status": "stopped",
+      "last_updated": "00:04:41"
+    },
+    {
+      "vehicle_id": "DL51EV9669",
+      "lat": 28.5375652313232,
+      "lng": 77.2672958374023,
+      "speed_kmh": 0.0,
+      "route_id": 3667.0,
+      "heading": 250,
+      "status": "stopped",
+      "last_updated": "00:04:41"
+    },
+    {
+      "vehicle_id": "DL1PD6892",
+      "lat": 28.579460144043,
+      "lng": 77.2290725708008,
+      "speed_kmh": 0.0,
+      "route_id": 3238.0,
+      "heading": 82,
+      "status": "stopped",
+      "last_updated": "00:04:41"
+    },
+    {
+      "vehicle_id": "DL1PD8769",
+      "lat": 28.5602855682373,
+      "lng": 77.2623748779297,
+      "speed_kmh": 0.0,
+      "route_id": 1988.0,
+      "heading": 256,
+      "status": "stopped",
+      "last_updated": "00:04:41"
+    },
+    {
+      "vehicle_id": "DL1PD5650",
+      "lat": 28.8073425292969,
+      "lng": 77.0745544433594,
+      "speed_kmh": 0.0,
+      "route_id": 740.0,
+      "heading": 239,
+      "status": "stopped",
+      "last_updated": "00:04:41"
+    },
+    {
+      "vehicle_id": "DL1PD7373",
+      "lat": 28.5794277191162,
+      "lng": 77.2350540161133,
+      "speed_kmh": 0.0,
+      "route_id": 1348.0,
+      "heading": 109,
+      "status": "stopped",
+      "last_updated": "00:04:41"
+    },
+    {
+      "vehicle_id": "DL1PD5943",
+      "lat": 28.5326099395752,
+      "lng": 76.9195098876953,
+      "speed_kmh": 2.5,
+      "route_id": 3476.0,
+      "heading": 139,
+      "status": "congested",
+      "last_updated": "00:04:41"
+    },
+    {
+      "vehicle_id": "DL1PD7937",
+      "lat": 28.5512409210205,
+      "lng": 77.1200332641602,
+      "speed_kmh": 9.7,
+      "route_id": 3074.0,
+      "heading": 193,
+      "status": "congested",
+      "last_updated": "00:04:41"
+    },
+    {
+      "vehicle_id": "DL1PD5887",
+      "lat": 28.537202835083,
+      "lng": 76.9134368896484,
+      "speed_kmh": 0.0,
+      "route_id": 3475.0,
+      "heading": 287,
+      "status": "stopped",
+      "last_updated": "00:04:41"
+    },
+    {
+      "vehicle_id": "DL1PD8845",
+      "lat": 28.560697555542,
+      "lng": 77.2609939575195,
+      "speed_kmh": 0.0,
+      "route_id": 3448.0,
+      "heading": 194,
+      "status": "stopped",
+      "last_updated": "00:04:41"
+    },
+    {
+      "vehicle_id": "DL1PD6749",
+      "lat": 28.5794124603271,
+      "lng": 77.2342071533203,
+      "speed_kmh": 0.0,
+      "route_id": 629.0,
+      "heading": 21,
+      "status": "stopped",
+      "last_updated": "00:04:41"
+    },
+    {
+      "vehicle_id": "DL1PD5158",
+      "lat": 28.6137199401855,
+      "lng": 76.9336624145508,
+      "speed_kmh": 0.0,
+      "route_id": 868.0,
+      "heading": 83,
+      "status": "stopped",
+      "last_updated": "00:04:41"
+    },
+    {
+      "vehicle_id": "DL1PD6862",
+      "lat": 28.5612888336182,
+      "lng": 77.1206741333008,
+      "speed_kmh": 10.1,
+      "route_id": 2583.0,
+      "heading": 224,
+      "status": "congested",
+      "last_updated": "00:04:51"
+    },
+    {
+      "vehicle_id": "DL1PD9434",
+      "lat": 28.698751449585,
+      "lng": 77.3223724365234,
+      "speed_kmh": 16.2,
+      "route_id": 2893.0,
+      "heading": 174,
+      "status": "moving",
+      "last_updated": "00:04:51"
+    },
+    {
+      "vehicle_id": "DL1PD8945",
+      "lat": 28.7234001159668,
+      "lng": 77.0879974365234,
+      "speed_kmh": 6.5,
+      "route_id": 2563.0,
+      "heading": 85,
+      "status": "congested",
+      "last_updated": "00:04:51"
+    },
+    {
+      "vehicle_id": "DL1PD9109",
+      "lat": 28.6963977813721,
+      "lng": 77.1436386108398,
+      "speed_kmh": 15.1,
+      "route_id": 3715.0,
+      "heading": 300,
+      "status": "moving",
+      "last_updated": "00:04:51"
+    },
+    {
+      "vehicle_id": "DL51EV4389",
+      "lat": 28.7321720123291,
+      "lng": 77.1920623779297,
+      "speed_kmh": 0.0,
+      "route_id": 1162.0,
+      "heading": 52,
+      "status": "stopped",
+      "last_updated": "00:04:51"
+    },
+    {
+      "vehicle_id": "DL1PD4211",
+      "lat": 28.5544757843018,
+      "lng": 77.0547180175781,
+      "speed_kmh": 0.0,
+      "route_id": 745.0,
+      "heading": 1,
+      "status": "stopped",
+      "last_updated": "00:04:51"
+    },
+    {
+      "vehicle_id": "DL1PD5203",
+      "lat": 28.5537910461426,
+      "lng": 77.0542373657227,
+      "speed_kmh": 0.0,
+      "route_id": 1366.0,
+      "heading": 247,
+      "status": "stopped",
+      "last_updated": "00:04:51"
+    },
+    {
+      "vehicle_id": "DL51GD3221",
+      "lat": 28.6407222747803,
+      "lng": 77.2537231445312,
+      "speed_kmh": 0.0,
+      "route_id": 1840.0,
+      "heading": 135,
+      "status": "stopped",
+      "last_updated": "00:04:51"
+    },
+    {
+      "vehicle_id": "DL51GD8590",
+      "lat": 28.6346855163574,
+      "lng": 77.1300430297852,
+      "speed_kmh": 0.0,
+      "route_id": 1942.0,
+      "heading": 176,
+      "status": "stopped",
+      "last_updated": "00:04:51"
+    },
+    {
+      "vehicle_id": "DL51EV3573",
+      "lat": 28.6928024291992,
+      "lng": 77.1549835205078,
+      "speed_kmh": 0.0,
+      "route_id": 2315.0,
+      "heading": 304,
+      "status": "stopped",
+      "last_updated": "00:04:51"
+    },
+    {
+      "vehicle_id": "DL1PD9446",
+      "lat": 28.6671676635742,
+      "lng": 77.2536239624023,
+      "speed_kmh": 0.0,
+      "route_id": 3214.0,
+      "heading": 277,
+      "status": "stopped",
+      "last_updated": "00:04:51"
+    },
+    {
+      "vehicle_id": "DL51EV3796",
+      "lat": 28.6925315856934,
+      "lng": 77.1541976928711,
+      "speed_kmh": 0.0,
+      "route_id": 1615.0,
+      "heading": 69,
+      "status": "stopped",
+      "last_updated": "00:04:51"
+    },
+    {
+      "vehicle_id": "DL51EV3538",
+      "lat": 28.6923542022705,
+      "lng": 77.1546630859375,
+      "speed_kmh": 0.0,
+      "route_id": 3675.0,
+      "heading": 252,
+      "status": "stopped",
+      "last_updated": "00:04:51"
+    },
+    {
+      "vehicle_id": "DL1PD4584",
+      "lat": 28.5545768737793,
+      "lng": 77.0545501708984,
+      "speed_kmh": 0.0,
+      "route_id": 789.0,
+      "heading": 92,
+      "status": "stopped",
+      "last_updated": "00:04:51"
+    },
+    {
+      "vehicle_id": "DL1PD4747",
+      "lat": 28.6225624084473,
+      "lng": 77.1025161743164,
+      "speed_kmh": 0.0,
+      "route_id": 790.0,
+      "heading": 142,
+      "status": "stopped",
+      "last_updated": "00:04:51"
+    }
+  ],
+  "count": 350
+}

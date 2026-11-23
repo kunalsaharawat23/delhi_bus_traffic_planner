@@ -1,0 +1,2125 @@
+{
+  "stops": {
+    "kashmere_gate": {
+      "id": "kashmere_gate",
+      "name": "Kashmere Gate ISBT",
+      "lat": 28.6675,
+      "lng": 77.2285,
+      "zone": "North/Central",
+      "is_hub": true
+    },
+    "connaught_place": {
+      "id": "connaught_place",
+      "name": "Connaught Place (Rajiv Chowk)",
+      "lat": 28.6315,
+      "lng": 77.2167,
+      "zone": "Central",
+      "is_hub": true
+    },
+    "aiims": {
+      "id": "aiims",
+      "name": "AIIMS / Safdarjung Hospital",
+      "lat": 28.5672,
+      "lng": 77.21,
+      "zone": "South",
+      "is_hub": true
+    },
+    "nehru_place": {
+      "id": "nehru_place",
+      "name": "Nehru Place Bus Terminal",
+      "lat": 28.5494,
+      "lng": 77.2528,
+      "zone": "South-East",
+      "is_hub": true
+    },
+    "anand_vihar": {
+      "id": "anand_vihar",
+      "name": "Anand Vihar ISBT",
+      "lat": 28.6469,
+      "lng": 77.316,
+      "zone": "East",
+      "is_hub": true
+    },
+    "sarai_kale_khan": {
+      "id": "sarai_kale_khan",
+      "name": "Sarai Kale Khan ISBT (Hazrat Nizamuddin)",
+      "lat": 28.591,
+      "lng": 77.257,
+      "zone": "South-East",
+      "is_hub": true
+    },
+    "dhaula_kuan": {
+      "id": "dhaula_kuan",
+      "name": "Dhaula Kuan Interchange",
+      "lat": 28.5922,
+      "lng": 77.161,
+      "zone": "South-West",
+      "is_hub": true
+    },
+    "hauz_khas": {
+      "id": "hauz_khas",
+      "name": "Hauz Khas Metro / Aurobindo Market",
+      "lat": 28.543,
+      "lng": 77.2065,
+      "zone": "South",
+      "is_hub": true
+    },
+    "saket": {
+      "id": "saket",
+      "name": "Saket (Select Citywalk)",
+      "lat": 28.5284,
+      "lng": 77.219,
+      "zone": "South",
+      "is_hub": false
+    },
+    "qutub_minar": {
+      "id": "qutub_minar",
+      "name": "Qutub Minar Complex",
+      "lat": 28.5244,
+      "lng": 77.1855,
+      "zone": "South",
+      "is_hub": false
+    },
+    "mehrauli_t": {
+      "id": "mehrauli_t",
+      "name": "Mehrauli Terminal",
+      "lat": 28.518,
+      "lng": 77.178,
+      "zone": "South",
+      "is_hub": true
+    },
+    "badarpur_border": {
+      "id": "badarpur_border",
+      "name": "Badarpur Border Terminal",
+      "lat": 28.494,
+      "lng": 77.305,
+      "zone": "South-East",
+      "is_hub": true
+    },
+    "lajpat_nagar": {
+      "id": "lajpat_nagar",
+      "name": "Lajpat Nagar Ring Road",
+      "lat": 28.57,
+      "lng": 77.237,
+      "zone": "South",
+      "is_hub": true
+    },
+    "ashram": {
+      "id": "ashram",
+      "name": "Ashram Chowk",
+      "lat": 28.571,
+      "lng": 77.2595,
+      "zone": "South-East",
+      "is_hub": true
+    },
+    "ito": {
+      "id": "ito",
+      "name": "ITO / Pragati Maidan",
+      "lat": 28.629,
+      "lng": 77.2435,
+      "zone": "Central",
+      "is_hub": true
+    },
+    "mandi_house": {
+      "id": "mandi_house",
+      "name": "Mandi House",
+      "lat": 28.6255,
+      "lng": 77.234,
+      "zone": "Central",
+      "is_hub": false
+    },
+    "new_delhi_station": {
+      "id": "new_delhi_station",
+      "name": "New Delhi Railway Station (Ajmeri Gate)",
+      "lat": 28.643,
+      "lng": 77.2225,
+      "zone": "Central",
+      "is_hub": true
+    },
+    "old_delhi_station": {
+      "id": "old_delhi_station",
+      "name": "Old Delhi Railway Station (Chandni Chowk)",
+      "lat": 28.657,
+      "lng": 77.23,
+      "zone": "North/Central",
+      "is_hub": true
+    },
+    "karol_bagh": {
+      "id": "karol_bagh",
+      "name": "Karol Bagh (Pusa Road)",
+      "lat": 28.644,
+      "lng": 77.1905,
+      "zone": "Central/West",
+      "is_hub": true
+    },
+    "patel_nagar": {
+      "id": "patel_nagar",
+      "name": "West Patel Nagar",
+      "lat": 28.653,
+      "lng": 77.165,
+      "zone": "West",
+      "is_hub": false
+    },
+    "rajouri_garden": {
+      "id": "rajouri_garden",
+      "name": "Rajouri Garden Ring Road",
+      "lat": 28.649,
+      "lng": 77.123,
+      "zone": "West",
+      "is_hub": true
+    },
+    "janakpuri_dc": {
+      "id": "janakpuri_dc",
+      "name": "Janakpuri District Centre",
+      "lat": 28.629,
+      "lng": 77.082,
+      "zone": "West",
+      "is_hub": true
+    },
+    "uttam_nagar": {
+      "id": "uttam_nagar",
+      "name": "Uttam Nagar East",
+      "lat": 28.6225,
+      "lng": 77.054,
+      "zone": "West",
+      "is_hub": false
+    },
+    "dwarka_mor": {
+      "id": "dwarka_mor",
+      "name": "Dwarka Mor",
+      "lat": 28.619,
+      "lng": 77.0325,
+      "zone": "South-West",
+      "is_hub": true
+    },
+    "dwarka_sec21": {
+      "id": "dwarka_sec21",
+      "name": "Dwarka Sector 21 Terminal",
+      "lat": 28.5522,
+      "lng": 77.0585,
+      "zone": "South-West",
+      "is_hub": true
+    },
+    "airport_t3": {
+      "id": "airport_t3",
+      "name": "IGI Airport Terminal 3",
+      "lat": 28.5562,
+      "lng": 77.086,
+      "zone": "South-West",
+      "is_hub": true
+    },
+    "airport_t1": {
+      "id": "airport_t1",
+      "name": "IGI Airport Terminal 1 (Domestic)",
+      "lat": 28.567,
+      "lng": 77.118,
+      "zone": "South-West",
+      "is_hub": false
+    },
+    "mahipalpur": {
+      "id": "mahipalpur",
+      "name": "Mahipalpur Village (NH-48)",
+      "lat": 28.544,
+      "lng": 77.126,
+      "zone": "South-West",
+      "is_hub": true
+    },
+    "kapashera_border": {
+      "id": "kapashera_border",
+      "name": "Kapashera Border",
+      "lat": 28.519,
+      "lng": 77.087,
+      "zone": "South-West",
+      "is_hub": true
+    },
+    "delhi_cantt": {
+      "id": "delhi_cantt",
+      "name": "Delhi Cantt Railway Station",
+      "lat": 28.601,
+      "lng": 77.128,
+      "zone": "South-West",
+      "is_hub": false
+    },
+    "punjabi_bagh": {
+      "id": "punjabi_bagh",
+      "name": "Punjabi Bagh Chowk",
+      "lat": 28.668,
+      "lng": 77.132,
+      "zone": "West",
+      "is_hub": true
+    },
+    "peera_garhi": {
+      "id": "peera_garhi",
+      "name": "Peera Garhi Chowk",
+      "lat": 28.6795,
+      "lng": 77.0945,
+      "zone": "West",
+      "is_hub": true
+    },
+    "pitampura": {
+      "id": "pitampura",
+      "name": "Pitampura ND Block / TV Tower",
+      "lat": 28.699,
+      "lng": 77.14,
+      "zone": "North-West",
+      "is_hub": false
+    },
+    "rohini_west": {
+      "id": "rohini_west",
+      "name": "Rohini West Metro",
+      "lat": 28.715,
+      "lng": 77.114,
+      "zone": "North-West",
+      "is_hub": true
+    },
+    "azadpur_t": {
+      "id": "azadpur_t",
+      "name": "Azadpur Terminal",
+      "lat": 28.7075,
+      "lng": 77.177,
+      "zone": "North",
+      "is_hub": true
+    },
+    "gtb_nagar": {
+      "id": "gtb_nagar",
+      "name": "GTB Nagar / Delhi University North Campus",
+      "lat": 28.698,
+      "lng": 77.207,
+      "zone": "North",
+      "is_hub": true
+    },
+    "civil_lines": {
+      "id": "civil_lines",
+      "name": "Civil Lines",
+      "lat": 28.68,
+      "lng": 77.225,
+      "zone": "North",
+      "is_hub": false
+    },
+    "shahdara_t": {
+      "id": "shahdara_t",
+      "name": "Shahdara Terminal",
+      "lat": 28.673,
+      "lng": 77.292,
+      "zone": "East",
+      "is_hub": true
+    },
+    "laxmi_nagar": {
+      "id": "laxmi_nagar",
+      "name": "Laxmi Nagar Vikas Marg",
+      "lat": 28.6305,
+      "lng": 77.277,
+      "zone": "East",
+      "is_hub": false
+    },
+    "mayur_vihar_1": {
+      "id": "mayur_vihar_1",
+      "name": "Mayur Vihar Phase 1",
+      "lat": 28.604,
+      "lng": 77.295,
+      "zone": "East",
+      "is_hub": true
+    },
+    "noida_sec16": {
+      "id": "noida_sec16",
+      "name": "Noida Sector 16 (Delhi Border)",
+      "lat": 28.578,
+      "lng": 77.318,
+      "zone": "East/Noida",
+      "is_hub": true
+    },
+    "munirka": {
+      "id": "munirka",
+      "name": "Munirka Village Outer Ring Road",
+      "lat": 28.558,
+      "lng": 77.173,
+      "zone": "South",
+      "is_hub": false
+    },
+    "iit_delhi": {
+      "id": "iit_delhi",
+      "name": "IIT Delhi Flyover",
+      "lat": 28.545,
+      "lng": 77.1925,
+      "zone": "South",
+      "is_hub": false
+    },
+    "vasant_kunj": {
+      "id": "vasant_kunj",
+      "name": "Vasant Kunj (Promenade / Ambience)",
+      "lat": 28.539,
+      "lng": 77.155,
+      "zone": "South-West",
+      "is_hub": false
+    },
+    "sangam_vihar": {
+      "id": "sangam_vihar",
+      "name": "Hamdard Nagar / Sangam Vihar",
+      "lat": 28.513,
+      "lng": 77.251,
+      "zone": "South",
+      "is_hub": true
+    },
+    "okhla_depot": {
+      "id": "okhla_depot",
+      "name": "Okhla Depot Phase 3",
+      "lat": 28.536,
+      "lng": 77.274,
+      "zone": "South-East",
+      "is_hub": true
+    },
+    "moti_bagh": {
+      "id": "moti_bagh",
+      "name": "Moti Bagh Ring Road",
+      "lat": 28.583,
+      "lng": 77.177,
+      "zone": "South",
+      "is_hub": false
+    },
+    "rk_puram": {
+      "id": "rk_puram",
+      "name": "RK Puram Sector 1",
+      "lat": 28.568,
+      "lng": 77.185,
+      "zone": "South",
+      "is_hub": false
+    },
+    "najafgarh_t": {
+      "id": "najafgarh_t",
+      "name": "Najafgarh Terminal",
+      "lat": 28.613,
+      "lng": 76.985,
+      "zone": "South-West",
+      "is_hub": true
+    },
+    "narela_t": {
+      "id": "narela_t",
+      "name": "Narela Terminal",
+      "lat": 28.852,
+      "lng": 77.094,
+      "zone": "Far North",
+      "is_hub": true
+    }
+  },
+  "routes": [
+    {
+      "route_id": "502",
+      "name": "Route 502",
+      "long_name": "Mehrauli Terminal \u2194 Old Delhi Railway Station",
+      "stops": [
+        "mehrauli_t",
+        "qutub_minar",
+        "saket",
+        "hauz_khas",
+        "aiims",
+        "connaught_place",
+        "new_delhi_station",
+        "old_delhi_station"
+      ],
+      "corridor": "aurobindo_marg",
+      "headway_mins": 8,
+      "type": "Radial Spine"
+    },
+    {
+      "route_id": "534",
+      "name": "Route 534",
+      "long_name": "Mehrauli Terminal \u2194 Anand Vihar ISBT",
+      "stops": [
+        "mehrauli_t",
+        "saket",
+        "sangam_vihar",
+        "nehru_place",
+        "ashram",
+        "sarai_kale_khan",
+        "mayur_vihar_1",
+        "anand_vihar"
+      ],
+      "corridor": "inner_ring_road",
+      "headway_mins": 10,
+      "type": "South-East Connector"
+    },
+    {
+      "route_id": "764",
+      "name": "Route 764",
+      "long_name": "Nehru Place Terminal \u2194 Najafgarh Terminal",
+      "stops": [
+        "nehru_place",
+        "iit_delhi",
+        "munirka",
+        "moti_bagh",
+        "dhaula_kuan",
+        "delhi_cantt",
+        "janakpuri_dc",
+        "uttam_nagar",
+        "dwarka_mor",
+        "najafgarh_t"
+      ],
+      "corridor": "outer_ring_road",
+      "headway_mins": 9,
+      "type": "South-to-West Crosstown"
+    },
+    {
+      "route_id": "894",
+      "name": "Route 894",
+      "long_name": "Okhla Depot \u2194 Karol Bagh",
+      "stops": [
+        "okhla_depot",
+        "nehru_place",
+        "lajpat_nagar",
+        "aiims",
+        "connaught_place",
+        "karol_bagh"
+      ],
+      "corridor": "central_delhi",
+      "headway_mins": 12,
+      "type": "South-Central Connector"
+    },
+    {
+      "route_id": "419",
+      "name": "Route 419",
+      "long_name": "Ambedkar Nagar / Sangam Vihar \u2194 Kashmere Gate ISBT",
+      "stops": [
+        "sangam_vihar",
+        "badarpur_border",
+        "ashram",
+        "sarai_kale_khan",
+        "ito",
+        "old_delhi_station",
+        "kashmere_gate"
+      ],
+      "corridor": "mathura_road",
+      "headway_mins": 10,
+      "type": "South-to-North Trunk"
+    },
+    {
+      "route_id": "729",
+      "name": "Route 729",
+      "long_name": "Old Delhi Station \u2194 Kapashera Border",
+      "stops": [
+        "old_delhi_station",
+        "connaught_place",
+        "dhaula_kuan",
+        "delhi_cantt",
+        "mahipalpur",
+        "airport_t3",
+        "kapashera_border"
+      ],
+      "corridor": "nh48_airport_corridor",
+      "headway_mins": 10,
+      "type": "Airport Radial"
+    },
+    {
+      "route_id": "511A",
+      "name": "Route 511A",
+      "long_name": "Badarpur Border \u2194 Dhaula Kuan",
+      "stops": [
+        "badarpur_border",
+        "ashram",
+        "lajpat_nagar",
+        "aiims",
+        "moti_bagh",
+        "dhaula_kuan"
+      ],
+      "corridor": "inner_ring_road",
+      "headway_mins": 8,
+      "type": "South Ring Arterial"
+    },
+    {
+      "route_id": "717A",
+      "name": "Route 717A",
+      "long_name": "Badarpur Border \u2194 Kapashera Border",
+      "stops": [
+        "badarpur_border",
+        "sangam_vihar",
+        "saket",
+        "mehrauli_t",
+        "vasant_kunj",
+        "mahipalpur",
+        "kapashera_border"
+      ],
+      "corridor": "mehrauli_badarpur_road",
+      "headway_mins": 12,
+      "type": "South Outer Border"
+    },
+    {
+      "route_id": "85",
+      "name": "Route 85",
+      "long_name": "Punjabi Bagh \u2194 Anand Vihar ISBT",
+      "stops": [
+        "punjabi_bagh",
+        "karol_bagh",
+        "connaught_place",
+        "mandi_house",
+        "ito",
+        "laxmi_nagar",
+        "anand_vihar"
+      ],
+      "corridor": "vikas_marg",
+      "headway_mins": 10,
+      "type": "West-to-East Transverse"
+    },
+    {
+      "route_id": "433",
+      "name": "Route 433",
+      "long_name": "Okhla Phase 3 \u2194 New Delhi Railway Station",
+      "stops": [
+        "okhla_depot",
+        "ashram",
+        "lajpat_nagar",
+        "ito",
+        "connaught_place",
+        "new_delhi_station"
+      ],
+      "corridor": "mathura_road",
+      "headway_mins": 11,
+      "type": "Okhla Radial"
+    },
+    {
+      "route_id": "578",
+      "name": "Route 578",
+      "long_name": "Najafgarh Terminal \u2194 Safdarjung / AIIMS",
+      "stops": [
+        "najafgarh_t",
+        "dwarka_mor",
+        "uttam_nagar",
+        "janakpuri_dc",
+        "delhi_cantt",
+        "dhaula_kuan",
+        "moti_bagh",
+        "aiims"
+      ],
+      "corridor": "najafgarh_road",
+      "headway_mins": 10,
+      "type": "South-West Radial"
+    },
+    {
+      "route_id": "620",
+      "name": "Route 620",
+      "long_name": "Vasant Kunj \u2194 Connaught Place (Shivaji Stadium)",
+      "stops": [
+        "vasant_kunj",
+        "munirka",
+        "moti_bagh",
+        "dhaula_kuan",
+        "connaught_place"
+      ],
+      "corridor": "aurobindo_marg",
+      "headway_mins": 12,
+      "type": "Vasant Kunj Express"
+    },
+    {
+      "route_id": "108",
+      "name": "Route 108",
+      "long_name": "Nehru Place \u2194 Hari Nagar / Rajouri Garden",
+      "stops": [
+        "nehru_place",
+        "aiims",
+        "moti_bagh",
+        "dhaula_kuan",
+        "delhi_cantt",
+        "rajouri_garden"
+      ],
+      "corridor": "inner_ring_road",
+      "headway_mins": 12,
+      "type": "Ring-West Connector"
+    },
+    {
+      "route_id": "970",
+      "name": "Route 970",
+      "long_name": "Rohini West \u2194 Nehru Place Terminal",
+      "stops": [
+        "rohini_west",
+        "pitampura",
+        "peera_garhi",
+        "punjabi_bagh",
+        "rajouri_garden",
+        "delhi_cantt",
+        "dhaula_kuan",
+        "aiims",
+        "lajpat_nagar",
+        "nehru_place"
+      ],
+      "corridor": "outer_ring_road",
+      "headway_mins": 14,
+      "type": "North-West to South-East Ring Express"
+    },
+    {
+      "route_id": "623",
+      "name": "Route 623",
+      "long_name": "Shahdara Terminal \u2194 Vasant Kunj",
+      "stops": [
+        "shahdara_t",
+        "ito",
+        "mandi_house",
+        "connaught_place",
+        "dhaula_kuan",
+        "munirka",
+        "vasant_kunj"
+      ],
+      "corridor": "central_delhi",
+      "headway_mins": 15,
+      "type": "East-to-South Spine"
+    },
+    {
+      "route_id": "208",
+      "name": "Route 208",
+      "long_name": "West Patel Nagar \u2194 Kashmere Gate ISBT",
+      "stops": [
+        "patel_nagar",
+        "karol_bagh",
+        "new_delhi_station",
+        "old_delhi_station",
+        "kashmere_gate"
+      ],
+      "corridor": "rohtak_road",
+      "headway_mins": 10,
+      "type": "West-Central Connector"
+    },
+    {
+      "route_id": "114",
+      "name": "Route 114",
+      "long_name": "GTB Nagar \u2194 Pitampura ND Block",
+      "stops": [
+        "gtb_nagar",
+        "azadpur_t",
+        "pitampura",
+        "rohini_west"
+      ],
+      "corridor": "gt_karnal_road",
+      "headway_mins": 12,
+      "type": "North-West Feeder"
+    },
+    {
+      "route_id": "448",
+      "name": "Route 448",
+      "long_name": "Munirka Village \u2194 Nehru Place Terminal",
+      "stops": [
+        "munirka",
+        "iit_delhi",
+        "hauz_khas",
+        "nehru_place"
+      ],
+      "corridor": "outer_ring_road",
+      "headway_mins": 8,
+      "type": "Outer Ring Feeder"
+    },
+    {
+      "route_id": "8UP",
+      "name": "Route 8UP",
+      "long_name": "Ali Village / Badarpur \u2194 Sarai Kale Khan ISBT",
+      "stops": [
+        "badarpur_border",
+        "sangam_vihar",
+        "ashram",
+        "sarai_kale_khan"
+      ],
+      "corridor": "mathura_road",
+      "headway_mins": 10,
+      "type": "Mathura Road Trunk"
+    },
+    {
+      "route_id": "522",
+      "name": "Route 522",
+      "long_name": "Ambedkar Nagar / Sangam Vihar \u2194 Patel Nagar",
+      "stops": [
+        "sangam_vihar",
+        "saket",
+        "aiims",
+        "dhaula_kuan",
+        "patel_nagar"
+      ],
+      "corridor": "aurobindo_marg",
+      "headway_mins": 12,
+      "type": "South-West Diagonal"
+    },
+    {
+      "route_id": "772",
+      "name": "Route 772",
+      "long_name": "Janakpuri District Centre \u2194 IGI Airport T3",
+      "stops": [
+        "janakpuri_dc",
+        "uttam_nagar",
+        "dwarka_mor",
+        "dwarka_sec21",
+        "airport_t3"
+      ],
+      "corridor": "nh48_airport_corridor",
+      "headway_mins": 12,
+      "type": "Dwarka-Airport Feeder"
+    },
+    {
+      "route_id": "ring_express_clockwise",
+      "name": "Ring Express CW",
+      "long_name": "Ring Road Express (Clockwise Circular)",
+      "stops": [
+        "kashmere_gate",
+        "old_delhi_station",
+        "ito",
+        "sarai_kale_khan",
+        "ashram",
+        "lajpat_nagar",
+        "aiims",
+        "moti_bagh",
+        "dhaula_kuan",
+        "rajouri_garden",
+        "punjabi_bagh",
+        "azadpur_t",
+        "civil_lines",
+        "kashmere_gate"
+      ],
+      "corridor": "inner_ring_road",
+      "headway_mins": 6,
+      "type": "Circular Trunk"
+    },
+    {
+      "route_id": "ring_express_counter",
+      "name": "Ring Express CCW",
+      "long_name": "Ring Road Express (Counter-Clockwise Circular)",
+      "stops": [
+        "kashmere_gate",
+        "civil_lines",
+        "azadpur_t",
+        "punjabi_bagh",
+        "rajouri_garden",
+        "dhaula_kuan",
+        "moti_bagh",
+        "aiims",
+        "lajpat_nagar",
+        "ashram",
+        "sarai_kale_khan",
+        "ito",
+        "old_delhi_station",
+        "kashmere_gate"
+      ],
+      "corridor": "inner_ring_road",
+      "headway_mins": 6,
+      "type": "Circular Trunk"
+    },
+    {
+      "route_id": "noida_delhi_express",
+      "name": "Route 347",
+      "long_name": "Noida Sector 16 \u2194 Connaught Place",
+      "stops": [
+        "noida_sec16",
+        "mayur_vihar_1",
+        "sarai_kale_khan",
+        "ito",
+        "mandi_house",
+        "connaught_place"
+      ],
+      "corridor": "vikas_marg",
+      "headway_mins": 10,
+      "type": "NCR Intercity"
+    }
+  ],
+  "edges": [
+    {
+      "from_stop": "mehrauli_t",
+      "to_stop": "qutub_minar",
+      "route_id": "502",
+      "route_name": "Route 502",
+      "distance_km": 1.28,
+      "corridor": "aurobindo_marg",
+      "headway_mins": 8
+    },
+    {
+      "from_stop": "qutub_minar",
+      "to_stop": "saket",
+      "route_id": "502",
+      "route_name": "Route 502",
+      "distance_km": 4.13,
+      "corridor": "aurobindo_marg",
+      "headway_mins": 8
+    },
+    {
+      "from_stop": "saket",
+      "to_stop": "hauz_khas",
+      "route_id": "502",
+      "route_name": "Route 502",
+      "distance_km": 2.54,
+      "corridor": "aurobindo_marg",
+      "headway_mins": 8
+    },
+    {
+      "from_stop": "hauz_khas",
+      "to_stop": "aiims",
+      "route_id": "502",
+      "route_name": "Route 502",
+      "distance_km": 3.39,
+      "corridor": "aurobindo_marg",
+      "headway_mins": 8
+    },
+    {
+      "from_stop": "aiims",
+      "to_stop": "connaught_place",
+      "route_id": "502",
+      "route_name": "Route 502",
+      "distance_km": 8.97,
+      "corridor": "aurobindo_marg",
+      "headway_mins": 8
+    },
+    {
+      "from_stop": "connaught_place",
+      "to_stop": "new_delhi_station",
+      "route_id": "502",
+      "route_name": "Route 502",
+      "distance_km": 1.75,
+      "corridor": "aurobindo_marg",
+      "headway_mins": 8
+    },
+    {
+      "from_stop": "new_delhi_station",
+      "to_stop": "old_delhi_station",
+      "route_id": "502",
+      "route_name": "Route 502",
+      "distance_km": 2.15,
+      "corridor": "aurobindo_marg",
+      "headway_mins": 8
+    },
+    {
+      "from_stop": "mehrauli_t",
+      "to_stop": "saket",
+      "route_id": "534",
+      "route_name": "Route 534",
+      "distance_km": 5.21,
+      "corridor": "inner_ring_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "saket",
+      "to_stop": "sangam_vihar",
+      "route_id": "534",
+      "route_name": "Route 534",
+      "distance_km": 4.46,
+      "corridor": "inner_ring_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "sangam_vihar",
+      "to_stop": "nehru_place",
+      "route_id": "534",
+      "route_name": "Route 534",
+      "distance_km": 5.06,
+      "corridor": "inner_ring_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "nehru_place",
+      "to_stop": "ashram",
+      "route_id": "534",
+      "route_name": "Route 534",
+      "distance_km": 3.11,
+      "corridor": "inner_ring_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "ashram",
+      "to_stop": "sarai_kale_khan",
+      "route_id": "534",
+      "route_name": "Route 534",
+      "distance_km": 2.8,
+      "corridor": "inner_ring_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "sarai_kale_khan",
+      "to_stop": "mayur_vihar_1",
+      "route_id": "534",
+      "route_name": "Route 534",
+      "distance_km": 4.98,
+      "corridor": "inner_ring_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "mayur_vihar_1",
+      "to_stop": "anand_vihar",
+      "route_id": "534",
+      "route_name": "Route 534",
+      "distance_km": 6.49,
+      "corridor": "inner_ring_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "nehru_place",
+      "to_stop": "iit_delhi",
+      "route_id": "764",
+      "route_name": "Route 764",
+      "distance_km": 7.39,
+      "corridor": "outer_ring_road",
+      "headway_mins": 9
+    },
+    {
+      "from_stop": "iit_delhi",
+      "to_stop": "munirka",
+      "route_id": "764",
+      "route_name": "Route 764",
+      "distance_km": 2.99,
+      "corridor": "outer_ring_road",
+      "headway_mins": 9
+    },
+    {
+      "from_stop": "munirka",
+      "to_stop": "moti_bagh",
+      "route_id": "764",
+      "route_name": "Route 764",
+      "distance_km": 3.51,
+      "corridor": "outer_ring_road",
+      "headway_mins": 9
+    },
+    {
+      "from_stop": "moti_bagh",
+      "to_stop": "dhaula_kuan",
+      "route_id": "764",
+      "route_name": "Route 764",
+      "distance_km": 2.33,
+      "corridor": "outer_ring_road",
+      "headway_mins": 9
+    },
+    {
+      "from_stop": "dhaula_kuan",
+      "to_stop": "delhi_cantt",
+      "route_id": "764",
+      "route_name": "Route 764",
+      "distance_km": 4.21,
+      "corridor": "outer_ring_road",
+      "headway_mins": 9
+    },
+    {
+      "from_stop": "delhi_cantt",
+      "to_stop": "janakpuri_dc",
+      "route_id": "764",
+      "route_name": "Route 764",
+      "distance_km": 6.83,
+      "corridor": "outer_ring_road",
+      "headway_mins": 9
+    },
+    {
+      "from_stop": "janakpuri_dc",
+      "to_stop": "uttam_nagar",
+      "route_id": "764",
+      "route_name": "Route 764",
+      "distance_km": 3.53,
+      "corridor": "outer_ring_road",
+      "headway_mins": 9
+    },
+    {
+      "from_stop": "uttam_nagar",
+      "to_stop": "dwarka_mor",
+      "route_id": "764",
+      "route_name": "Route 764",
+      "distance_km": 2.67,
+      "corridor": "outer_ring_road",
+      "headway_mins": 9
+    },
+    {
+      "from_stop": "dwarka_mor",
+      "to_stop": "najafgarh_t",
+      "route_id": "764",
+      "route_name": "Route 764",
+      "distance_km": 5.86,
+      "corridor": "outer_ring_road",
+      "headway_mins": 9
+    },
+    {
+      "from_stop": "okhla_depot",
+      "to_stop": "nehru_place",
+      "route_id": "894",
+      "route_name": "Route 894",
+      "distance_km": 3.19,
+      "corridor": "central_delhi",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "nehru_place",
+      "to_stop": "lajpat_nagar",
+      "route_id": "894",
+      "route_name": "Route 894",
+      "distance_km": 3.45,
+      "corridor": "central_delhi",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "lajpat_nagar",
+      "to_stop": "aiims",
+      "route_id": "894",
+      "route_name": "Route 894",
+      "distance_km": 3.32,
+      "corridor": "central_delhi",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "aiims",
+      "to_stop": "connaught_place",
+      "route_id": "894",
+      "route_name": "Route 894",
+      "distance_km": 8.97,
+      "corridor": "central_delhi",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "connaught_place",
+      "to_stop": "karol_bagh",
+      "route_id": "894",
+      "route_name": "Route 894",
+      "distance_km": 3.64,
+      "corridor": "central_delhi",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "sangam_vihar",
+      "to_stop": "badarpur_border",
+      "route_id": "419",
+      "route_name": "Route 419",
+      "distance_km": 7.1,
+      "corridor": "mathura_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "badarpur_border",
+      "to_stop": "ashram",
+      "route_id": "419",
+      "route_name": "Route 419",
+      "distance_km": 12.06,
+      "corridor": "mathura_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "ashram",
+      "to_stop": "sarai_kale_khan",
+      "route_id": "419",
+      "route_name": "Route 419",
+      "distance_km": 2.8,
+      "corridor": "mathura_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "sarai_kale_khan",
+      "to_stop": "ito",
+      "route_id": "419",
+      "route_name": "Route 419",
+      "distance_km": 5.53,
+      "corridor": "mathura_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "ito",
+      "to_stop": "old_delhi_station",
+      "route_id": "419",
+      "route_name": "Route 419",
+      "distance_km": 4.23,
+      "corridor": "mathura_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "old_delhi_station",
+      "to_stop": "kashmere_gate",
+      "route_id": "419",
+      "route_name": "Route 419",
+      "distance_km": 1.47,
+      "corridor": "mathura_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "old_delhi_station",
+      "to_stop": "connaught_place",
+      "route_id": "729",
+      "route_name": "Route 729",
+      "distance_km": 3.9,
+      "corridor": "nh48_airport_corridor",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "connaught_place",
+      "to_stop": "dhaula_kuan",
+      "route_id": "729",
+      "route_name": "Route 729",
+      "distance_km": 8.72,
+      "corridor": "nh48_airport_corridor",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "dhaula_kuan",
+      "to_stop": "delhi_cantt",
+      "route_id": "729",
+      "route_name": "Route 729",
+      "distance_km": 4.21,
+      "corridor": "nh48_airport_corridor",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "delhi_cantt",
+      "to_stop": "mahipalpur",
+      "route_id": "729",
+      "route_name": "Route 729",
+      "distance_km": 7.93,
+      "corridor": "nh48_airport_corridor",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "mahipalpur",
+      "to_stop": "airport_t3",
+      "route_id": "729",
+      "route_name": "Route 729",
+      "distance_km": 5.17,
+      "corridor": "nh48_airport_corridor",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "airport_t3",
+      "to_stop": "kapashera_border",
+      "route_id": "729",
+      "route_name": "Route 729",
+      "distance_km": 5.17,
+      "corridor": "nh48_airport_corridor",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "badarpur_border",
+      "to_stop": "ashram",
+      "route_id": "511A",
+      "route_name": "Route 511A",
+      "distance_km": 12.06,
+      "corridor": "inner_ring_road",
+      "headway_mins": 8
+    },
+    {
+      "from_stop": "ashram",
+      "to_stop": "lajpat_nagar",
+      "route_id": "511A",
+      "route_name": "Route 511A",
+      "distance_km": 2.75,
+      "corridor": "inner_ring_road",
+      "headway_mins": 8
+    },
+    {
+      "from_stop": "lajpat_nagar",
+      "to_stop": "aiims",
+      "route_id": "511A",
+      "route_name": "Route 511A",
+      "distance_km": 3.32,
+      "corridor": "inner_ring_road",
+      "headway_mins": 8
+    },
+    {
+      "from_stop": "aiims",
+      "to_stop": "moti_bagh",
+      "route_id": "511A",
+      "route_name": "Route 511A",
+      "distance_km": 4.59,
+      "corridor": "inner_ring_road",
+      "headway_mins": 8
+    },
+    {
+      "from_stop": "moti_bagh",
+      "to_stop": "dhaula_kuan",
+      "route_id": "511A",
+      "route_name": "Route 511A",
+      "distance_km": 2.33,
+      "corridor": "inner_ring_road",
+      "headway_mins": 8
+    },
+    {
+      "from_stop": "badarpur_border",
+      "to_stop": "sangam_vihar",
+      "route_id": "717A",
+      "route_name": "Route 717A",
+      "distance_km": 7.1,
+      "corridor": "mehrauli_badarpur_road",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "sangam_vihar",
+      "to_stop": "saket",
+      "route_id": "717A",
+      "route_name": "Route 717A",
+      "distance_km": 4.46,
+      "corridor": "mehrauli_badarpur_road",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "saket",
+      "to_stop": "mehrauli_t",
+      "route_id": "717A",
+      "route_name": "Route 717A",
+      "distance_km": 5.21,
+      "corridor": "mehrauli_badarpur_road",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "mehrauli_t",
+      "to_stop": "vasant_kunj",
+      "route_id": "717A",
+      "route_name": "Route 717A",
+      "distance_km": 4.05,
+      "corridor": "mehrauli_badarpur_road",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "vasant_kunj",
+      "to_stop": "mahipalpur",
+      "route_id": "717A",
+      "route_name": "Route 717A",
+      "distance_km": 3.61,
+      "corridor": "mehrauli_badarpur_road",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "mahipalpur",
+      "to_stop": "kapashera_border",
+      "route_id": "717A",
+      "route_name": "Route 717A",
+      "distance_km": 5.9,
+      "corridor": "mehrauli_badarpur_road",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "punjabi_bagh",
+      "to_stop": "karol_bagh",
+      "route_id": "85",
+      "route_name": "Route 85",
+      "distance_km": 7.88,
+      "corridor": "vikas_marg",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "karol_bagh",
+      "to_stop": "connaught_place",
+      "route_id": "85",
+      "route_name": "Route 85",
+      "distance_km": 3.64,
+      "corridor": "vikas_marg",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "connaught_place",
+      "to_stop": "mandi_house",
+      "route_id": "85",
+      "route_name": "Route 85",
+      "distance_km": 2.27,
+      "corridor": "vikas_marg",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "mandi_house",
+      "to_stop": "ito",
+      "route_id": "85",
+      "route_name": "Route 85",
+      "distance_km": 1.26,
+      "corridor": "vikas_marg",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "ito",
+      "to_stop": "laxmi_nagar",
+      "route_id": "85",
+      "route_name": "Route 85",
+      "distance_km": 4.09,
+      "corridor": "vikas_marg",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "laxmi_nagar",
+      "to_stop": "anand_vihar",
+      "route_id": "85",
+      "route_name": "Route 85",
+      "distance_km": 5.28,
+      "corridor": "vikas_marg",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "okhla_depot",
+      "to_stop": "ashram",
+      "route_id": "433",
+      "route_name": "Route 433",
+      "distance_km": 5.18,
+      "corridor": "mathura_road",
+      "headway_mins": 11
+    },
+    {
+      "from_stop": "ashram",
+      "to_stop": "lajpat_nagar",
+      "route_id": "433",
+      "route_name": "Route 433",
+      "distance_km": 2.75,
+      "corridor": "mathura_road",
+      "headway_mins": 11
+    },
+    {
+      "from_stop": "lajpat_nagar",
+      "to_stop": "ito",
+      "route_id": "433",
+      "route_name": "Route 433",
+      "distance_km": 8.24,
+      "corridor": "mathura_road",
+      "headway_mins": 11
+    },
+    {
+      "from_stop": "ito",
+      "to_stop": "connaught_place",
+      "route_id": "433",
+      "route_name": "Route 433",
+      "distance_km": 3.29,
+      "corridor": "mathura_road",
+      "headway_mins": 11
+    },
+    {
+      "from_stop": "connaught_place",
+      "to_stop": "new_delhi_station",
+      "route_id": "433",
+      "route_name": "Route 433",
+      "distance_km": 1.75,
+      "corridor": "mathura_road",
+      "headway_mins": 11
+    },
+    {
+      "from_stop": "najafgarh_t",
+      "to_stop": "dwarka_mor",
+      "route_id": "578",
+      "route_name": "Route 578",
+      "distance_km": 5.86,
+      "corridor": "najafgarh_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "dwarka_mor",
+      "to_stop": "uttam_nagar",
+      "route_id": "578",
+      "route_name": "Route 578",
+      "distance_km": 2.67,
+      "corridor": "najafgarh_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "uttam_nagar",
+      "to_stop": "janakpuri_dc",
+      "route_id": "578",
+      "route_name": "Route 578",
+      "distance_km": 3.53,
+      "corridor": "najafgarh_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "janakpuri_dc",
+      "to_stop": "delhi_cantt",
+      "route_id": "578",
+      "route_name": "Route 578",
+      "distance_km": 6.83,
+      "corridor": "najafgarh_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "delhi_cantt",
+      "to_stop": "dhaula_kuan",
+      "route_id": "578",
+      "route_name": "Route 578",
+      "distance_km": 4.21,
+      "corridor": "najafgarh_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "dhaula_kuan",
+      "to_stop": "moti_bagh",
+      "route_id": "578",
+      "route_name": "Route 578",
+      "distance_km": 2.33,
+      "corridor": "najafgarh_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "moti_bagh",
+      "to_stop": "aiims",
+      "route_id": "578",
+      "route_name": "Route 578",
+      "distance_km": 4.59,
+      "corridor": "najafgarh_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "vasant_kunj",
+      "to_stop": "munirka",
+      "route_id": "620",
+      "route_name": "Route 620",
+      "distance_km": 3.44,
+      "corridor": "aurobindo_marg",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "munirka",
+      "to_stop": "moti_bagh",
+      "route_id": "620",
+      "route_name": "Route 620",
+      "distance_km": 3.51,
+      "corridor": "aurobindo_marg",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "moti_bagh",
+      "to_stop": "dhaula_kuan",
+      "route_id": "620",
+      "route_name": "Route 620",
+      "distance_km": 2.33,
+      "corridor": "aurobindo_marg",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "dhaula_kuan",
+      "to_stop": "connaught_place",
+      "route_id": "620",
+      "route_name": "Route 620",
+      "distance_km": 8.72,
+      "corridor": "aurobindo_marg",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "nehru_place",
+      "to_stop": "aiims",
+      "route_id": "108",
+      "route_name": "Route 108",
+      "distance_km": 5.78,
+      "corridor": "inner_ring_road",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "aiims",
+      "to_stop": "moti_bagh",
+      "route_id": "108",
+      "route_name": "Route 108",
+      "distance_km": 4.59,
+      "corridor": "inner_ring_road",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "moti_bagh",
+      "to_stop": "dhaula_kuan",
+      "route_id": "108",
+      "route_name": "Route 108",
+      "distance_km": 2.33,
+      "corridor": "inner_ring_road",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "dhaula_kuan",
+      "to_stop": "delhi_cantt",
+      "route_id": "108",
+      "route_name": "Route 108",
+      "distance_km": 4.21,
+      "corridor": "inner_ring_road",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "delhi_cantt",
+      "to_stop": "rajouri_garden",
+      "route_id": "108",
+      "route_name": "Route 108",
+      "distance_km": 6.7,
+      "corridor": "inner_ring_road",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "rohini_west",
+      "to_stop": "pitampura",
+      "route_id": "970",
+      "route_name": "Route 970",
+      "distance_km": 3.87,
+      "corridor": "outer_ring_road",
+      "headway_mins": 14
+    },
+    {
+      "from_stop": "pitampura",
+      "to_stop": "peera_garhi",
+      "route_id": "970",
+      "route_name": "Route 970",
+      "distance_km": 6.17,
+      "corridor": "outer_ring_road",
+      "headway_mins": 14
+    },
+    {
+      "from_stop": "peera_garhi",
+      "to_stop": "punjabi_bagh",
+      "route_id": "970",
+      "route_name": "Route 970",
+      "distance_km": 4.84,
+      "corridor": "outer_ring_road",
+      "headway_mins": 14
+    },
+    {
+      "from_stop": "punjabi_bagh",
+      "to_stop": "rajouri_garden",
+      "route_id": "970",
+      "route_name": "Route 970",
+      "distance_km": 2.86,
+      "corridor": "outer_ring_road",
+      "headway_mins": 14
+    },
+    {
+      "from_stop": "rajouri_garden",
+      "to_stop": "delhi_cantt",
+      "route_id": "970",
+      "route_name": "Route 970",
+      "distance_km": 6.7,
+      "corridor": "outer_ring_road",
+      "headway_mins": 14
+    },
+    {
+      "from_stop": "delhi_cantt",
+      "to_stop": "dhaula_kuan",
+      "route_id": "970",
+      "route_name": "Route 970",
+      "distance_km": 4.21,
+      "corridor": "outer_ring_road",
+      "headway_mins": 14
+    },
+    {
+      "from_stop": "dhaula_kuan",
+      "to_stop": "aiims",
+      "route_id": "970",
+      "route_name": "Route 970",
+      "distance_km": 6.92,
+      "corridor": "outer_ring_road",
+      "headway_mins": 14
+    },
+    {
+      "from_stop": "aiims",
+      "to_stop": "lajpat_nagar",
+      "route_id": "970",
+      "route_name": "Route 970",
+      "distance_km": 3.32,
+      "corridor": "outer_ring_road",
+      "headway_mins": 14
+    },
+    {
+      "from_stop": "lajpat_nagar",
+      "to_stop": "nehru_place",
+      "route_id": "970",
+      "route_name": "Route 970",
+      "distance_km": 3.45,
+      "corridor": "outer_ring_road",
+      "headway_mins": 14
+    },
+    {
+      "from_stop": "shahdara_t",
+      "to_stop": "ito",
+      "route_id": "623",
+      "route_name": "Route 623",
+      "distance_km": 8.51,
+      "corridor": "central_delhi",
+      "headway_mins": 15
+    },
+    {
+      "from_stop": "ito",
+      "to_stop": "mandi_house",
+      "route_id": "623",
+      "route_name": "Route 623",
+      "distance_km": 1.26,
+      "corridor": "central_delhi",
+      "headway_mins": 15
+    },
+    {
+      "from_stop": "mandi_house",
+      "to_stop": "connaught_place",
+      "route_id": "623",
+      "route_name": "Route 623",
+      "distance_km": 2.27,
+      "corridor": "central_delhi",
+      "headway_mins": 15
+    },
+    {
+      "from_stop": "connaught_place",
+      "to_stop": "dhaula_kuan",
+      "route_id": "623",
+      "route_name": "Route 623",
+      "distance_km": 8.72,
+      "corridor": "central_delhi",
+      "headway_mins": 15
+    },
+    {
+      "from_stop": "dhaula_kuan",
+      "to_stop": "munirka",
+      "route_id": "623",
+      "route_name": "Route 623",
+      "distance_km": 4.97,
+      "corridor": "central_delhi",
+      "headway_mins": 15
+    },
+    {
+      "from_stop": "munirka",
+      "to_stop": "vasant_kunj",
+      "route_id": "623",
+      "route_name": "Route 623",
+      "distance_km": 3.44,
+      "corridor": "central_delhi",
+      "headway_mins": 15
+    },
+    {
+      "from_stop": "patel_nagar",
+      "to_stop": "karol_bagh",
+      "route_id": "208",
+      "route_name": "Route 208",
+      "distance_km": 3.35,
+      "corridor": "rohtak_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "karol_bagh",
+      "to_stop": "new_delhi_station",
+      "route_id": "208",
+      "route_name": "Route 208",
+      "distance_km": 3.91,
+      "corridor": "rohtak_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "new_delhi_station",
+      "to_stop": "old_delhi_station",
+      "route_id": "208",
+      "route_name": "Route 208",
+      "distance_km": 2.15,
+      "corridor": "rohtak_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "old_delhi_station",
+      "to_stop": "kashmere_gate",
+      "route_id": "208",
+      "route_name": "Route 208",
+      "distance_km": 1.47,
+      "corridor": "rohtak_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "gtb_nagar",
+      "to_stop": "azadpur_t",
+      "route_id": "114",
+      "route_name": "Route 114",
+      "distance_km": 3.89,
+      "corridor": "gt_karnal_road",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "azadpur_t",
+      "to_stop": "pitampura",
+      "route_id": "114",
+      "route_name": "Route 114",
+      "distance_km": 4.66,
+      "corridor": "gt_karnal_road",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "pitampura",
+      "to_stop": "rohini_west",
+      "route_id": "114",
+      "route_name": "Route 114",
+      "distance_km": 3.87,
+      "corridor": "gt_karnal_road",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "munirka",
+      "to_stop": "iit_delhi",
+      "route_id": "448",
+      "route_name": "Route 448",
+      "distance_km": 2.99,
+      "corridor": "outer_ring_road",
+      "headway_mins": 8
+    },
+    {
+      "from_stop": "iit_delhi",
+      "to_stop": "hauz_khas",
+      "route_id": "448",
+      "route_name": "Route 448",
+      "distance_km": 1.73,
+      "corridor": "outer_ring_road",
+      "headway_mins": 8
+    },
+    {
+      "from_stop": "hauz_khas",
+      "to_stop": "nehru_place",
+      "route_id": "448",
+      "route_name": "Route 448",
+      "distance_km": 5.72,
+      "corridor": "outer_ring_road",
+      "headway_mins": 8
+    },
+    {
+      "from_stop": "badarpur_border",
+      "to_stop": "sangam_vihar",
+      "route_id": "8UP",
+      "route_name": "Route 8UP",
+      "distance_km": 7.1,
+      "corridor": "mathura_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "sangam_vihar",
+      "to_stop": "ashram",
+      "route_id": "8UP",
+      "route_name": "Route 8UP",
+      "distance_km": 8.13,
+      "corridor": "mathura_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "ashram",
+      "to_stop": "sarai_kale_khan",
+      "route_id": "8UP",
+      "route_name": "Route 8UP",
+      "distance_km": 2.8,
+      "corridor": "mathura_road",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "sangam_vihar",
+      "to_stop": "saket",
+      "route_id": "522",
+      "route_name": "Route 522",
+      "distance_km": 4.46,
+      "corridor": "aurobindo_marg",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "saket",
+      "to_stop": "aiims",
+      "route_id": "522",
+      "route_name": "Route 522",
+      "distance_km": 5.5,
+      "corridor": "aurobindo_marg",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "aiims",
+      "to_stop": "dhaula_kuan",
+      "route_id": "522",
+      "route_name": "Route 522",
+      "distance_km": 6.92,
+      "corridor": "aurobindo_marg",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "dhaula_kuan",
+      "to_stop": "patel_nagar",
+      "route_id": "522",
+      "route_name": "Route 522",
+      "distance_km": 8.46,
+      "corridor": "aurobindo_marg",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "janakpuri_dc",
+      "to_stop": "uttam_nagar",
+      "route_id": "772",
+      "route_name": "Route 772",
+      "distance_km": 3.53,
+      "corridor": "nh48_airport_corridor",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "uttam_nagar",
+      "to_stop": "dwarka_mor",
+      "route_id": "772",
+      "route_name": "Route 772",
+      "distance_km": 2.67,
+      "corridor": "nh48_airport_corridor",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "dwarka_mor",
+      "to_stop": "dwarka_sec21",
+      "route_id": "772",
+      "route_name": "Route 772",
+      "distance_km": 9.81,
+      "corridor": "nh48_airport_corridor",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "dwarka_sec21",
+      "to_stop": "airport_t3",
+      "route_id": "772",
+      "route_name": "Route 772",
+      "distance_km": 3.4,
+      "corridor": "nh48_airport_corridor",
+      "headway_mins": 12
+    },
+    {
+      "from_stop": "kashmere_gate",
+      "to_stop": "old_delhi_station",
+      "route_id": "ring_express_clockwise",
+      "route_name": "Ring Express CW",
+      "distance_km": 1.47,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "old_delhi_station",
+      "to_stop": "ito",
+      "route_id": "ring_express_clockwise",
+      "route_name": "Ring Express CW",
+      "distance_km": 4.23,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "ito",
+      "to_stop": "sarai_kale_khan",
+      "route_id": "ring_express_clockwise",
+      "route_name": "Ring Express CW",
+      "distance_km": 5.53,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "sarai_kale_khan",
+      "to_stop": "ashram",
+      "route_id": "ring_express_clockwise",
+      "route_name": "Ring Express CW",
+      "distance_km": 2.8,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "ashram",
+      "to_stop": "lajpat_nagar",
+      "route_id": "ring_express_clockwise",
+      "route_name": "Ring Express CW",
+      "distance_km": 2.75,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "lajpat_nagar",
+      "to_stop": "aiims",
+      "route_id": "ring_express_clockwise",
+      "route_name": "Ring Express CW",
+      "distance_km": 3.32,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "aiims",
+      "to_stop": "moti_bagh",
+      "route_id": "ring_express_clockwise",
+      "route_name": "Ring Express CW",
+      "distance_km": 4.59,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "moti_bagh",
+      "to_stop": "dhaula_kuan",
+      "route_id": "ring_express_clockwise",
+      "route_name": "Ring Express CW",
+      "distance_km": 2.33,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "dhaula_kuan",
+      "to_stop": "rajouri_garden",
+      "route_id": "ring_express_clockwise",
+      "route_name": "Ring Express CW",
+      "distance_km": 9.16,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "rajouri_garden",
+      "to_stop": "punjabi_bagh",
+      "route_id": "ring_express_clockwise",
+      "route_name": "Ring Express CW",
+      "distance_km": 2.86,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "punjabi_bagh",
+      "to_stop": "azadpur_t",
+      "route_id": "ring_express_clockwise",
+      "route_name": "Ring Express CW",
+      "distance_km": 7.76,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "azadpur_t",
+      "to_stop": "civil_lines",
+      "route_id": "ring_express_clockwise",
+      "route_name": "Ring Express CW",
+      "distance_km": 6.99,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "civil_lines",
+      "to_stop": "kashmere_gate",
+      "route_id": "ring_express_clockwise",
+      "route_name": "Ring Express CW",
+      "distance_km": 1.79,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "kashmere_gate",
+      "to_stop": "civil_lines",
+      "route_id": "ring_express_counter",
+      "route_name": "Ring Express CCW",
+      "distance_km": 1.79,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "civil_lines",
+      "to_stop": "azadpur_t",
+      "route_id": "ring_express_counter",
+      "route_name": "Ring Express CCW",
+      "distance_km": 6.99,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "azadpur_t",
+      "to_stop": "punjabi_bagh",
+      "route_id": "ring_express_counter",
+      "route_name": "Ring Express CCW",
+      "distance_km": 7.76,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "punjabi_bagh",
+      "to_stop": "rajouri_garden",
+      "route_id": "ring_express_counter",
+      "route_name": "Ring Express CCW",
+      "distance_km": 2.86,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "rajouri_garden",
+      "to_stop": "dhaula_kuan",
+      "route_id": "ring_express_counter",
+      "route_name": "Ring Express CCW",
+      "distance_km": 9.16,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "dhaula_kuan",
+      "to_stop": "moti_bagh",
+      "route_id": "ring_express_counter",
+      "route_name": "Ring Express CCW",
+      "distance_km": 2.33,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "moti_bagh",
+      "to_stop": "aiims",
+      "route_id": "ring_express_counter",
+      "route_name": "Ring Express CCW",
+      "distance_km": 4.59,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "aiims",
+      "to_stop": "lajpat_nagar",
+      "route_id": "ring_express_counter",
+      "route_name": "Ring Express CCW",
+      "distance_km": 3.32,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "lajpat_nagar",
+      "to_stop": "ashram",
+      "route_id": "ring_express_counter",
+      "route_name": "Ring Express CCW",
+      "distance_km": 2.75,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "ashram",
+      "to_stop": "sarai_kale_khan",
+      "route_id": "ring_express_counter",
+      "route_name": "Ring Express CCW",
+      "distance_km": 2.8,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "sarai_kale_khan",
+      "to_stop": "ito",
+      "route_id": "ring_express_counter",
+      "route_name": "Ring Express CCW",
+      "distance_km": 5.53,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "ito",
+      "to_stop": "old_delhi_station",
+      "route_id": "ring_express_counter",
+      "route_name": "Ring Express CCW",
+      "distance_km": 4.23,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "old_delhi_station",
+      "to_stop": "kashmere_gate",
+      "route_id": "ring_express_counter",
+      "route_name": "Ring Express CCW",
+      "distance_km": 1.47,
+      "corridor": "inner_ring_road",
+      "headway_mins": 6
+    },
+    {
+      "from_stop": "noida_sec16",
+      "to_stop": "mayur_vihar_1",
+      "route_id": "noida_delhi_express",
+      "route_name": "Route 347",
+      "distance_km": 4.58,
+      "corridor": "vikas_marg",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "mayur_vihar_1",
+      "to_stop": "sarai_kale_khan",
+      "route_id": "noida_delhi_express",
+      "route_name": "Route 347",
+      "distance_km": 4.98,
+      "corridor": "vikas_marg",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "sarai_kale_khan",
+      "to_stop": "ito",
+      "route_id": "noida_delhi_express",
+      "route_name": "Route 347",
+      "distance_km": 5.53,
+      "corridor": "vikas_marg",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "ito",
+      "to_stop": "mandi_house",
+      "route_id": "noida_delhi_express",
+      "route_name": "Route 347",
+      "distance_km": 1.26,
+      "corridor": "vikas_marg",
+      "headway_mins": 10
+    },
+    {
+      "from_stop": "mandi_house",
+      "to_stop": "connaught_place",
+      "route_id": "noida_delhi_express",
+      "route_name": "Route 347",
+      "distance_km": 2.27,
+      "corridor": "vikas_marg",
+      "headway_mins": 10
+    }
+  ],
+  "total_stops": 50,
+  "total_routes": 24,
+  "total_edges": 145
+}

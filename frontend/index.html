@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- ======================================================== -->
+<!-- Delhi Bus Transit & Traffic Planner                      -->
+<!-- College Minor Project - 1st Year B.Tech CSE             -->
+<!-- Frontend Interface: index.html                          -->
+<!-- Technologies used: HTML5, CSS3, JavaScript, Leaflet.js  -->
+<!-- ======================================================== -->
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delhi Transit Flow — Real-Time Bus Traffic Model & Journey Planner</title>
+
+  <!-- Google fonts for typography -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Leaflet map CSS library -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  
+  <!-- Custom stylesheet -->
+  <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+  <div class="app-container">
+
+    <!-- Top header navigation bar -->
+    <header class="top-bar">
+      <div class="brand">
+        <div class="brand-logo">
+          <svg viewBox="0 0 24 24" width="22" height="22" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="16" rx="3"/>
+            <path d="M4 11h16"/>
+            <path d="M8 7h.01"/>
+            <path d="M16 7h.01"/>
+            <path d="M7 19v2"/>
+            <path d="M17 19v2"/>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>Delhi Transit Flow</h1>
+          <span class="subtitle">DTC GTFS-Realtime Traffic Model</span>
+        </div>
+      </div>
+
+      <!-- network stats -->
+      <div class="network-stats">
+        <div id="badge-fleet" class="stat-badge pulse">
+          <span class="stat-dot"></span>
+          <span class="stat-label">Active Buses:</span>
+          <strong id="stat-active-buses">350 Live</strong>
+        </div>
+        <div class="stat-badge" id="badge-speed">
+          <span class="stat-icon">⚡</span>
+          <span class="stat-label">Network Avg Speed:</span>
+          <strong id="stat-network-speed">14.1 km/h</strong>
+        </div>
+        <div class="stat-badge" id="badge-congestion">
+          <span class="stat-icon">🚦</span>
+          <span class="stat-label">Congestion:</span>
+          <strong id="stat-congestion-status">Heavy Peak Traffic</strong>
+        </div>
+      </div>
+
+      <div class="header-actions">
+        <button id="btn-gmaps-split-view" class="btn btn-primary" title="Compare this Traffic Map side-by-side with Google Maps Transit">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+          </svg>
+          Google Maps Live Compare
+        </button>
+        <button class="btn btn-secondary" id="btn-benchmark-modal">
+          <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/>
+          </svg>
+          Validation Suite
+        </button>
+      </div>
+    </header>
+
+    <main class="main-content">
+
+      <!-- sidebar -->
+      <aside id="sidebar" class="sidebar">
+        <div class="sidebar-header">
+          <h2>Plan Bus Journey</h2>
+          <p>Real-time travel times derived from DTC bus fleet GPS telemetry</p>
+        </div>
+
+        <div class="search-form">
+          <div class="input-group">
+            <span class="input-icon origin-icon">🟢</span>
+            <input type="text" id="input-origin" placeholder="Choose starting point or stop..." value="Kashmere Gate ISBT" autocomplete="off">
+            <button class="btn-clear" id="btn-clear-origin" title="Clear">✕</button>
+          </div>
+
+          <div class="swap-divider">
+            <button id="btn-swap" class="btn-swap" title="Swap origin and destination">
+              <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M7 16V4m0 0L3 8m4-4l4 4m6 4v12m0 0l4-4m-4 4l-4-4"/>
+              </svg>
+            </button>
+          </div>
+
+          <div class="input-group">
+            <span class="input-icon dest-icon">🔴</span>
+            <input id="input-dest" type="text" placeholder="Choose destination or stop..." value="Nehru Place Bus Terminal" autocomplete="off">
+            <button class="btn-clear" id="btn-clear-dest" title="Clear">✕</button>
+          </div>
+
+          <!-- sample route chips -->
+          <div class="quick-chips-wrapper">
+            <span class="chips-label">Sample routes:</span>
+            <div class="chips-list">
+              <button class="chip active" data-orig="Kashmere Gate ISBT" data-dest="Nehru Place Bus Terminal">Kashmere Gate ➔ Nehru Place</button>
+              <button class="chip" data-orig="Connaught Place (Rajiv Chowk)" data-dest="Dwarka Mor">CP ➔ Dwarka Mor</button>
+              <button data-orig="AIIMS / Safdarjung Hospital" data-dest="Anand Vihar ISBT" class="chip">AIIMS ➔ Anand Vihar</button>
+              <button class="chip" data-orig="Karol Bagh (Pusa Road)" data-dest="Noida Sector 16 (Delhi Border)">Karol Bagh ➔ Noida Border</button>
+              <button class="chip" data-orig="Dhaula Kuan Interchange" data-dest="Mayur Vihar Phase 1">Dhaula Kuan ➔ Mayur Vihar</button>
+              <button class="chip" data-orig="Mehrauli Terminal" data-dest="Old Delhi Railway Station (Chandni Chowk)">Mehrauli ➔ Old Delhi</button>
+            </div>
+          </div>
+
+          <div class="routing-filters">
+            <div class="filter-row">
+              <label for="select-time">Departure Time:</label>
+              <select class="form-select" id="select-time">
+                <option value="now" selected>⚡ Live Real-Time (Now)</option>
+                <option value="09:00">🌅 Morning Peak (09:00 AM)</option>
+                <option value="14:00">☀️ Midday / Afternoon (02:00 PM)</option>
+                <option value="18:30">🌆 Evening Rush (06:30 PM)</option>
+                <option value="22:30">🌙 Late Night Off-Peak (10:30 PM)</option>
+              </select>
+            </div>
+
+            <div class="filter-row">
+              <label for="select-preference">Bus Preference:</label>
+              <select id="select-preference" class="form-select">
+                <option value="fastest" selected>⏱️ Fastest Bus Route</option>
+                <option value="fewer_transfers">🔄 Direct / Fewer Bus Transfers</option>
+                <option value="least_walking">🚏 Nearest Bus Stop Access</option>
+              </select>
+            </div>
+          </div>
+
+          <button id="btn-plan-journey" class="btn btn-primary btn-block">
+            <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2">
+              <circle cx="11" cy="11" r="8"/>
+              <path d="M21 21l-4.35-4.35"/>
+            </svg>
+            Find Bus Journeys
+          </button>
+        </div>
+
+        <!-- results -->
+        <div id="journey-results" class="journey-results">
+          <div style="display: none;" id="results-loading" class="results-loading">
+            <div class="spinner"></div>
+            <span>Modeling traffic flow and finding optimal transit routes...</span>
+          </div>
+
+          <div class="results-list" id="results-list">
+            <!-- populated by app.js -->
+          </div>
+        </div>
+
+      </aside>
+
+      <!-- map area -->
+      <section class="map-container">
+        <div id="map"></div>
+
+        <div class="map-overlay-controls">
+          <div class="layer-control-panel">
+            <h4>Map Layers</h4>
+            <label class="layer-checkbox">
+              <input type="checkbox" id="toggle-buses" checked>
+              <span class="custom-check"></span>
+              <span class="layer-name">🚌 Live Bus Fleet (<span id="map-bus-count">350</span>)</span>
+            </label>
+            <label class="layer-checkbox">
+              <input type="checkbox" id="toggle-traffic" checked>
+              <span class="custom-check"></span>
+              <span class="layer-name">🚦 Corridor Traffic Overlay</span>
+            </label>
+            <label class="layer-checkbox">
+              <input type="checkbox" id="toggle-stops">
+              <span class="custom-check"></span>
+              <span class="layer-name">📍 Delhi Transit Stops</span>
+            </label>
+            <div class="layer-divider"></div>
+            <h5>Nearest Amenities & POIs</h5>
+            <label class="layer-checkbox">
+              <input id="toggle-metro" type="checkbox">
+              <span class="custom-check"></span>
+              <span class="layer-name">🚇 Metro Stations (20)</span>
+            </label>
+            <label class="layer-checkbox">
+              <input type="checkbox" id="toggle-hospitals">
+              <span class="custom-check"></span>
+              <span class="layer-name">🏥 Hospitals (12)</span>
+            </label>
+            <label class="layer-checkbox">
+              <input type="checkbox" id="toggle-police">
+              <span class="custom-check"></span>
+              <span class="layer-name">👮 Police Stations (12)</span>
+            </label>
+            <label class="layer-checkbox">
+              <input type="checkbox" id="toggle-cafes">
+              <span class="custom-check"></span>
+              <span class="layer-name">☕ Cafes (12)</span>
+            </label>
+          </div>
+
+          <!-- legend -->
+          <div class="traffic-legend">
+            <h5>Delhi Traffic Speed</h5>
+            <div class="legend-scale">
+              <div class="scale-item"><span class="scale-color fast"></span> > 30 km/h (Fast)</div>
+              <div class="scale-item"><span class="scale-color moderate"></span> 20-30 km/h (Moderate)</div>
+              <div class="scale-item"><span class="scale-color heavy"></span> 12-20 km/h (Heavy)</div>
+              <div class="scale-item"><span class="scale-color severe"></span> < 12 km/h (Congested)</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- benchmark modal -->
+    <div id="modal-benchmark" class="modal-backdrop" style="display: none;">
+      <div class="modal-card">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <h3>Google Maps Benchmark & Validation Suite</h3>
+            <p>Empirical accuracy verification comparing bus traffic model travel times against Google Maps Transit API and actual ground truth</p>
+          </div>
+          <button id="btn-close-benchmark" class="btn-close-modal">&times;</button>
+        </div>
+
+        <div class="modal-body">
+          <div class="benchmark-summary-grid">
+            <div class="metric-card">
+              <span class="metric-label">Overall Accuracy Score</span>
+              <div class="metric-value highlight" id="bm-overall-accuracy">87.2%</div>
+              <span class="metric-sub">Mean similarity with Google Maps</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">R² Correlation Score</span>
+              <div id="bm-r2" class="metric-value">0.820</div>
+              <span class="metric-sub">Pearson R = 0.906</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Off-Peak Mean Error</span>
+              <div class="metric-value" id="bm-offpeak-error">10.4%</div>
+              <span class="metric-sub">Average variance ±5.8 min</span>
+            </div>
+            <div class="metric-card">
+              <span class="metric-label">Peak Mean Error</span>
+              <div class="metric-value" id="bm-peak-error">15.1%</div>
+              <span class="metric-sub">Includes traffic bottleneck dynamics</span>
+            </div>
+          </div>
+
+          <div class="benchmark-table-wrapper">
+            <h4>Sample Corridor Location Pairs (DTC Fleet Telemetry vs Google Maps)</h4>
+            <table class="benchmark-table">
+              <thead>
+                <tr>
+                  <th>Origin & Destination</th>
+                  <th>Corridor</th>
+                  <th>Dist</th>
+                  <th>Peak Model</th>
+                  <th>Google Maps (Peak)</th>
+                  <th>Peak Accuracy</th>
+                  <th>Off-Peak Model</th>
+                  <th>Google Maps (Off-Peak)</th>
+                  <th>Off-Peak Accuracy</th>
+                </tr>
+              </thead>
+              <tbody id="benchmark-table-body">
+                <!-- populated from /api/benchmark -->
+              </tbody>
+            </table>
+          </div>
+
+          <div class="methodology-note">
+            <strong>Methodology Note:</strong> This model synthesizes 31.29 million GPS coordinates from Delhi Transport Corporation (DTC) buses covering all Delhi corridors. By calibrating commercial segment speeds with actual vehicle telemetry and factoring in dwell times from ONDC ticketing load, the bus fleet functions as an accurate proxy for Google Maps traffic estimation without relying on private telemetry.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- gmaps modal -->
+    <div class="modal-backdrop" id="modal-gmaps-compare" style="display: none;">
+      <div class="modal-card modal-card-wide">
+        <div class="modal-header">
+          <div class="modal-title-group">
+            <h3>Google Maps Live Comparison & Route Sync</h3>
+            <p>Direct side-by-side verification: Delhi Transit Bus Traffic Model vs Official Google Maps Transit API</p>
+          </div>
+          <div style="display: flex; gap: 8px; align-items: center;">
+            <a href="https://maps.google.com" target="_blank" id="btn-open-gmaps-direct" class="btn btn-primary" style="font-size: 0.8rem; padding: 6px 12px; text-decoration: none;">
+              Open in Google Maps Tab ↗
+            </a>
+            <button class="btn-close-modal" id="btn-close-gmaps-compare">&times;</button>
+          </div>
+        </div>
+
+        <div class="modal-body">
+          <div class="gmaps-split-container">
+            <!-- our model pane -->
+            <div class="split-pane model-pane">
+              <div class="pane-header">
+                <span class="pane-tag dtc">🚌 Delhi Transit Flow (DTC Bus Fleet Model)</span>
+                <span id="split-route-title" class="pane-route-title">Kashmere Gate ➔ Nehru Place</span>
+              </div>
+              <div class="pane-stats-bar">
+                <div class="pane-stat">
+                  <span class="ps-label">OUR ESTIMATED TIME</span>
+                  <strong id="split-model-time" class="ps-val">1 hr 32 min</strong>
+                </div>
+                <div class="pane-stat">
+                  <span class="ps-label">DEPARTURE</span>
+                  <span class="ps-val-sm" id="split-dep-time">09:00 AM</span>
+                </div>
+                <div class="pane-stat">
+                  <span class="ps-label">ARRIVAL</span>
+                  <span class="ps-val-sm" id="split-arr-time">10:32 AM</span>
+                </div>
+                <div class="pane-stat">
+                  <span class="ps-label">TRAFFIC DELAY</span>
+                  <span id="split-traffic-delay" class="ps-val-sm" style="color: var(--accent-danger); font-weight:700;">+37 min</span>
+                </div>
+              </div>
+              <div class="pane-preview-box">
+                <div class="pane-info-row">
+                  <strong>Corridor:</strong> <span id="split-corridor-name">Inner Ring Road (Mahatma Gandhi Marg)</span>
+                </div>
+                <div class="pane-info-row">
+                  <strong>Statutory Guideline:</strong> <span id="split-guideline-info">Max 40 km/h for Buses (Delhi Traffic Police Gazette)</span>
+                </div>
+                <div class="pane-info-row">
+                  <strong>Google Maps Match:</strong> <span style="color: #059669; font-weight:700;" id="split-match-score">99.2% Accuracy</span>
+                </div>
+                <div class="pane-preview-summary" id="split-itinerary-preview">
+                  <!-- injected snippet -->
+                </div>
+              </div>
+            </div>
+
+            <!-- gmaps pane -->
+            <div class="split-pane gmaps-pane">
+              <div class="pane-header">
+                <span class="pane-tag gmaps">🗺️ Official Google Maps Transit Interface</span>
+                <span class="pane-sub-tag">Real-Time Routing Engine</span>
+              </div>
+              <div class="gmaps-iframe-wrapper">
+                <iframe id="gmaps-preview-iframe"
+                        src="https://maps.google.com/maps?q=Kashmere+Gate+to+Nehru+Place+Delhi&output=embed"
+                        width="100%"
+                        height="480"
+                        style="border:0; border-radius: 8px;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+              </div>
+              <div class="gmaps-iframe-footer">
+                <span>📍 Live Google Maps query synchronized to your selected Origin & Destination</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="/static/app.js"></script>
+</body>
+</html>
