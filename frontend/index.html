@@ -19,8 +19,8 @@
   <!-- Leaflet map CSS library -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   
-  <!-- Custom stylesheet -->
-  <link rel="stylesheet" href="/static/style.css">
+  <!-- Custom stylesheet with cache bust -->
+  <link rel="stylesheet" href="/static/style.css?v=3.0">
 </head>
 <body>
   <div class="app-container">
@@ -93,7 +93,7 @@
           <div class="input-wrapper">
             <div class="input-group">
               <span class="input-icon origin-icon">🟢</span>
-              <input type="text" id="input-origin" placeholder="Choose pickup point in Delhi..." value="Kashmere Gate ISBT" autocomplete="off">
+              <input type="text" id="input-origin" list="delhi-places-list" placeholder="Choose pickup point in Delhi..." value="Kashmere Gate ISBT" autocomplete="off">
               <button class="btn-clear" id="btn-clear-origin" title="Clear">✕</button>
             </div>
             <div class="suggestions-dropdown" id="suggestions-origin"></div>
@@ -111,11 +111,65 @@
           <div class="input-wrapper">
             <div class="input-group">
               <span class="input-icon dest-icon">🔴</span>
-              <input id="input-dest" type="text" placeholder="Choose drop-off point in Delhi..." value="Nehru Place Bus Terminal" autocomplete="off">
+              <input id="input-dest" type="text" list="delhi-places-list" placeholder="Choose drop-off point in Delhi..." value="Nehru Place Bus Terminal" autocomplete="off">
               <button class="btn-clear" id="btn-clear-dest" title="Clear">✕</button>
             </div>
             <div class="suggestions-dropdown" id="suggestions-dest"></div>
           </div>
+
+          <!-- confirmed delhi pickup and drop places list -->
+          <datalist id="delhi-places-list">
+            <option value="Kashmere Gate ISBT">North/Central • Verified Terminal Hub</option>
+            <option value="Connaught Place (Rajiv Chowk)">Central • Verified Terminal Hub</option>
+            <option value="AIIMS / Safdarjung Hospital">South • Verified Terminal Hub</option>
+            <option value="Nehru Place Bus Terminal">South-East • Verified Terminal Hub</option>
+            <option value="Anand Vihar ISBT">East • Verified Terminal Hub</option>
+            <option value="Sarai Kale Khan ISBT (Hazrat Nizamuddin)">South-East • Verified Terminal Hub</option>
+            <option value="Dhaula Kuan Interchange">South-West • Verified Terminal Hub</option>
+            <option value="Hauz Khas Metro / Aurobindo Market">South • Verified Terminal Hub</option>
+            <option value="Saket (Select Citywalk)">South • Confirmed Passenger Stop</option>
+            <option value="Qutub Minar Complex">South • Confirmed Passenger Stop</option>
+            <option value="Mehrauli Terminal">South • Verified Terminal Hub</option>
+            <option value="Badarpur Border Terminal">South-East • Verified Terminal Hub</option>
+            <option value="Lajpat Nagar Ring Road">South • Verified Terminal Hub</option>
+            <option value="Ashram Chowk">South-East • Verified Terminal Hub</option>
+            <option value="ITO / Pragati Maidan">Central • Verified Terminal Hub</option>
+            <option value="Mandi House">Central • Confirmed Passenger Stop</option>
+            <option value="New Delhi Railway Station (Ajmeri Gate)">Central • Verified Terminal Hub</option>
+            <option value="Old Delhi Railway Station (Chandni Chowk)">North/Central • Verified Terminal Hub</option>
+            <option value="Karol Bagh (Pusa Road)">Central/West • Verified Terminal Hub</option>
+            <option value="West Patel Nagar">West • Confirmed Passenger Stop</option>
+            <option value="Rajouri Garden Ring Road">West • Verified Terminal Hub</option>
+            <option value="Janakpuri District Centre">West • Verified Terminal Hub</option>
+            <option value="Uttam Nagar East">West • Confirmed Passenger Stop</option>
+            <option value="Dwarka Mor">South-West • Verified Terminal Hub</option>
+            <option value="Dwarka Sector 21 Terminal">South-West • Verified Terminal Hub</option>
+            <option value="IGI Airport Terminal 3">South-West • Verified Terminal Hub</option>
+            <option value="IGI Airport Terminal 1 (Domestic)">South-West • Confirmed Passenger Stop</option>
+            <option value="Mahipalpur Village (NH-48)">South-West • Verified Terminal Hub</option>
+            <option value="Kapashera Border">South-West • Verified Terminal Hub</option>
+            <option value="Delhi Cantt Railway Station">South-West • Confirmed Passenger Stop</option>
+            <option value="Punjabi Bagh Chowk">West • Verified Terminal Hub</option>
+            <option value="Peera Garhi Chowk">West • Verified Terminal Hub</option>
+            <option value="Pitampura ND Block / TV Tower">North-West • Confirmed Passenger Stop</option>
+            <option value="Rohini West Metro">North-West • Verified Terminal Hub</option>
+            <option value="Azadpur Terminal">North • Verified Terminal Hub</option>
+            <option value="GTB Nagar / Delhi University North Campus">North • Verified Terminal Hub</option>
+            <option value="Civil Lines">North • Confirmed Passenger Stop</option>
+            <option value="Shahdara Terminal">East • Verified Terminal Hub</option>
+            <option value="Laxmi Nagar Vikas Marg">East • Confirmed Passenger Stop</option>
+            <option value="Mayur Vihar Phase 1">East • Verified Terminal Hub</option>
+            <option value="Noida Sector 16 (Delhi Border)">East/Noida • Verified Terminal Hub</option>
+            <option value="Munirka Village Outer Ring Road">South • Confirmed Passenger Stop</option>
+            <option value="IIT Delhi Flyover">South • Confirmed Passenger Stop</option>
+            <option value="Vasant Kunj (Promenade / Ambience)">South-West • Confirmed Passenger Stop</option>
+            <option value="Hamdard Nagar / Sangam Vihar">South • Verified Terminal Hub</option>
+            <option value="Okhla Depot Phase 3">South-East • Verified Terminal Hub</option>
+            <option value="Moti Bagh Ring Road">South • Confirmed Passenger Stop</option>
+            <option value="RK Puram Sector 1">South • Confirmed Passenger Stop</option>
+            <option value="Najafgarh Terminal">South-West • Verified Terminal Hub</option>
+            <option value="Narela Terminal">Far North • Verified Terminal Hub</option>
+          </datalist>
 
           <!-- sample route chips -->
           <div class="quick-chips-wrapper">
@@ -387,6 +441,6 @@
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="/static/app.js"></script>
+  <script src="/static/app.js?v=3.0"></script>
 </body>
 </html>

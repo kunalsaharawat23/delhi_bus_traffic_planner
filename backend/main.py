@@ -211,10 +211,14 @@ def get_speed_limits():
 # connect frontend static files
 app.mount("/static", StaticFiles(directory=FRONTEND_DIR), name="static")
 
-# serve html home page
+# serve html home page with no-cache headers so browser always loads latest updates
 @app.get("/")
 def serve_index():
-    return FileResponse(os.path.join(FRONTEND_DIR, 'index.html'))
+    res = FileResponse(os.path.join(FRONTEND_DIR, 'index.html'))
+    res.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+    res.headers["Pragma"] = "no-cache"
+    res.headers["Expires"] = "0"
+    return res
 
 # run the app directly if this file is executed
 if __name__ == '__main__':

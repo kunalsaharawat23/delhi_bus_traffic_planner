@@ -236,12 +236,19 @@ body {
   padding: 16px 20px;
   background: var(--bg-card-subtle);
   border-bottom: 1px solid var(--border-color);
+  position: relative;
+  z-index: 600;
 }
 
 /* wrapper for input field and its suggestions dropdown */
 .input-wrapper {
   position: relative;
   width: 100%;
+  z-index: 1000;
+}
+
+.input-wrapper:focus-within {
+  z-index: 2500;
 }
 
 .input-group {
