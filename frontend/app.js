@@ -919,82 +919,218 @@ async function planJourney() {
   }
 }
 
+// renders the "NEAREST TRANSIT, CAFES & HOSPITALS" panel matching student lab design
+function renderAmenitiesPanel(originInfo, destInfo) {
+  var origAmenities = originInfo && originInfo.nearest_amenities ? originInfo.nearest_amenities : null;
+  var destAmenities = destInfo && destInfo.nearest_amenities ? destInfo.nearest_amenities : null;
+
+  if (!origAmenities && !destAmenities) {
+    return null;
+  }
+
+  var container = document.createElement("div");
+  container.className = "journey-amenities-card";
+
+  // clean display names for origin and destination
+  var origName = originInfo && originInfo.name ? originInfo.name : "Origin";
+  var destName = destInfo && destInfo.name ? destInfo.name : "Destination";
+
+  // shorten for pill button display
+  var origShort = origName.replace(/\b(Bus Terminal|Terminal|ISBT|Metro Station|Bus Stop)\b/gi, '').trim();
+  var destShort = destName.replace(/\b(Bus Terminal|Terminal|ISBT|Metro Station|Bus Stop)\b/gi, '').trim();
+  if (origShort.length > 16) origShort = origShort.substring(0, 14) + '..';
+  if (destShort.length > 16) destShort = destShort.substring(0, 14) + '..';
+
+  // default to origin active
+  var currentTab = 'origin';
+
+  function formatDist(item) {
+    var distM = item.distance_m || (item.distance_km ? Math.round(item.distance_km * 1000) : 0);
+    if (distM < 1000) {
+      return distM + "m";
+    }
+    return (distM / 1000).toFixed(2) + "km";
+  }
+
+  function formatWalk(item) {
+    var distM = item.distance_m || (item.distance_km ? Math.round(item.distance_km * 1000) : 0);
+    var mins = Math.max(1, Math.round(distM / 80));
+    return "🚶 ~" + mins + " min";
+  }
+
+  function generateRowsHtml(amenitiesData) {
+    if (!amenitiesData) {
+      return '<div style="padding: 12px; color: #64748b; font-size: 12px;">No nearby services recorded for this point.</div>';
+    }
+
+    var html = '';
+
+    // 1. Metro stations
+    var metros = amenitiesData.metro_stations || [];
+    if (metros.length > 0) {
+      html += 
+        '<div class="amenity-category-block">' +
+          '<div class="amenity-cat-header metro-header">' +
+            '<span>🚇 NEAREST METRO STATIONS</span>' +
+            '<span>LINE CONNECTION</span>' +
+          '</div>';
+
+      metros.slice(0, 3).forEach(function (m) {
+        var lineText = m.line || (m.lines ? m.lines.join(' / ') : 'Metro Line');
+        html += 
+          '<div class="amenity-row-item" data-lat="' + m.lat + '" data-lng="' + m.lng + '" data-name="' + m.name + '">' +
+            '<div class="amenity-row-left">' +
+              '<div class="amenity-icon-box">🚇</div>' +
+              '<div class="amenity-text-box">' +
+                '<div class="amenity-main-name">' + m.name + '</div>' +
+                '<div class="amenity-sub-desc"><span class="line-yellow">' + lineText + '</span></div>' +
+              '</div>' +
+            '</div>' +
+            '<div class="amenity-row-right">' +
+              '<div class="amenity-dist-val">' + formatDist(m) + '</div>' +
+              '<div class="amenity-walk-time">' + formatWalk(m) + '</div>' +
+            '</div>' +
+          '</div>';
+      });
+      html += '</div>';
+    }
+
+    // 2. Cafes & Coffee
+    var cafes = amenitiesData.cafes || [];
+    if (cafes.length > 0) {
+      html += 
+        '<div class="amenity-category-block">' +
+          '<div class="amenity-cat-header cafe-header">' +
+            '<span>☕ NEAREST CAFES & COFFEE</span>' +
+            '<span>SPECIALTY</span>' +
+          '</div>';
+
+      cafes.slice(0, 3).forEach(function (c) {
+        var subText = c.specialty || 'Fresh Brews';
+        if (c.rating) {
+          subText += ' · <span class="rating-star">⭐ ' + c.rating + '</span>';
+        }
+        html += 
+          '<div class="amenity-row-item" data-lat="' + c.lat + '" data-lng="' + c.lng + '" data-name="' + c.name + '">' +
+            '<div class="amenity-row-left">' +
+              '<div class="amenity-icon-box">☕</div>' +
+              '<div class="amenity-text-box">' +
+                '<div class="amenity-main-name">' + c.name + '</div>' +
+                '<div class="amenity-sub-desc">' + subText + '</div>' +
+              '</div>' +
+            '</div>' +
+            '<div class="amenity-row-right">' +
+              '<div class="amenity-dist-val">' + formatDist(c) + '</div>' +
+              '<div class="amenity-walk-time">' + formatWalk(c) + '</div>' +
+            '</div>' +
+          '</div>';
+      });
+      html += '</div>';
+    }
+
+    // 3. Hospitals & Care
+    var hosps = amenitiesData.hospitals || [];
+    if (hosps.length > 0) {
+      html += 
+        '<div class="amenity-category-block">' +
+          '<div class="amenity-cat-header hosp-header">' +
+            '<span>🏥 NEAREST HOSPITALS & CARE</span>' +
+            '<span>24X7 EMERGENCY</span>' +
+          '</div>';
+
+      hosps.slice(0, 3).forEach(function (h) {
+        var subText = (h.type || 'Hospital') + ' · <span class="emergency-alert">' + (h.emergency || '24x7 Emergency') + '</span>';
+        html += 
+          '<div class="amenity-row-item" data-lat="' + h.lat + '" data-lng="' + h.lng + '" data-name="' + h.name + '">' +
+            '<div class="amenity-row-left">' +
+              '<div class="amenity-icon-box">🏥</div>' +
+              '<div class="amenity-text-box">' +
+                '<div class="amenity-main-name">' + h.name + '</div>' +
+                '<div class="amenity-sub-desc">' + subText + '</div>' +
+              '</div>' +
+            '</div>' +
+            '<div class="amenity-row-right">' +
+              '<div class="amenity-dist-val">' + formatDist(h) + '</div>' +
+              '<div class="amenity-walk-time">' + formatWalk(h) + '</div>' +
+            '</div>' +
+          '</div>';
+      });
+      html += '</div>';
+    }
+
+    return html;
+  }
+
+  function renderCard() {
+    var activeAmenities = currentTab === 'origin' ? origAmenities : destAmenities;
+    container.innerHTML = 
+      '<div class="amenities-panel-title">' +
+        '📍 NEAREST TRANSIT, CAFES & HOSPITALS' +
+      '</div>' +
+      '<div class="amenities-tabs-nav">' +
+        '<button type="button" class="amenities-tab-btn ' + (currentTab === 'origin' ? 'active' : '') + '" id="tab-near-orig">' +
+          '<span class="tab-dot green"></span>' +
+          'Near Origin (' + origShort + ')' +
+        '</button>' +
+        '<button type="button" class="amenities-tab-btn ' + (currentTab === 'dest' ? 'active' : '') + '" id="tab-near-dest">' +
+          '<span class="tab-dot red"></span>' +
+          'Near Dest (' + destShort + ')' +
+        '</button>' +
+      '</div>' +
+      '<div class="amenities-content-area">' +
+        generateRowsHtml(activeAmenities) +
+      '</div>';
+
+    // attach click event listeners to tabs
+    var btnOrig = container.querySelector("#tab-near-orig");
+    var btnDest = container.querySelector("#tab-near-dest");
+    if (btnOrig) {
+      btnOrig.addEventListener("click", function (e) {
+        e.stopPropagation();
+        if (currentTab !== 'origin') {
+          currentTab = 'origin';
+          renderCard();
+        }
+      });
+    }
+    if (btnDest) {
+      btnDest.addEventListener("click", function (e) {
+        e.stopPropagation();
+        if (currentTab !== 'dest') {
+          currentTab = 'dest';
+          renderCard();
+        }
+      });
+    }
+
+    // click on any row to pan map to that amenity
+    var rowItems = container.querySelectorAll(".amenity-row-item");
+    rowItems.forEach(function (row) {
+      row.addEventListener("click", function () {
+        var lat = parseFloat(this.getAttribute("data-lat"));
+        var lng = parseFloat(this.getAttribute("data-lng"));
+        var name = this.getAttribute("data-name");
+        if (state.map && !isNaN(lat) && !isNaN(lng)) {
+          state.map.flyTo([lat, lng], 15, { duration: 1.2 });
+          L.popup().setLatLng([lat, lng]).setContent('<strong>' + name + '</strong>').openOn(state.map);
+        }
+      });
+    });
+  }
+
+  renderCard();
+  return container;
+}
+
 // display journey option cards in the left sidebar
 function renderJourneyOptions(options, originInfo, destInfo) {
   var listEl = document.getElementById("results-list");
   listEl.innerHTML = "";
 
-  // 1. show nearby amenities banner at top of results
-  if (originInfo && originInfo.nearest_amenities) {
-    var origAmenities = originInfo.nearest_amenities;
-    var destAmenities = destInfo ? destInfo.nearest_amenities : null;
-
-    var banner = document.createElement("div");
-    banner.className = "journey-amenities-card";
-
-    var topOrigMetro  = origAmenities.metro_stations && origAmenities.metro_stations[0];
-    var topOrigHosp   = origAmenities.hospitals && origAmenities.hospitals[0];
-    var topOrigPolice = origAmenities.police_stations && origAmenities.police_stations[0];
-    var topOrigCafe   = origAmenities.cafes && origAmenities.cafes[0];
-
-    var bannerHtml = 
-      '<div class="amenities-card-header">' +
-        '<span class="amenities-card-title">📍 Nearby Services & Amenities</span>' +
-        '<span class="amenities-card-sub">At Origin & Destination</span>' +
-      '</div>' +
-      '<div class="amenities-grid">';
-
-    if (topOrigMetro) {
-      bannerHtml += 
-        '<div class="amenity-grid-item metro">' +
-          '<span class="amenity-icon">🚇</span>' +
-          '<div class="amenity-info">' +
-            '<span class="amenity-label">Nearest Metro:</span>' +
-            '<strong class="amenity-name">' + topOrigMetro.name + '</strong>' +
-            '<span class="amenity-dist">' + topOrigMetro.distance_km + ' km (' + (topOrigMetro.lines ? topOrigMetro.lines.join('/') : '') + ')</span>' +
-          '</div>' +
-        '</div>';
-    }
-
-    if (topOrigHosp) {
-      bannerHtml += 
-        '<div class="amenity-grid-item hosp">' +
-          '<span class="amenity-icon">🏥</span>' +
-          '<div class="amenity-info">' +
-            '<span class="amenity-label">Nearest Hospital:</span>' +
-            '<strong class="amenity-name">' + topOrigHosp.name + '</strong>' +
-            '<span class="amenity-dist">' + topOrigHosp.distance_km + ' km • ' + topOrigHosp.emergency + '</span>' +
-          '</div>' +
-        '</div>';
-    }
-
-    if (topOrigPolice) {
-      bannerHtml += 
-        '<div class="amenity-grid-item police">' +
-          '<span class="amenity-icon">👮</span>' +
-          '<div class="amenity-info">' +
-            '<span class="amenity-label">Police Station:</span>' +
-            '<strong class="amenity-name">' + topOrigPolice.name + '</strong>' +
-            '<span class="amenity-dist">' + topOrigPolice.distance_km + ' km • ' + topOrigPolice.contact + '</span>' +
-          '</div>' +
-        '</div>';
-    }
-
-    if (topOrigCafe) {
-      bannerHtml += 
-        '<div class="amenity-grid-item cafe">' +
-          '<span class="amenity-icon">☕</span>' +
-          '<div class="amenity-info">' +
-            '<span class="amenity-label">Nearest Cafe:</span>' +
-            '<strong class="amenity-name">' + topOrigCafe.name + '</strong>' +
-            '<span class="amenity-dist">' + topOrigCafe.distance_km + ' km • ⭐ ' + topOrigCafe.rating + '</span>' +
-          '</div>' +
-        '</div>';
-    }
-
-    bannerHtml += '</div>';
-    banner.innerHTML = bannerHtml;
-    listEl.appendChild(banner);
+  // 1. show nearby amenities banner at top of results matching student transit design
+  var amenitiesCard = renderAmenitiesPanel(originInfo, destInfo);
+  if (amenitiesCard) {
+    listEl.appendChild(amenitiesCard);
   }
 
   // 2. build route cards for each journey option

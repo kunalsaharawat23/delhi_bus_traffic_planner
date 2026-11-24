@@ -1175,60 +1175,183 @@ body {
 .speed-status-text.warn { color: #d97706; font-weight: 700; font-size: 0.7rem; }
 
 /* amenities */
+/* ======================================================== */
+/* Nearest Transit, Cafes & Hospitals Panel (Student Style)  */
+/* ======================================================== */
 .journey-amenities-card {
-  background: #f8fafc;
-  border: 1px solid #e2e8f0;
-  border-radius: var(--radius-md);
-  padding: 12px;
-  margin-bottom: 12px;
+  background: #0d1527;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  padding: 16px;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
 }
 
-.amenities-card-header {
+.amenities-panel-title {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.80rem;
+  font-weight: 700;
+  color: #94a3b8;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.amenities-tabs-nav {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.amenities-tab-btn {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 9px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background: #090e1a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.amenities-tab-btn:hover {
+  background: #131d31;
+  color: #cbd5e1;
+}
+
+.amenities-tab-btn.active {
+  background: #1e293b;
+  border-color: #3b82f6;
+  color: #f8fafc;
+  box-shadow: 0 0 10px rgba(59, 130, 246, 0.2);
+}
+
+.tab-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.tab-dot.green { background-color: #10b981; box-shadow: 0 0 6px #10b981; }
+.tab-dot.red   { background-color: #ef4444; box-shadow: 0 0 6px #ef4444; }
+
+/* Category section header */
+.amenity-category-block {
+  margin-bottom: 14px;
+}
+.amenity-category-block:last-child {
+  margin-bottom: 0;
+}
+
+.amenity-cat-header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  margin-bottom: 8px;
-  border-bottom: 1px solid #e2e8f0;
-  padding-bottom: 6px;
-}
-
-.amenities-card-title { font-size: 0.82rem; font-weight: 700; color: var(--text-primary); }
-.amenities-card-sub   { font-size: 0.68rem; color: var(--text-secondary); }
-
-.amenities-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 8px;
-}
-
-.amenity-grid-item {
-  display: flex;
-  align-items: flex-start;
-  gap: 6px;
-  padding: 6px;
-  background: #ffffff;
-  border-radius: 6px;
-  border: 1px solid #f1f5f9;
-}
-
-.amenity-info {
-  display: flex;
-  flex-direction: column;
-  gap: 1px;
-}
-
-.amenity-label {
-  font-size: 0.65rem;
-  color: #64748b;
+  align-items: center;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
+  margin-bottom: 8px;
 }
 
-.amenity-name { font-size: 0.74rem; color: #0f172a; line-height: 1.2; }
+.amenity-cat-header.metro-header { color: #818cf8; }
+.amenity-cat-header.cafe-header  { color: #fbbf24; }
+.amenity-cat-header.hosp-header  { color: #f43f5e; }
 
-.amenity-dist {
-  font-size: 0.68rem;
-  color: #2563eb;
-  font-family: var(--font-mono);
+/* Rows */
+.amenity-row-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #131d31;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 10px 12px;
+  margin-bottom: 6px;
+  transition: all 0.15s ease;
+  cursor: pointer;
+}
+
+.amenity-row-item:hover {
+  border-color: #3b82f6;
+  background: rgba(30, 41, 59, 0.9);
+}
+
+.amenity-row-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-width: 0;
+  flex: 1;
+}
+
+.amenity-icon-box {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: rgba(255, 255, 255, 0.06);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  flex-shrink: 0;
+}
+
+.amenity-text-box {
+  min-width: 0;
+  flex: 1;
+}
+
+.amenity-main-name {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #f8fafc;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.amenity-sub-desc {
+  font-size: 0.72rem;
+  color: #94a3b8;
+  margin-top: 2px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.amenity-sub-desc .line-yellow { color: #facc15; }
+.amenity-sub-desc .rating-star { color: #fbbf24; font-weight: 600; }
+.amenity-sub-desc .emergency-alert { color: #ef4444; font-weight: 600; }
+
+.amenity-row-right {
+  text-align: right;
+  flex-shrink: 0;
+  margin-left: 10px;
+}
+
+.amenity-dist-val {
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: #38bdf8;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.amenity-walk-time {
+  font-size: 0.70rem;
+  color: #94a3b8;
+  margin-top: 2px;
 }
 
 .amenity-popup { font-family: var(--font-sans); padding: 4px; }

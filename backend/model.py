@@ -320,6 +320,13 @@ class DelhiTrafficModel:
 
     # find nearest metro, hospitals, police stations, cafes using haversine
     def get_nearest_amenities(self, lat, lng, max_results=4):
+        if os.path.exists(AMENITIES_PATH):
+            try:
+                with open(AMENITIES_PATH, 'r', encoding='utf-8') as f:
+                    self.amenities = json.load(f)
+            except Exception:
+                pass
+
         result = {}
         for category in ["cafes", "hospitals", "police_stations", "metro_stations"]:
             items = self.amenities.get(category, [])
