@@ -412,31 +412,35 @@ body {
 .swap-divider {
   display: flex;
   justify-content: flex-end;
-  padding-right: 24px;
-  margin: -8px 0;
-  z-index: 10;
+  padding-right: 28px;
+  margin: -14px 0;
+  z-index: 1500;
   position: relative;
 }
 
 .btn-swap {
   background: white;
-  border: 1px solid var(--border-color);
+  border: 1.5px solid var(--border-color);
   border-radius: 50%;
-  width: 28px;
-  height: 28px;
+  width: 32px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   color: var(--text-secondary);
-  box-shadow: var(--shadow-sm);
-  transition: transform 0.2s ease, background-color 0.15s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  transition: transform 0.25s ease, background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  z-index: 1600;
+  position: relative;
 }
 
 .btn-swap:hover {
-  background-color: var(--bg-card-subtle);
-  transform: rotate(180deg);
+  background-color: #f0f7ff;
+  border-color: var(--accent-primary);
   color: var(--accent-primary);
+  box-shadow: 0 4px 10px rgba(37, 99, 235, 0.2);
+  transform: rotate(180deg) scale(1.08);
 }
 
 /* chips */
