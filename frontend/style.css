@@ -396,6 +396,23 @@ body {
   color: var(--text-primary);
 }
 
+/* suggestion down arrow button: shifted to the left away from clear & swap buttons */
+.input-group input::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  opacity: 0.65;
+  margin-right: 18px;
+  padding: 3px 4px;
+  font-size: 0.85rem;
+  border-radius: 4px;
+  transition: opacity 0.15s ease, background-color 0.15s ease, transform 0.15s ease;
+}
+
+.input-group input::-webkit-calendar-picker-indicator:hover {
+  opacity: 1;
+  background-color: #f1f5f9;
+  transform: scale(1.1);
+}
+
 .btn-clear {
   background: none;
   border: none;
@@ -412,7 +429,7 @@ body {
 .swap-divider {
   display: flex;
   justify-content: flex-end;
-  padding-right: 28px;
+  padding-right: 18px;
   margin: -14px 0;
   z-index: 1500;
   position: relative;
