@@ -297,6 +297,234 @@ function bindEvents() {
       }
     });
   }
+
+  // initialize the autocomplete suggestions for pickup and drop places
+  setupPlaceSuggestions();
+}
+
+// step 2b: autocomplete dropdown suggestions for confirmed pickup/drop places in delhi
+function setupPlaceSuggestions() {
+  console.log("Setting up place suggestions dropdown...");
+
+  // list of major confirmed pickup/drop transit hubs in delhi
+  var popularHubs = [
+    "Kashmere Gate ISBT",
+    "Connaught Place (Rajiv Chowk)",
+    "AIIMS / Safdarjung Hospital",
+    "Nehru Place Bus Terminal",
+    "Anand Vihar ISBT",
+    "Sarai Kale Khan ISBT (Hazrat Nizamuddin)",
+    "Dhaula Kuan Interchange",
+    "Hauz Khas Metro / Aurobindo Market",
+    "Karol Bagh (Pusa Road)",
+    "Rajouri Garden Interchange",
+    "Punjabi Bagh Chowk",
+    "Janakpuri West District Centre",
+    "Dwarka Mor",
+    "Dwarka Sector 21 Interchange",
+    "IGI Airport Terminal 3",
+    "Rohini West / Madhuban Chowk",
+    "Azadpur Terminal",
+    "Vishwavidyalaya (Delhi University North Campus)",
+    "New Delhi Railway Station (Ajmeri Gate)",
+    "Old Delhi Railway Station (Chandni Chowk)",
+    "Lajpat Nagar Ring Road",
+    "Mehrauli Terminal",
+    "Badarpur Border Terminal",
+    "Akshardham Temple / Commonwealth Games Village",
+    "Mayur Vihar Phase 1 Pocket 1",
+    "Laxmi Nagar Metro (Vikas Marg)",
+    "Shahdara Terminal",
+    "Vasant Kunj (Promenade / Ambience Mall)"
+  ];
+
+  function getStopsList() {
+    if (state.stopsData && state.stopsData.length > 0) {
+      return state.stopsData;
+    }
+    // fallback to popular hubs list if stops are still loading
+    return popularHubs.map(function (name) {
+      return { name: name, zone: "Delhi Transit", is_hub: true };
+    });
+  }
+
+  function setupInput(inputId, dropdownId) {
+    var input = document.getElementById(inputId);
+    var dropdown = document.getElementById(dropdownId);
+    if (!input || !dropdown) return;
+
+    var activeIndex = -1;
+
+    function renderDropdown(items, queryText, isPopular) {
+      dropdown.innerHTML = "";
+      if (items.length === 0) {
+        dropdown.innerHTML = 
+          '<div class="suggestion-empty">' +
+            'No confirmed stop found for "<strong>' + queryText + '</strong>".<br>' +
+            '<span style="font-size:0.75rem; color:#94a3b8;">Try searching by area (e.g. Rohini, CP, Dwarka, AIIMS)</span>' +
+          '</div>';
+        dropdown.classList.add("open");
+        return;
+      }
+
+      var header = document.createElement("div");
+      header.className = "suggestions-header";
+      header.innerText = isPopular ? "⭐ Confirmed Delhi Pickup & Drop Locations" : "🚏 Matching Verified Stops (" + items.length + ")";
+      dropdown.appendChild(header);
+
+      items.forEach(function (stop, idx) {
+        var itemDiv = document.createElement("div");
+        itemDiv.className = "suggestion-item";
+        itemDiv.dataset.index = idx;
+
+        // highlight matching query letters
+        var displayName = stop.name;
+        if (queryText && queryText.length > 0) {
+          var escapedQuery = queryText.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+          var reg = new RegExp("(" + escapedQuery + ")", "gi");
+          displayName = stop.name.replace(reg, "<mark>$1</mark>");
+        }
+
+        var isHub = stop.is_hub;
+        var iconHtml = isHub ? "🚏" : "📍";
+        var badgeText = isHub ? "Terminal Hub" : "Confirmed Stop";
+        var badgeClass = isHub ? "suggestion-badge hub" : "suggestion-badge";
+        var zoneText = (stop.zone ? stop.zone + " Zone • " : "") + (isHub ? "Major DTC Terminal" : "Confirmed Passenger Stop");
+
+        itemDiv.innerHTML = 
+          '<div class="suggestion-icon-col ' + (isHub ? "hub" : "stop") + '">' + iconHtml + '</div>' +
+          '<div class="suggestion-info">' +
+            '<div class="suggestion-name">' + displayName + '</div>' +
+            '<div class="suggestion-sub">' + zoneText + '</div>' +
+          '</div>' +
+          '<span class="' + badgeClass + '">' + badgeText + '</span>';
+
+        // select place when clicked
+        itemDiv.addEventListener("click", function (e) {
+          e.stopPropagation();
+          input.value = stop.name;
+          closeDropdown();
+          planJourney();
+        });
+
+        dropdown.appendChild(itemDiv);
+      });
+
+      dropdown.classList.add("open");
+      activeIndex = -1;
+    }
+
+    function closeDropdown() {
+      dropdown.classList.remove("open");
+      dropdown.innerHTML = "";
+      activeIndex = -1;
+    }
+
+    function showSuggestions() {
+      var query = input.value.trim().toLowerCase();
+      var allStops = getStopsList();
+
+      if (query.length === 0) {
+        // show popular confirmed hubs when input is blank
+        var popularList = allStops.filter(function (s) {
+          return s.is_hub || popularHubs.indexOf(s.name) !== -1;
+        }).slice(0, 10);
+        renderDropdown(popularList, "", true);
+        return;
+      }
+
+      // filter stops matching query
+      var filtered = allStops.filter(function (s) {
+        var nameLower = s.name.toLowerCase();
+        var zoneLower = (s.zone || "").toLowerCase();
+        var idLower = (s.id || "").toLowerCase();
+
+        // check direct substring match
+        if (nameLower.indexOf(query) !== -1 || zoneLower.indexOf(query) !== -1 || idLower.indexOf(query) !== -1) {
+          return true;
+        }
+
+        // common delhi abbreviations and aliases
+        if ((query === "cp" || query === "connaught") && nameLower.indexOf("connaught") !== -1) return true;
+        if ((query === "airport" || query === "t3") && (nameLower.indexOf("airport") !== -1 || nameLower.indexOf("igi") !== -1)) return true;
+        if (query === "aiims" && nameLower.indexOf("aiims") !== -1) return true;
+        if (query === "isbt" && nameLower.indexOf("isbt") !== -1) return true;
+        if (query === "du" && nameLower.indexOf("vishwavidyalaya") !== -1) return true;
+        if (query === "metro" && nameLower.indexOf("metro") !== -1) return true;
+        if (query === "railway" && nameLower.indexOf("railway") !== -1) return true;
+
+        return false;
+      });
+
+      renderDropdown(filtered.slice(0, 12), query, false);
+    }
+
+    // event listeners on input
+    input.addEventListener("focus", function () {
+      showSuggestions();
+    });
+
+    input.addEventListener("click", function () {
+      showSuggestions();
+    });
+
+    input.addEventListener("input", function () {
+      showSuggestions();
+    });
+
+    // keyboard navigation
+    input.addEventListener("keydown", function (e) {
+      if (!dropdown.classList.contains("open")) return;
+
+      var items = dropdown.querySelectorAll(".suggestion-item");
+      if (items.length === 0) return;
+
+      if (e.key === "ArrowDown") {
+        e.preventDefault();
+        activeIndex = (activeIndex + 1) % items.length;
+        updateActiveItem(items);
+      } else if (e.key === "ArrowUp") {
+        e.preventDefault();
+        activeIndex = (activeIndex - 1 + items.length) % items.length;
+        updateActiveItem(items);
+      } else if (e.key === "Enter") {
+        e.preventDefault();
+        if (activeIndex >= 0 && activeIndex < items.length) {
+          items[activeIndex].click();
+        } else {
+          closeDropdown();
+          planJourney();
+        }
+      } else if (e.key === "Escape") {
+        closeDropdown();
+      }
+    });
+
+    function updateActiveItem(items) {
+      items.forEach(function (el, i) {
+        if (i === activeIndex) {
+          el.classList.add("active");
+          el.scrollIntoView({ block: "nearest" });
+        } else {
+          el.classList.remove("active");
+        }
+      });
+    }
+  }
+
+  // attach autocomplete to both origin and destination inputs
+  setupInput("input-origin", "suggestions-origin");
+  setupInput("input-dest", "suggestions-dest");
+
+  // click outside closes any open suggestions
+  document.addEventListener("click", function (e) {
+    if (!e.target.closest(".input-wrapper")) {
+      var d1 = document.getElementById("suggestions-origin");
+      var d2 = document.getElementById("suggestions-dest");
+      if (d1) d1.classList.remove("open");
+      if (d2) d2.classList.remove("open");
+    }
+  });
 }
 
 // step 3: fetch all initial data from python backend using fetch()

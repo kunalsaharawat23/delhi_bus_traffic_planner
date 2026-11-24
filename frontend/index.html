@@ -89,10 +89,14 @@
         </div>
 
         <div class="search-form">
-          <div class="input-group">
-            <span class="input-icon origin-icon">🟢</span>
-            <input type="text" id="input-origin" placeholder="Choose starting point or stop..." value="Kashmere Gate ISBT" autocomplete="off">
-            <button class="btn-clear" id="btn-clear-origin" title="Clear">✕</button>
+          <!-- origin pickup point input with suggestions -->
+          <div class="input-wrapper">
+            <div class="input-group">
+              <span class="input-icon origin-icon">🟢</span>
+              <input type="text" id="input-origin" placeholder="Choose pickup point in Delhi..." value="Kashmere Gate ISBT" autocomplete="off">
+              <button class="btn-clear" id="btn-clear-origin" title="Clear">✕</button>
+            </div>
+            <div class="suggestions-dropdown" id="suggestions-origin"></div>
           </div>
 
           <div class="swap-divider">
@@ -103,10 +107,14 @@
             </button>
           </div>
 
-          <div class="input-group">
-            <span class="input-icon dest-icon">🔴</span>
-            <input id="input-dest" type="text" placeholder="Choose destination or stop..." value="Nehru Place Bus Terminal" autocomplete="off">
-            <button class="btn-clear" id="btn-clear-dest" title="Clear">✕</button>
+          <!-- destination drop-off point input with suggestions -->
+          <div class="input-wrapper">
+            <div class="input-group">
+              <span class="input-icon dest-icon">🔴</span>
+              <input id="input-dest" type="text" placeholder="Choose drop-off point in Delhi..." value="Nehru Place Bus Terminal" autocomplete="off">
+              <button class="btn-clear" id="btn-clear-dest" title="Clear">✕</button>
+            </div>
+            <div class="suggestions-dropdown" id="suggestions-dest"></div>
           </div>
 
           <!-- sample route chips -->
