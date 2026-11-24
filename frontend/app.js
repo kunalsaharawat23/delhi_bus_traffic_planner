@@ -32,6 +32,7 @@ document.addEventListener("DOMContentLoaded", function () {
   initMap();
   bindEvents();
   fetchInitialData();
+  initDelhiClock();
 
   // auto plan default journey after small delay (Kashmere Gate to Nehru Place)
   setTimeout(function () {
@@ -543,6 +544,10 @@ async function fetchInitialData() {
     var vehiclesJson = await vehiclesRes.json();
     state.vehiclesData = vehiclesJson.vehicles;
     document.getElementById("map-bus-count").innerText = vehiclesJson.count;
+    var activeBusesEl = document.getElementById("stat-active-buses");
+    if (activeBusesEl) {
+      activeBusesEl.innerText = vehiclesJson.count + " Working";
+    }
     renderLiveBusMarkers(vehiclesJson.vehicles);
     startLiveSimulation();
 
@@ -588,6 +593,48 @@ function updateTopBarStats(trafficJson) {
   }
 }
 
+// initialize live clock according to GMT+5:30 (Indian Standard Time)
+function initDelhiClock() {
+  updateDelhiClock();
+  setInterval(updateDelhiClock, 1000);
+}
+
+// update the top-bar clock strictly to GMT+5:30 (Asia/Kolkata)
+function updateDelhiClock() {
+  var clockEl = document.getElementById("stat-current-time");
+  if (!clockEl) {
+    return;
+  }
+
+  try {
+    // Current time according to GMT+5:30 (Asia/Kolkata timezone)
+    var now = new Date();
+    var timeStr = now.toLocaleTimeString('en-US', {
+      timeZone: 'Asia/Kolkata',
+      hour: '2-digit',
+      minute: '2-digit',
+      second: '2-digit',
+      hour12: true
+    });
+    clockEl.innerText = timeStr;
+  } catch (err) {
+    // Math fallback for GMT+5:30
+    var now = new Date();
+    var utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+    var istDate = new Date(utc + (3600000 * 5.5));
+    var hours = istDate.getHours();
+    var minutes = istDate.getMinutes();
+    var seconds = istDate.getSeconds();
+    var ampm = hours >= 12 ? 'PM' : 'AM';
+    hours = hours % 12;
+    hours = hours ? hours : 12;
+    var hStr = hours < 10 ? '0' + hours : hours;
+    var mStr = minutes < 10 ? '0' + minutes : minutes;
+    var sStr = seconds < 10 ? '0' + seconds : seconds;
+    clockEl.innerText = hStr + ':' + mStr + ':' + sStr + ' ' + ampm;
+  }
+}
+
 // no colored lines drawn over the map so google maps remains clean
 function renderTrafficCorridors(corridors) {
   state.trafficLayersGroup.clearLayers();
@@ -597,6 +644,11 @@ function renderTrafficCorridors(corridors) {
 // draw buses as moving circles on the map
 function renderLiveBusMarkers(vehicles) {
   state.busMarkersGroup.clearLayers();
+
+  var activeBusesEl = document.getElementById("stat-active-buses");
+  if (activeBusesEl && vehicles) {
+    activeBusesEl.innerText = vehicles.length + " Working";
+  }
 
   vehicles.forEach(function (v) {
     // color based on bus speed

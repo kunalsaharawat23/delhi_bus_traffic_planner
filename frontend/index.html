@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   
   <!-- Custom stylesheet with cache bust -->
-  <link rel="stylesheet" href="/static/style.css?v=3.3">
+  <link rel="stylesheet" href="/static/style.css?v=3.4">
 </head>
 <body>
   <div class="app-container">
@@ -41,6 +41,23 @@
         <div class="brand-text">
           <h1>Delhi Transit Flow</h1>
           <span class="subtitle">DTC GTFS-Realtime Traffic Model</span>
+        </div>
+      </div>
+
+      <!-- Live fleet status and Delhi current time (GMT+5:30) -->
+      <div class="network-stats">
+        <div id="badge-fleet" class="stat-badge pulse" title="Total active DTC buses transmitting live GPS coordinates">
+          <span class="stat-dot"></span>
+          <span class="stat-label">Live Buses:</span>
+          <strong id="stat-active-buses">350 Working</strong>
+        </div>
+        <div id="badge-time" class="stat-badge" title="Current time in Delhi (Indian Standard Time, GMT+5:30)">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="#38bdf8" stroke-width="2" style="flex-shrink: 0;">
+            <circle cx="12" cy="12" r="10"></circle>
+            <polyline points="12 6 12 12 16 14"></polyline>
+          </svg>
+          <span class="stat-label">Time (GMT+5:30):</span>
+          <strong id="stat-current-time">--:--:-- --</strong>
         </div>
       </div>
 
@@ -422,6 +439,6 @@
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="/static/app.js?v=3.3"></script>
+  <script src="/static/app.js?v=3.4"></script>
 </body>
 </html>
