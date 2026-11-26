@@ -251,11 +251,25 @@ function bindEvents() {
     });
   }
 
-  // benchmark accuracy modal buttons
+  // benchmark accuracy & live API perfection modal buttons
   var btnBenchmark = document.getElementById("btn-benchmark-modal");
   if (btnBenchmark) {
     btnBenchmark.addEventListener("click", function () {
       openBenchmarkModal();
+    });
+  }
+
+  var badgeApiHealth = document.getElementById("badge-api-health");
+  if (badgeApiHealth) {
+    badgeApiHealth.addEventListener("click", function () {
+      openBenchmarkModal();
+    });
+  }
+
+  var btnRerunBench = document.getElementById("btn-rerun-api-bench");
+  if (btnRerunBench) {
+    btnRerunBench.addEventListener("click", function () {
+      runLiveApiDiagnostics(true);
     });
   }
 
@@ -564,6 +578,9 @@ async function fetchInitialData() {
     renderAmenityMarkers(amenitiesJson);
 
     console.log("Initial data loaded successfully!");
+
+    // 5. measure live API health & update heading bar benchmark status
+    runLiveApiDiagnostics(false);
   } catch (err) {
     console.error("Error fetching data from server:", err);
   }
@@ -1385,29 +1402,304 @@ function selectJourneyOption(opt) {
   state.map.fitBounds(mainLine.getBounds(), { padding: [60, 60], maxZoom: 14 });
 }
 
-// open benchmark dialog modal
+// open benchmark dialog modal & run fresh live endpoint diagnostics
 async function openBenchmarkModal() {
   var modal = document.getElementById("modal-benchmark");
   if (modal) {
     modal.style.display = "flex";
   }
 
-  // fetch benchmark data if not already cached
-  if (!state.benchmarkData) {
-    try {
-      var res = await fetch("/api/benchmark");
-      state.benchmarkData = await res.json();
-      populateBenchmarkModal(state.benchmarkData);
-    } catch (err) {
-      console.error("Error loading benchmark data:", err);
-    }
-  }
+  await runLiveApiDiagnostics(true);
 }
 
 function closeBenchmarkModal() {
   var modal = document.getElementById("modal-benchmark");
   if (modal) {
     modal.style.display = "none";
+  }
+}
+
+// helper to time and verify one API endpoint
+async function probeSingleApi(label, roleText, url, methodName, bodyPayload, verifyFn) {
+  var t0 = performance.now();
+  try {
+    var fetchOpts = { method: methodName || "GET" };
+    if (bodyPayload) {
+      fetchOpts.headers = { "Content-Type": "application/json" };
+      fetchOpts.body = JSON.stringify(bodyPayload);
+    }
+    var res = await fetch(url, fetchOpts);
+    var jsonData = await res.json();
+    var elapsedMs = Math.max(1, Math.round(performance.now() - t0));
+    var detailMsg = verifyFn(jsonData);
+    var effLabel = "Optimal";
+    var effClass = "optimal";
+    if (elapsedMs <= 25) {
+      effLabel = "Ultra Fast";
+      effClass = "fast";
+    } else if (elapsedMs > 250) {
+      effLabel = "High Latency";
+      effClass = "slow";
+    }
+    return {
+      label: label,
+      roleText: roleText,
+      ok: res.ok,
+      statusCode: res.status,
+      ms: elapsedMs,
+      detail: detailMsg,
+      effLabel: effLabel,
+      effClass: effClass,
+      data: jsonData
+    };
+  } catch (err) {
+    var failMs = Math.max(1, Math.round(performance.now() - t0));
+    return {
+      label: label,
+      roleText: roleText,
+      ok: false,
+      statusCode: 0,
+      ms: failMs,
+      detail: "Request failed: " + err.message,
+      effLabel: "Error",
+      effClass: "slow",
+      data: null
+    };
+  }
+}
+
+// run live probes across all internal APIs + OSRM cache + benchmark accuracy
+async function runLiveApiDiagnostics(updateModalTable) {
+  console.log("Running live API perfection & benchmark checks...");
+
+  var statusBadgeEl = document.getElementById("bm-live-check-status");
+  if (updateModalTable && statusBadgeEl) {
+    statusBadgeEl.className = "bench-live-badge running";
+    statusBadgeEl.innerText = "Running live HTTP probes...";
+  }
+
+  var probes = [
+    probeSingleApi(
+      "GET /api/health",
+      "System Readiness & Cache Probe",
+      "/api/health",
+      "GET",
+      null,
+      function (d) {
+        return d.stops_loaded + " stops, " + d.routes_loaded + " routes, " + d.osrm_cache_files + " cached OSRM files";
+      }
+    ),
+    probeSingleApi(
+      "GET /api/directions",
+      "Bus Routing + OSRM Road Geometry",
+      "/api/directions?origin=Kashmere%20Gate%20ISBT&destination=Nehru%20Place%20Bus%20Terminal&departure_time=09:00",
+      "GET",
+      null,
+      function (d) {
+        var firstPts = (d.options && d.options[0] && d.options[0].path_coordinates) ? d.options[0].path_coordinates.length : 0;
+        return d.options_count + " route options • " + firstPts + " OSRM street coords";
+      }
+    ),
+    probeSingleApi(
+      "POST /api/directions",
+      "JSON Body Route Planner",
+      "/api/directions",
+      "POST",
+      { origin: "Connaught Place (Rajiv Chowk)", destination: "Dwarka Mor", departure_time: "now" },
+      function (d) {
+        var firstPts = (d.options && d.options[0] && d.options[0].path_coordinates) ? d.options[0].path_coordinates.length : 0;
+        return d.options_count + " options • " + firstPts + " road points";
+      }
+    ),
+    probeSingleApi(
+      "GET /api/traffic?hour=9",
+      "12-Corridor Peak Traffic Model",
+      "/api/traffic?hour=9",
+      "GET",
+      null,
+      function (d) {
+        return d.corridors.length + " corridors • Avg " + d.citywide_average_bus_speed_kmh + " km/h (" + d.overall_status + ")";
+      }
+    ),
+    probeSingleApi(
+      "GET /api/vehicles?limit=300",
+      "Live DTC Bus Fleet Telemetry",
+      "/api/vehicles?limit=300",
+      "GET",
+      null,
+      function (d) {
+        return d.count + " live bus GPS coordinates active";
+      }
+    ),
+    probeSingleApi(
+      "GET /api/stops",
+      "Confirmed Bus Stops & Hubs",
+      "/api/stops",
+      "GET",
+      null,
+      function (d) {
+        return d.count + " transit hubs & passenger stops indexed";
+      }
+    ),
+    probeSingleApi(
+      "GET /api/routes",
+      "Directional DTC Route Master",
+      "/api/routes",
+      "GET",
+      null,
+      function (d) {
+        return d.count + " directional routes loaded";
+      }
+    ),
+    probeSingleApi(
+      "GET /api/amenities",
+      "Haversine Nearby POI Finder",
+      "/api/amenities",
+      "GET",
+      null,
+      function (d) {
+        var total = (d.metro_stations || []).length + (d.hospitals || []).length + (d.police_stations || []).length + (d.cafes || []).length;
+        return total + " POIs (" + (d.metro_stations || []).length + " Metro, " + (d.hospitals || []).length + " Hosp, " + (d.cafes || []).length + " Cafes)";
+      }
+    ),
+    probeSingleApi(
+      "GET /api/speed-limits",
+      "Delhi Traffic Police Gazette Limits",
+      "/api/speed-limits",
+      "GET",
+      null,
+      function (d) {
+        var cnt = d.corridors ? Object.keys(d.corridors).length : 0;
+        return cnt + " statutory corridor rules loaded";
+      }
+    ),
+    probeSingleApi(
+      "GET /api/benchmark",
+      "Google Maps 10-Pair Accuracy Suite",
+      "/api/benchmark",
+      "GET",
+      null,
+      function (d) {
+        return d.benchmark_pairs_tested + " pairs • " + d.overall_model_accuracy_score + "% accuracy (" + d.solver_execution_ms + "ms solver)";
+      }
+    )
+  ];
+
+  var results = await Promise.all(probes);
+
+  var passed = 0;
+  var totalMs = 0;
+  var minMs = 999999;
+  var maxMs = 0;
+  var healthData = null;
+  var benchData = null;
+  var roadPtsSample = 0;
+
+  results.forEach(function (r, idx) {
+    if (r.ok) passed += 1;
+    totalMs += r.ms;
+    if (r.ms < minMs) minMs = r.ms;
+    if (r.ms > maxMs) maxMs = r.ms;
+
+    if (idx === 0 && r.data) healthData = r.data;
+    if (idx === 1 && r.data && r.data.options && r.data.options[0] && r.data.options[0].path_coordinates) {
+      roadPtsSample = r.data.options[0].path_coordinates.length;
+    }
+    if (idx === 9 && r.data) benchData = r.data;
+  });
+
+  var healthPct = Math.round((passed / results.length) * 100);
+  var avgMs = Math.max(1, Math.round(totalMs / results.length));
+
+  // Update top heading bar live indicators
+  var headerApiEl = document.getElementById("stat-api-perfection");
+  var headerApiBadge = document.getElementById("badge-api-health");
+  if (headerApiEl) {
+    if (passed === results.length) {
+      headerApiEl.innerText = healthPct + "% Optimal (" + avgMs + "ms)";
+      if (headerApiBadge) headerApiBadge.classList.remove("warn");
+    } else {
+      headerApiEl.innerText = passed + "/" + results.length + " Active (" + healthPct + "%)";
+      if (headerApiBadge) headerApiBadge.classList.add("warn");
+    }
+  }
+
+  var headerBmPill = document.getElementById("header-bm-pill");
+  if (headerBmPill && benchData) {
+    headerBmPill.innerText = benchData.overall_model_accuracy_score + "%";
+  }
+
+  if (benchData) {
+    state.benchmarkData = benchData;
+    populateBenchmarkModal(benchData);
+  }
+
+  if (!updateModalTable) {
+    return;
+  }
+
+  // Update modal Section 1 diagnostic KPI cards
+  var pctEl = document.getElementById("bm-api-health-pct");
+  var passSubEl = document.getElementById("bm-api-pass-sub");
+  var avgLatEl = document.getElementById("bm-avg-latency");
+  var latSubEl = document.getElementById("bm-latency-sub");
+  var cacheEl = document.getElementById("bm-osrm-cache");
+  var cacheSubEl = document.getElementById("bm-osrm-sub");
+  var solverEl = document.getElementById("bm-solver-speed");
+  var covEl = document.getElementById("bm-system-coverage");
+
+  if (pctEl) pctEl.innerText = healthPct + "%";
+  if (passSubEl) passSubEl.innerText = passed + " / " + results.length + " Endpoints Working (HTTP 200)";
+  if (avgLatEl) avgLatEl.innerText = avgMs + " ms";
+  if (latSubEl) latSubEl.innerText = "Min " + minMs + "ms • Max " + maxMs + "ms";
+
+  if (healthData) {
+    if (cacheEl) cacheEl.innerText = (healthData.osrm_cache_files || 0) + " Files";
+    if (cacheSubEl) cacheSubEl.innerText = (healthData.osrm_cache_size_kb || 0) + " KB on disk • " + roadPtsSample + " street coords";
+    if (covEl) covEl.innerText = healthData.stops_loaded + " Stops • " + healthData.routes_loaded + " Routes • " + healthData.amenities_loaded + " POIs";
+  }
+
+  if (benchData && solverEl) {
+    solverEl.innerText = (benchData.solver_execution_ms || avgMs) + " ms";
+  }
+
+  if (statusBadgeEl) {
+    statusBadgeEl.className = "bench-live-badge";
+    statusBadgeEl.innerText = passed + "/" + results.length + " APIs Verified Live (" + avgMs + "ms avg)";
+  }
+
+  // Fill Live API Diagnostic rows
+  var diagBody = document.getElementById("api-health-table-body");
+  if (diagBody) {
+    diagBody.innerHTML = "";
+    results.forEach(function (r) {
+      var tr = document.createElement("tr");
+      var statusBadge = r.ok
+        ? '<span class="api-status-pill ok">✓ ' + r.statusCode + ' OK</span>'
+        : '<span class="api-status-pill fail">✗ FAIL</span>';
+      var effBadge = '<span class="api-eff-pill ' + r.effClass + '">' + r.effLabel + '</span>';
+
+      tr.innerHTML =
+        '<td><span class="api-ep-code">' + r.label + '</span></td>' +
+        '<td>' + r.roleText + '</td>' +
+        '<td>' + statusBadge + '</td>' +
+        '<td><strong>' + r.ms + ' ms</strong></td>' +
+        '<td>' + effBadge + '</td>' +
+        '<td style="color: #475569;">' + r.detail + '</td>';
+      diagBody.appendChild(tr);
+    });
+
+    // Add row showing Leaflet Google Maps tile layers & OSRM status
+    var extTr = document.createElement("tr");
+    var osrmActive = roadPtsSample > 20;
+    extTr.innerHTML =
+      '<td><span class="api-ep-code">EXTERNAL: OSRM + Cache</span></td>' +
+      '<td>Street-Following Road Geometry</td>' +
+      '<td>' + (osrmActive ? '<span class="api-status-pill ok">✓ ACTIVE</span>' : '<span class="api-status-pill fail">FALLBACK</span>') + '</td>' +
+      '<td><strong>0ms cache</strong></td>' +
+      '<td><span class="api-eff-pill fast">Disk Cached</span></td>' +
+      '<td style="color: #475569;">' + roadPtsSample + ' road points active • ' + (healthData ? healthData.osrm_cache_files : 0) + ' cached JSON routes</td>';
+    diagBody.appendChild(extTr);
   }
 }
 

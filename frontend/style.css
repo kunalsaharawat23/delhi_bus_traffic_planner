@@ -1530,3 +1530,168 @@ body {
     grid-template-columns: 1fr;
   }
 }
+
+/* ======================================================== */
+/* Heading Bar Benchmarks Button & API Perfection Badge     */
+/* ======================================================== */
+.stat-badge-btn {
+  cursor: pointer;
+  font-family: inherit;
+  transition: all 0.15s ease;
+}
+
+.stat-badge-btn:hover {
+  border-color: #38bdf8;
+  background: rgba(30, 41, 59, 0.95);
+  transform: translateY(-1px);
+}
+
+.stat-badge-btn strong {
+  color: #10b981;
+}
+
+.stat-badge-btn.warn strong {
+  color: #f59e0b;
+}
+
+.btn-benchmark-header {
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: #f8fafc;
+  border: 1px solid #334155;
+  box-shadow: 0 2px 8px rgba(15, 23, 42, 0.35);
+}
+
+.btn-benchmark-header:hover {
+  border-color: #38bdf8;
+  background: #1e293b;
+  transform: translateY(-1px);
+}
+
+.header-bm-pill {
+  background: rgba(16, 185, 129, 0.18);
+  color: #34d399;
+  border: 1px solid rgba(52, 211, 153, 0.35);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+}
+
+/* Modal Section Headers & Dark Diagnostic Cards */
+.bench-section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.bench-section-header h4 {
+  font-size: 0.95rem;
+  font-weight: 800;
+  color: var(--text-primary);
+}
+
+.bench-live-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 9999px;
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+  font-family: var(--font-mono);
+}
+
+.bench-live-badge.running {
+  background: #eff6ff;
+  color: #1d4ed8;
+  border-color: #bfdbfe;
+}
+
+.bench-sub-tag {
+  font-size: 0.74rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+.metric-card.dark-perf {
+  background: #0f172a;
+  border: 1px solid #1e293b;
+  color: #f8fafc;
+}
+
+.metric-card.dark-perf .metric-label {
+  color: #94a3b8;
+}
+
+.metric-card.dark-perf .metric-value.cyan {
+  color: #38bdf8;
+}
+
+.metric-card.dark-perf .metric-sub {
+  color: #cbd5e1;
+}
+
+.api-diag-table th {
+  background: #0f172a;
+}
+
+.api-ep-code {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.api-status-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 9999px;
+  font-family: var(--font-mono);
+}
+
+.api-status-pill.ok {
+  background: #ecfdf5;
+  color: #047857;
+  border: 1px solid #a7f3d0;
+}
+
+.api-status-pill.fail {
+  background: #fef2f2;
+  color: #b91c1c;
+  border: 1px solid #fecaca;
+}
+
+.api-eff-pill {
+  display: inline-block;
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.api-eff-pill.fast {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+.api-eff-pill.optimal {
+  background: #ecfdf5;
+  color: #047857;
+}
+
+.api-eff-pill.slow {
+  background: #fef3c7;
+  color: #b45309;
+}
+
+@media (max-width: 1240px) {
+  .top-bar { padding: 8px 14px; }
+  .stat-badge { padding: 5px 10px; font-size: 0.75rem; gap: 6px; }
+  .btn { padding: 7px 12px; font-size: 0.8rem; }
+}

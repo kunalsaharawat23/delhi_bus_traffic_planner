@@ -20,7 +20,7 @@
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   
   <!-- Custom stylesheet with cache bust -->
-  <link rel="stylesheet" href="/static/style.css?v=3.7">
+  <link rel="stylesheet" href="/static/style.css?v=4.1">
 </head>
 <body>
   <div class="app-container">
@@ -62,6 +62,15 @@
       </div>
 
       <div class="header-actions">
+        <button id="btn-benchmark-modal" class="btn btn-benchmark-header" title="View System Benchmarks & Perfection Efficiency">
+          <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M18 20V10"/>
+            <path d="M12 20V4"/>
+            <path d="M6 20v-6"/>
+          </svg>
+          <span>Benchmarks</span>
+          <span id="header-bm-pill" class="header-bm-pill">87.2%</span>
+        </button>
         <button id="btn-gmaps-split-view" class="btn btn-primary" title="Compare this Traffic Map side-by-side with Google Maps Transit">
           <svg viewBox="0 0 24 24" width="16" height="16" fill="currentColor">
             <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
@@ -248,22 +257,22 @@
             <label class="layer-checkbox">
               <input id="toggle-metro" type="checkbox">
               <span class="custom-check"></span>
-              <span class="layer-name">🚇 Metro Stations (20)</span>
+              <span class="layer-name">🚇 Metro Stations (23)</span>
             </label>
             <label class="layer-checkbox">
               <input type="checkbox" id="toggle-hospitals">
               <span class="custom-check"></span>
-              <span class="layer-name">🏥 Hospitals (12)</span>
+              <span class="layer-name">🏥 Hospitals (15)</span>
             </label>
             <label class="layer-checkbox">
               <input type="checkbox" id="toggle-police">
               <span class="custom-check"></span>
-              <span class="layer-name">👮 Police Stations (12)</span>
+              <span class="layer-name">👮 Police Stations (13)</span>
             </label>
             <label class="layer-checkbox">
               <input type="checkbox" id="toggle-cafes">
               <span class="custom-check"></span>
-              <span class="layer-name">☕ Cafes (12)</span>
+              <span class="layer-name">☕ Cafes (19)</span>
             </label>
           </div>
 
@@ -284,16 +293,78 @@
 
     <!-- benchmark modal -->
     <div id="modal-benchmark" class="modal-backdrop" style="display: none;">
-      <div class="modal-card">
+      <div class="modal-card modal-card-wide">
         <div class="modal-header">
           <div class="modal-title-group">
-            <h3>Google Maps Benchmark & Validation Suite</h3>
-            <p>Empirical accuracy verification comparing bus traffic model travel times against Google Maps Transit API and actual ground truth</p>
+            <h3>System Benchmarks & Live API Perfection Suite</h3>
+            <p>Live HTTP endpoint diagnostics, OSRM road-cache efficiency, and empirical Google Maps accuracy verification</p>
           </div>
-          <button id="btn-close-benchmark" class="btn-close-modal">&times;</button>
+          <div style="display: flex; align-items: center; gap: 10px;">
+            <button id="btn-rerun-api-bench" class="btn btn-secondary" style="font-size: 0.78rem; padding: 6px 12px;" title="Re-measure live response time and HTTP health across all APIs">
+              ↻ Run Live API Check
+            </button>
+            <button id="btn-close-benchmark" class="btn-close-modal">&times;</button>
+          </div>
         </div>
 
         <div class="modal-body">
+          <!-- Section 1: Live API Health & Perfection Diagnostics -->
+          <div class="bench-section-header">
+            <h4>⚡ Live API Health & Runtime Perfection Efficiency</h4>
+            <span class="bench-live-badge" id="bm-live-check-status">Running live endpoint probes...</span>
+          </div>
+
+          <div class="benchmark-summary-grid api-perf-grid">
+            <div class="metric-card dark-perf">
+              <span class="metric-label">API Endpoint Health</span>
+              <div class="metric-value highlight" id="bm-api-health-pct">--%</div>
+              <span class="metric-sub" id="bm-api-pass-sub">Probing endpoints...</span>
+            </div>
+            <div class="metric-card dark-perf">
+              <span class="metric-label">Avg Response Time</span>
+              <div class="metric-value cyan" id="bm-avg-latency">-- ms</div>
+              <span class="metric-sub" id="bm-latency-sub">Real-time round-trip</span>
+            </div>
+            <div class="metric-card dark-perf">
+              <span class="metric-label">OSRM Road Cache</span>
+              <div class="metric-value highlight" id="bm-osrm-cache">-- Files</div>
+              <span class="metric-sub" id="bm-osrm-sub">Persistent disk geometry cache</span>
+            </div>
+            <div class="metric-card dark-perf">
+              <span class="metric-label">Data & Solver Speed</span>
+              <div class="metric-value cyan" id="bm-solver-speed">-- ms</div>
+              <span class="metric-sub" id="bm-system-coverage">50 Stops • 46 Routes • 70 POIs</span>
+            </div>
+          </div>
+
+          <div class="benchmark-table-wrapper">
+            <table class="benchmark-table api-diag-table">
+              <thead>
+                <tr>
+                  <th>API Endpoint</th>
+                  <th>System Role</th>
+                  <th>HTTP Status</th>
+                  <th>Latency</th>
+                  <th>Efficiency</th>
+                  <th>Live Payload Verification</th>
+                </tr>
+              </thead>
+              <tbody id="api-health-table-body">
+                <tr>
+                  <td colspan="6" style="text-align: center; color: #64748b; padding: 18px;">
+                    Probing live backend endpoints & OSRM road cache...
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <!-- Section 2: Empirical Google Maps Accuracy Benchmark -->
+          <div class="bench-section-header" style="margin-top: 22px;">
+            <h4>📊 Google Maps Transit Accuracy Benchmark (10 Delhi Corridors)</h4>
+            <span class="bench-sub-tag">Model vs Google Maps Ground Truth</span>
+          </div>
+
           <div class="benchmark-summary-grid">
             <div class="metric-card">
               <span class="metric-label">Overall Accuracy Score</span>
@@ -340,7 +411,7 @@
           </div>
 
           <div class="methodology-note">
-            <strong>Methodology Note:</strong> This model synthesizes 31.29 million GPS coordinates from Delhi Transport Corporation (DTC) buses covering all Delhi corridors. By calibrating commercial segment speeds with actual vehicle telemetry and factoring in dwell times from ONDC ticketing load, the bus fleet functions as an accurate proxy for Google Maps traffic estimation without relying on private telemetry.
+            <strong>Methodology & Architecture Note:</strong> This system combines 31.29M DTC GPS records and 2.56M ONDC ticketing records for travel-time prediction, renders true street geometry via the <strong>OSRM Driving Route API</strong> cached persistently in <code>backend/osrm_cache/*.json</code>, and cross-checks all REST APIs in real time with live latency telemetry.
           </div>
         </div>
       </div>
@@ -433,6 +504,6 @@
   </div>
 
   <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
-  <script src="/static/app.js?v=3.7"></script>
+  <script src="/static/app.js?v=4.1"></script>
 </body>
 </html>

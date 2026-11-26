@@ -8,10 +8,156 @@
 import json
 import math
 import os
+import hashlib
+import urllib.request as _urllib_request
 try:
     from .model import traffic_engine, haversine
 except ImportError:
     from model import traffic_engine, haversine
+
+# ----------------------------------------------------------
+# OSRM Road-Following Path Helper
+# Uses the free OSRM public API (no API key needed)
+# Returns real road geometry coordinates instead of straight lines
+# Results are CACHED to disk so the same route is never re-fetched
+# ----------------------------------------------------------
+
+# Cache folder sits inside the backend folder: backend/osrm_cache/
+# Each cached route is saved as a small JSON file named by a hash of the waypoints
+_CACHE_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)), "osrm_cache")
+
+def _get_cache_key(waypoints):
+    """
+    Makes a unique short hash string from the waypoints list.
+    Same route waypoints -> same filename every time.
+    We round coords to 4 decimal places so tiny float differences don't miss cache.
+    """
+    # round each coord to 4 decimal places to avoid float noise
+    rounded = []
+    for lat, lng in waypoints:
+        rounded.append(str(round(lat, 4)) + "," + str(round(lng, 4)))
+    key_string = "|".join(rounded)
+    # MD5 is fine here - we just need a short unique filename, not security
+    return hashlib.md5(key_string.encode("utf-8")).hexdigest()
+
+def _load_from_cache(cache_key):
+    """
+    Tries to load a previously saved OSRM result from disk.
+    Returns the road_path list if found, or None if not cached yet.
+    """
+    cache_file = os.path.join(_CACHE_DIR, cache_key + ".json")
+    if os.path.exists(cache_file):
+        try:
+            with open(cache_file, "r", encoding="utf-8") as f:
+                data = json.load(f)
+            print("OSRM cache HIT: loaded from " + cache_key + ".json (" + str(len(data)) + " points)")
+            return data
+        except Exception as read_err:
+            # corrupt cache file - ignore and re-fetch
+            print("OSRM cache read error (" + str(read_err) + "), will re-fetch from API")
+            return None
+    return None
+
+def _save_to_cache(cache_key, road_path):
+    """
+    Saves a fetched OSRM road path to a JSON file in the cache folder.
+    Creates the cache folder if it doesn't exist yet.
+    """
+    try:
+        # make sure the cache folder exists
+        if not os.path.exists(_CACHE_DIR):
+            os.makedirs(_CACHE_DIR)
+            print("OSRM cache folder created: " + _CACHE_DIR)
+
+        cache_file = os.path.join(_CACHE_DIR, cache_key + ".json")
+        with open(cache_file, "w", encoding="utf-8") as f:
+            json.dump(road_path, f, separators=(",", ":"))  # compact JSON to save space
+        print("OSRM cache SAVED: " + cache_key + ".json (" + str(len(road_path)) + " points)")
+    except Exception as write_err:
+        # if saving fails, it's okay - we still have the data in memory
+        print("OSRM cache write error (" + str(write_err) + "), continuing without saving")
+
+def get_osrm_cache_stats():
+    """Returns count and total KB size of persistent JSON cache files on disk."""
+    if not os.path.exists(_CACHE_DIR):
+        return {"cached_routes_count": 0, "cache_size_kb": 0.0}
+    total_bytes = 0
+    file_count = 0
+    for fname in os.listdir(_CACHE_DIR):
+        if fname.endswith(".json"):
+            fpath = os.path.join(_CACHE_DIR, fname)
+            if os.path.isfile(fpath):
+                file_count += 1
+                total_bytes += os.path.getsize(fpath)
+    return {
+        "cached_routes_count": file_count,
+        "cache_size_kb": round(total_bytes / 1024.0, 1)
+    }
+
+def fetch_osrm_road_coords(waypoints):
+    """
+    Takes a list of (lat, lng) tuples.
+    1. First checks the disk cache - if found, returns instantly (no API call)
+    2. If not cached, calls OSRM public API to get actual road-following polyline
+    3. Saves result to disk cache for all future requests of the same route
+    4. Falls back to straight-line segments if the API fails
+    """
+    if len(waypoints) < 2:
+        # nothing to route, return as-is
+        return [[p[0], p[1]] for p in waypoints]
+
+    # Step 1: check disk cache first
+    cache_key = _get_cache_key(waypoints)
+    cached_result = _load_from_cache(cache_key)
+    if cached_result is not None:
+        return cached_result   # cache hit - instant return, no API call needed
+
+    # Step 2: not in cache - build OSRM request
+    # OSRM wants: lng,lat;lng,lat;...
+    coord_parts = []
+    for lat, lng in waypoints:
+        coord_parts.append(str(lng) + "," + str(lat))
+    coords_str = ";".join(coord_parts)
+
+    # overview=full gives the complete geometry, geometries=geojson returns [lng, lat] arrays
+    osrm_url = "http://router.project-osrm.org/route/v1/driving/" + coords_str + "?overview=full&geometries=geojson"
+
+    try:
+        req = _urllib_request.Request(osrm_url, headers={"User-Agent": "DelhiTransitFlow/1.0"})
+        with _urllib_request.urlopen(req, timeout=8) as resp:
+            data = json.loads(resp.read())
+
+        # OSRM returns coordinates as [lng, lat] - flip them to [lat, lng] for Leaflet
+        raw_coords = data["routes"][0]["geometry"]["coordinates"]
+        road_path = []
+        for c in raw_coords:
+            road_path.append([c[1], c[0]])   # flip: lng,lat -> lat,lng
+
+        print("OSRM API fetch OK: " + str(len(road_path)) + " road points for " + str(len(waypoints)) + " waypoints")
+
+        # Step 3: save result to disk cache so next time is instant
+        _save_to_cache(cache_key, road_path)
+
+        return road_path
+
+    except Exception as osrm_err:
+        # graceful fallback - straight line between waypoints (not saved to cache)
+        print("OSRM fetch failed (" + str(osrm_err) + "), using straight-line fallback")
+        fallback = []
+        for p in waypoints:
+            fallback.append([p[0], p[1]])
+        return fallback
+
+def _sample_waypoints(points, max_points=6):
+    """Sample evenly spaced (lat, lng) waypoints while always preserving first and last point."""
+    if len(points) <= max_points:
+        return list(points)
+    step = max(1, len(points) // (max_points - 1))
+    sampled = list(points[::step])
+    if sampled[-1] != points[-1]:
+        sampled.append(points[-1])
+    return sampled
+
 
 # helper function to convert minutes into nice AM/PM clock time (like 09:15 AM)
 def format_clock_time(minutes_from_midnight):
@@ -123,8 +269,8 @@ class TransitRouter:
         cp = self.stops["connaught_place"]
         return cp["lat"], cp["lng"], cp["name"], "connaught_place"
 
-    def plan_journey(self, origin, destination, departure_time="now", preference="fastest"):
-        # TODO: add caching here for repeated origin/destination pairs
+    def plan_journey(self, origin, destination, departure_time="now", preference="fastest", include_road_geometry=True):
+        # resolve stops and compute journey; OSRM road geometry is disk-cached in backend/osrm_cache/
         orig_lat, orig_lng, orig_name, orig_stop_id = self.resolve_location(origin)
         dest_lat, dest_lng, dest_name, dest_stop_id = self.resolve_location(destination)
 
@@ -236,7 +382,8 @@ class TransitRouter:
                         "to_coord": [dest_lat, dest_lng]
                     }
                 ],
-                "path_coordinates": [[orig_lat, orig_lng], [dest_lat, dest_lng]]
+                "path_coordinates": [[orig_lat, orig_lng], [dest_lat, dest_lng]],
+                "_osrm_waypoints": [(orig_lat, orig_lng), (dest_lat, dest_lng)]
             })
 
         gmaps_transit_url = f"https://www.google.com/maps/dir/?api=1&origin={orig_lat},{orig_lng}&destination={dest_lat},{dest_lng}&travelmode=transit"
@@ -245,6 +392,9 @@ class TransitRouter:
 
         for opt in top_options:
             opt["google_maps_url"] = gmaps_transit_url
+            osrm_wps = opt.pop("_osrm_waypoints", None)
+            if include_road_geometry and osrm_wps:
+                opt["path_coordinates"] = fetch_osrm_road_coords(osrm_wps)
 
         return {
             "origin": {"name": orig_name, "lat": orig_lat, "lng": orig_lng, "nearest_amenities": origin_amenities},
@@ -311,9 +461,12 @@ class TransitRouter:
         free_flow_mins = 0.0
         total_bus_km = 0.0
         path_coords = []
+        # collect raw stop coords for OSRM waypoints
+        stop_waypoints = []
 
         o_stop_data = self.stops[orig_stop_id]
         path_coords.append([o_stop_data["lat"], o_stop_data["lng"]])
+        stop_waypoints.append((o_stop_data["lat"], o_stop_data["lng"]))
 
         for i in range(len(journey_stops) - 1):
             s1 = self.stops[journey_stops[i]]
@@ -332,6 +485,10 @@ class TransitRouter:
             free_flow_mins += (ff_mins + dwell_mins)
 
             path_coords.append([s2["lat"], s2["lng"]])
+            stop_waypoints.append((s2["lat"], s2["lng"]))
+
+        # Sample up to 6 key waypoints; snapped via OSRM only for top 3 selected options
+        osrm_waypoints = _sample_waypoints(stop_waypoints, max_points=6)
 
         traffic_delay = max(0.0, in_vehicle_mins - free_flow_mins)
         total_duration = o_walk_mins + wait_mins + in_vehicle_mins + d_walk_mins
@@ -450,7 +607,8 @@ class TransitRouter:
                 "note": "Model calibrated against DTC GPS telemetry; matches Google Maps transit estimates within ±5%."
             },
             "legs": legs,
-            "path_coordinates": path_coords
+            "path_coordinates": path_coords,
+            "_osrm_waypoints": osrm_waypoints
         }
 
     def _build_transfer_journey(self, r1, xfer_stop_id, r2, orig_stop_id, dest_stop_id, o_walk_km, d_walk_km, orig_name, dest_name, hour, base_mins=540):
@@ -612,7 +770,10 @@ class TransitRouter:
                 "to_stop": dest_name
             })
 
-        all_coords = [[self.stops[orig_stop_id]["lat"], self.stops[orig_stop_id]["lng"]]] + coords1 + coords2
+        # Build combined stop waypoints from both route legs; OSRM runs only for final top 3 options
+        raw_all_coords = [[self.stops[orig_stop_id]["lat"], self.stops[orig_stop_id]["lng"]]] + coords1 + coords2
+        raw_waypoints = [(c[0], c[1]) for c in raw_all_coords]
+        xfer_waypoints = _sample_waypoints(raw_waypoints, max_points=8)
 
         return {
             "option_id": f"xfer_{r1['route_id']}_{r2['route_id']}",
@@ -639,7 +800,8 @@ class TransitRouter:
                 "note": "Includes transfer buffer at designated interchange."
             },
             "legs": legs,
-            "path_coordinates": all_coords
+            "path_coordinates": raw_all_coords,
+            "_osrm_waypoints": xfer_waypoints
         }
 
 # module-level singleton

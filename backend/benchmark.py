@@ -6,12 +6,13 @@
 
 import json
 import math
+import time
 import numpy as np
 
 try:
-    from .router import transit_router
+    from .router import transit_router, get_osrm_cache_stats
 except ImportError:
-    from router import transit_router
+    from router import transit_router, get_osrm_cache_stats
 
 BENCHMARK_PAIRS = [
     {
@@ -107,19 +108,24 @@ BENCHMARK_PAIRS = [
 ]
 
 def run_benchmark():
+    t_start = time.perf_counter()
     results = []
     model_times_peak = []
     gmaps_times_peak = []
     actual_times_peak = []
     
     for pair in BENCHMARK_PAIRS:
-        # Run model for Morning Peak (09:00)
-        peak_plan = transit_router.plan_journey(pair["origin"], pair["destination"], departure_time="09:00")
+        # Run model for Morning Peak (09:00) - road geometry not needed for timing comparison
+        peak_plan = transit_router.plan_journey(
+            pair["origin"], pair["destination"], departure_time="09:00", include_road_geometry=False
+        )
         best_peak = peak_plan["options"][0] if peak_plan["options"] else None
         model_peak_mins = best_peak["total_duration_mins"] if best_peak else 0.0
         
         # Run model for Off-Peak (14:00)
-        off_plan = transit_router.plan_journey(pair["origin"], pair["destination"], departure_time="14:00")
+        off_plan = transit_router.plan_journey(
+            pair["origin"], pair["destination"], departure_time="14:00", include_road_geometry=False
+        )
         best_off = off_plan["options"][0] if off_plan["options"] else None
         model_off_mins = best_off["total_duration_mins"] if best_off else 0.0
         
@@ -177,9 +183,14 @@ def run_benchmark():
     r_val = float(corr_matrix[0, 1])
     r_squared = float(r_val ** 2)
     
+    elapsed_ms = round((time.perf_counter() - t_start) * 1000.0, 2)
+    cache_stats = get_osrm_cache_stats()
+
     summary = {
         "status": "PASS",
         "benchmark_pairs_tested": len(results),
+        "solver_execution_ms": elapsed_ms,
+        "osrm_cache": cache_stats,
         "mean_absolute_percentage_error_peak": round(mean_peak_error, 2),
         "mean_absolute_percentage_error_off_peak": round(mean_off_error, 2),
         "correlation_with_google_maps_r2": round(r_squared, 4),

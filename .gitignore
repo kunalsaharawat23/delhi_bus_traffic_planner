@@ -1,17 +1,42 @@
-# Raw datasets exceeding GitHub's 100MB limit (not needed to run the website)
-data/*.csv
-data/*.db
+# ============================================================
+# Delhi Bus Traffic Planner - .gitignore
+# ============================================================
+
+# --- Large data files (too big for GitHub 100MB limit) ---
+data/October-Delhi.csv
+data/bus_movements_2026_10_01.db
 *.csv
 *.db
+*.sqlite
+*.sqlite3
 
-# Python bytecode and caches
+# --- Python bytecode & cache ---
 __pycache__/
 *.py[cod]
 *$py.class
+*.pyo
 .pytest_cache/
+.mypy_cache/
 
-# Local environment & IDE files
-.vscode/
-.idea/
+# --- OSRM route cache (auto-generated JSON files) ---
+backend/osrm_cache/*.json
+
+# --- Virtual environments ---
 venv/
 env/
+.env
+.venv/
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# --- Editor files ---
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# --- Logs ---
+*.log

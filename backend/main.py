@@ -26,7 +26,7 @@ if CURRENT_DIR not in sys.path:
 
 # import custom modules
 from model import traffic_engine, STATUTORY_SPEED_LIMITS
-from router import transit_router
+from router import transit_router, get_osrm_cache_stats
 from benchmark import run_benchmark
 
 # create the main app
@@ -55,7 +55,9 @@ class JourneyRequest(BaseModel):
 # 1. simple health check endpoint
 @app.get("/api/health")
 def health_check():
-    # return simple status json
+    cache_stats = get_osrm_cache_stats()
+    total_amenities = sum(len(v) for v in traffic_engine.amenities.values())
+    # return simple status json with live loaded counts & cache stats
     return {
         "status": "healthy",
         "city": "Delhi, India",
@@ -63,7 +65,11 @@ def health_check():
         "dataset": "GTFS-Realtime October 2026 Vehicle Telemetry",
         "stops_loaded": len(transit_router.stops),
         "routes_loaded": len(transit_router.routes),
-        "active_fleet_count": len(traffic_engine.fleet)
+        "active_fleet_count": len(traffic_engine.fleet),
+        "corridors_loaded": len(traffic_engine.corridors),
+        "amenities_loaded": total_amenities,
+        "osrm_cache_files": cache_stats["cached_routes_count"],
+        "osrm_cache_size_kb": cache_stats["cache_size_kb"]
     }
 
 # 2. journey directions endpoint (GET method)
